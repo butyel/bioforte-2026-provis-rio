@@ -2391,6 +2391,12 @@ div .single-slider {
 .about-us  img{
 	width:100%;
 }
+.about-btns{
+	margin-top:25px;
+}
+.about-btns .btn{
+	margin:5px 8px 0 0;
+}
 /* Tab Navigation */
 .about-us .tabs-main .nav-main{
 	text-align:center;
