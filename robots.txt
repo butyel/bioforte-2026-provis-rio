@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /areaCliente.html
+Disallow: /mail-success.html
+Disallow: /emConstrucao.html
+Disallow: /google.html
+Disallow: /header.html
+Disallow: /footer.html
+
+Sitemap: https://www.bioforte.com.br/sitemap.xml

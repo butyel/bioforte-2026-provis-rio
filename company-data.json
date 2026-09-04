@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bioforte Saneamento Ambiental",
+  "legalName": "Bioforte Controle de Pragas",
+  "url": "https://www.bioforte.com.br/",
+  "logo": "https://www.bioforte.com.br/images/logoBioforte.png",
+  "email": "atendimento@bioforte.com.br",
+  "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 20 anos de experiência, atuando em Franca, Ribeirão Preto, Uberaba e região.",
+  "foundingDate": "",
+  "numberOfEmployees": "",
+  "sameAs": [
+    "https://pt-br.facebook.com/biofortecontroledepragas/",
+    "https://twitter.com/francabioforte",
+    "https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ",
+    "https://www.instagram.com/bioforte_dedetizadora/"
+  ],
+  "areaServed": [
+    "Franca, São Paulo, Brasil",
+    "Ribeirão Preto, São Paulo, Brasil",
+    "Uberaba, Minas Gerais, Brasil"
+  ],
+  "openingHours": "Mo-Fr 07:30-17:30",
+  "departments": [
+    {
+      "@type": "ContactPoint",
+      "areaServed": "Franca/SP",
+      "contactType": "sales",
+      "telephone": "+55-16-3723-0808",
+      "email": "comercialfranca@bioforte.com.br"
+    },
+    {
+      "@type": "ContactPoint",
+      "areaServed": "Ribeirão Preto/SP",
+      "contactType": "sales",
+      "telephone": "+55-16-3635-2034",
+      "email": "comercial@bioforte.com.br"
+    },
+    {
+      "@type": "ContactPoint",
+      "areaServed": "Uberaba/MG",
+      "contactType": "sales",
+      "telephone": "+55-34-99298-6711",
+      "email": "atendimentouberaba@bioforte.com.br"
+    }
+  ],
+  "units": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.bioforte.com.br/#unidade-franca",
+      "name": "Bioforte Franca Saneamento Ambiental",
+      "parentOrganization": {
+        "@id": "https://www.bioforte.com.br/#organization"
+      },
+      "url": "https://www.bioforte.com.br/contato.html",
+      "telephone": "+55-16-3723-0808",
+      "email": "comercialfranca@bioforte.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João de Goes Conrado, 2525 - São José",
+        "addressLocality": "Franca",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHours": "Mo-Fr 07:30-17:30",
+      "geo": ""
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.bioforte.com.br/#unidade-ribeirao-preto",
+      "name": "Bioforte Ribeirão Preto",
+      "parentOrganization": {
+        "@id": "https://www.bioforte.com.br/#organization"
+      },
+      "url": "https://www.bioforte.com.br/contato.html",
+      "telephone": "+55-16-3635-2034",
+      "email": "comercial@bioforte.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Nutti, 1135 - Jardim Paulistano",
+        "addressLocality": "Ribeirão Preto",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHours": "Mo-Fr 07:30-17:30",
+      "geo": ""
+    }
+  ]
+}
