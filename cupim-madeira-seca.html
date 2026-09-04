@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="pt-BR">
     <head>
         <!-- Meta tag -->
@@ -39,6 +39,7 @@
     "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 20 anos de experiência em Franca, Ribeirão Preto, Uberaba e região.",
     "areaServed": ["Franca, SP", "Ribeirão Preto, SP", "Uberaba, MG"],
     "openingHours": "Mo-Fr 07:30-17:30",
+    "knowsAbout": ["Controle de Pragas Urbanas","Desinsetização","Desratização","Descupinização","Controle Integrado de Pragas","Controle de Pombos","Saneamento Ambiental","Higienização de Caixa d'Água","Manejo de Abelhas","Oxi-Sanitização"],
     "sameAs": [
       "https://pt-br.facebook.com/biofortecontroledepragas/",
       "https://twitter.com/francabioforte",
@@ -80,6 +81,38 @@
     },
     "openingHours": "Mo-Fr 07:30-17:30"
   },
+  {
+    "@type": "Service",
+    "@id": "#service",
+    "serviceType": "Descupinização",
+    "name": "Descupinização - Cupim de Madeira Seca",
+    "description": "Serviço especializado de descupinização para eliminação do cupim de madeira seca. A Bioforte protege móveis, estruturas e imóveis contra cupins.",
+    "url": "https://www.bioforte.com.br/cupim-madeira-seca.html",
+    "provider": { "@id": "https://www.bioforte.com.br/#organization" },
+    "areaServed": ["Franca, SP", "Ribeirão Preto, SP", "Uberaba, MG"],
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.bioforte.com.br/contato.html",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@type": "LocalBusiness",
+    "@id": "https://www.bioforte.com.br/#unidade-uberaba",
+    "name": "Bioforte Uberaba",
+    "url": "https://www.bioforte.com.br/contato.html",
+    "telephone": "+55-34-99298-6711",
+    "email": "atendimentouberaba@bioforte.com.br",
+    "parentOrganization": { "@id": "https://www.bioforte.com.br/#organization" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Uberaba",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "openingHours": "Mo-Fr 07:30-17:30"
+  },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -90,7 +123,7 @@
 ]}</script>
 		
         <!-- Web Font -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -152,21 +185,21 @@
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-clock-o"></i>
-									<h4>Horário de Funcionamento</h4>
+									<p class="widget-title">Horário de Funcionamento</p>
 									<p>Segunda a Sexta das 07:30 às 17:30</p>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-envelope"></i>
-									<h4>E-mail</h4>
+									<p class="widget-title">E-mail</p>
 									<p><a href="mailto:atendimento@bioforte.com.br">atendimento@bioforte.com.br</a></p>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-phone"></i>
-									<h4>Telefone</h4>
+									<p class="widget-title">Telefone</p>
                                     <p>Franca (16) 3723-0808</p>
                                     <p>Ribeirão Preto (16) 3635-2034</p>
 								</div>
@@ -241,7 +274,7 @@
 											<li class="mega-menu"><a href="#">Biologia<i class="fa fa-angle-down"></i></a>
 												<ul class="drop-down mega-inner">
 													<li class="single-menu">
-														<h4>Pragas</h4>
+														<p class="widget-title">Pragas</p>
 														<ul class="list-menu">
 															<li><a href="aranha-armadeira.html"><span class="fa fa-circle-o"></span>Aranha Armadeira</a></li>
 															<li><a href="barata-americana.html"><span class="fa fa-circle-o"></span>Barata Americana</a></li>
@@ -252,7 +285,7 @@
 														</ul>
 													</li>
 													<li class="single-menu">
-														<h4>Pragas</h4>
+														<p class="widget-title">Pragas</p>
 														<ul class="list-menu">
 															<li><a href="formiga-fantasma.html"><span class="fa fa-circle-o"></span>Formiga Fantasma</a></li>
 															<li><a href="formiga-sauva.html"><span class="fa fa-circle-o"></span>Formiga Saúva</a></li>
@@ -266,7 +299,7 @@
 														<div class="list-menu mega-widget">
 															<p>Contrate nossos serviços e mantenha seu ambiente protegido e seguro contra os insetos.</p>
 															<div class="image">
-																<img src="images/EstruturaBioforteFranca/foto2.jpg" alt="Foto da estrutura da Bioforte em Franca">
+																<img src="images/EstruturaBioforteFranca/foto2.jpg" alt="Foto da estrutura da Bioforte em Franca" loading="lazy" decoding="async">
 																<a href="quemSomos.html" class="btn primary"><i class="fa fa-link"></i></a>
 															</div>
 														</div>
@@ -289,10 +322,10 @@
 								<!--/ End Main Menu -->
 								<!-- Social -->
 								<ul class="social" aria-label="Redes sociais">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								<!--/ End Social -->
 							</div>
@@ -340,7 +373,7 @@
 												<div class="col-md-5 col-sm-12 col-xs-12">
 													<!-- About Image -->
 													<div>
-														<img id="imagesPragas" src="images/pragas/cupim-madeira-seca.png" alt="Cupim de madeira seca, praga urbana controlada pela Bioforte">								
+														<img id="imagesPragas" src="images/pragas/cupim-madeira-seca.png" alt="Cupim de madeira seca, praga urbana controlada pela Bioforte" loading="lazy" decoding="async">								
 													</div>
 												</div>
 												<!-- End About Image -->
@@ -353,7 +386,8 @@
 														<p class="text">De acordo com o Dicionário Aurélio, podemos encontrar os seguintes sinônimos da palavra cupim, em Português: térmita, térmite e itapicuim, este último utilizado na região Amazônica do Brasil. A denominação térmita, por sua vez, é originada do latim Termes e era utilizada pelos romanos ao se referirem ao verme da madeira, seu significado em latim, dada a aparência que os mesmos apresentam quando infestando uma estrutura de madeira.</p>
 														<p class="text">É interessante frisar, porém, que existem muitas espécies de cupins e sua fonte de alimento pode variar bastante - existem cupins que comem raízes de plantas ou fungos, por exemplo. Desta maneira, é importante saber identificar a espécie a ser controlada, diferenciando cupins que não causam prejuízos ao homem (úteis na manutenção da cadeia alimentar na natureza) dos cupins que causam danos ao patrimônio privado, histórico ou cultural do homem.</p>
 														<p class="text">Fonte: Pragas Online</p>
-													</div>
+<p class="text">Conheça o serviço de <a href="descupinizacao.html">descupinização</a> da Bioforte para proteção de móveis, estruturas e imóveis em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 												</div>
 											</div>
 										</div>
@@ -403,7 +437,7 @@
 													</br>
 													<p class="text">Estes insetos tem distribuição mundial, ocorrendo em áreas tropicais e temperadas na terra. Cerca de 2.200 espécies de cupins já foram descritas, sendo que no continente americano encontramos aproximadamente 540 espécies distribuídas em 84 gêneros e 5 famílias. Nos Estados Unidos foram relatadas cerca de 40 espécies e, no Brasil, cerca de 200 espécies, a maioria benéfica. O quadro abaixo representa esta distribuição:</p>
 													<div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/tabela-cupim-distribuicao.jpg" alt="Tabela de distribuição de cupins pelo país">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/tabela-cupim-distribuicao.jpg" alt="Tabela de distribuição de cupins pelo país" loading="lazy" decoding="async">
 													</div>
 													<p class="text">Além destes cupins, podemos citar o Reticulitermes lucifugus (Rossi, 1792), o Heterotermes spp, Nasutitermes spp, etc. que também invadem estruturas.</p>
 													<p class="text"><b>VIDA SOCIAL</b></p>
@@ -414,7 +448,7 @@
 													<li>Reprodutores alados</li>
 													<p class="text">Conforme a figura abaixo, na parte superior está o alado, pronto para a revoada. Ele é também chamado de siriri ou aleluia. É o cupim adulto, que tem o aparelho reprodutor já desenvolvido. Na parte inferior, à esquerda, um cupim operário e à direita um soldado. O soldado é caracterizado pela cabeça avantajada para sustentar uma mandíbula grande o suficiente para a função de defesa:</p>
 													<div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/foto-cupim.jpg" alt="Cupim infestando madeira">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/foto-cupim.jpg" alt="Cupim infestando madeira" loading="lazy" decoding="async">
 													</div>
 													<p class="text">A casta dos <b>operários</b> é caracterizada por indivíduos responsáveis por todas as funções rotineiras da colônia, tais como obtenção de alimento, alimentação de indivíduos de outras castas, inclusive o rei e a rainha, construção e conservação do ninho (reparação por danos e limpeza), eliminação de indivíduos adoecidos ou mortos, cuidados com os ovos. Morfologicamente falando, os operários apresentam uma cor branco leitosa com a cabeça relativamente mais escura, não apresentando nenhum olho (tanto olhos compostos quanto olhos simples ou ocelos). Algumas espécies podem apresentar uma área pigmentada onde os olhos seriam tipicamente encontrados; no entanto todos os operários são cegos. As asas são ausentes pois não necessitam das mesmas para o desempenho das funções a eles atribuídas.</p>
 													<p class="text">A casta dos <b>soldados</b>, por sua vez, tem a função de guarda do ninho e proteção dos operários durante a busca de alimentos. Morfologicamente apresentam corpo de cor branco leitosa, e são caracterizados pelas cabeças escuras desenvolvidas com um par de mandíbulas também desenvolvidas (a única exceção são os soldados da espécie Nasutitermes spp, que apresentam mandíbulas na forma de um prolongamento espinhoso da cabeça). Semelhantemente aos operários, os soldados também não apresentam asas ou olhos (áreas pigmentadas na cabeça podem estar presentes na região onde os olhos estariam localizados). Como estruturas de defesa, além da potente mandíbula que pode esmagar, cortar ou golpear com enorme força e da cabeça dura e volumosa que pode obstruir passagens estreitas do ninho contra a penetração de inimigos naturais, os soldados de algumas espécies podem apresentar secreções de natureza tóxica ou viscosa e muito grudenta, através de uma estrutura na cabeça denominada fontanela (um tipo de poro que se interliga com a glândula frontal, responsável pela produção das secreções). É interessante mencionar que o formato da cabeça e das mandíbulas pode ajudar na identificação da espécie infestante.</p>
@@ -427,7 +461,7 @@
 													<p class="text"><b>CICLO DE VIDA</b></p>
 													<p class="text">Os cupins são insetos que apresentam metamorfose incompleta. Embora cada espécie possua características de desenvolvimento diferentes, basicamente podemos resumir o ciclo de vida destes insetos em: ovos, formas jovens (ou ninfas) e adultos. A rainha coloca ovos que se transformam nas formas jovens. As formas jovens, por sua vez, podem se diferenciar em operários, soldados e reprodutores alados que, como vimos, após se abrigarem em outro local, formam o casal real da nova colônia.</p>
 													<div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/ciclo-reproducao-cupim.jpg" alt="Ciclo de reprodução do cupim">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/ciclo-reproducao-cupim.jpg" alt="Ciclo de reprodução do cupim" loading="lazy" decoding="async">
 													</div>
 													<p class="text">Entre a forma jovem e a forma adulta, os cupins sofrem mudas para que possam se desenvolver, a este processo chamamos de ecdise ou muda.</p>
 													<p class="text">Os operários podem ser divididos em dois tipos: operários verdadeiros, que são estéreis e operários funcionais, que são machos e fêmeas. Operários funcionais tem a habilidade de mudar de volta a ninfa, que pode então se transformar em soldados, reprodutores alados ou reprodutores de substituição, dependendo das necessidades da colônia. O último estágio ninfal pode desempenhar funções do operário no busca de alimentos e ajudam a cuidar de outras ninfas nos estágios iniciais.</p>
@@ -438,7 +472,8 @@
 													<p class="text">A formação de uma nova colônia, através do isolamento, acontece quando uma colônia identifica uma nova fonte de alimento e uma sub-colônia é formada para explorar esta nova fonte alimentar. Se o caminho entre a colônia principal e a colônia secundária for quebrado, a população isolada pode então dar origem às formas reprodutoras, geradas através dos operários funcionais e ninfas, como discutimos anteriormente.</p>
 													<p class="text">Desta maneira, outra principal fonte de formação de novas colônias, é através do acúmulo de madeira infestada em determinados locais (que contribuem para a formação de uma sub-colônia) e pelo uso de madeiras já infestadas por cupins.</p>
                                                     <p class="text">Fonte: Pragas Online</p>
-											</div>
+<p class="text">Conheça o serviço de <a href="descupinizacao.html">descupinização</a> da Bioforte para proteção de móveis, estruturas e imóveis em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 										</div>
 									</div>
 									<!--/ End Story Tab -->
@@ -448,16 +483,16 @@
 											<div class="row fix">		
 												<div class="col-md-4 col-sm-6 col-xs-12 fix">
 													<div class="single-gallery">
-														<img src="images/pragas/barata1.jpg" alt="Barata, praga urbana controlada pela Bioforte"/>
+														<img src="images/pragas/barata1.jpg" alt="Barata, praga urbana controlada pela Bioforte"/ loading="lazy" decoding="async">
 														<a data-fancybox="gallery" href="images/pragas/barata1.jpg"><i class="fa fa-search"></i></a>
 														<div class="caption">
-															<p>Barata Blatella Germanica</p>
+															<p>Barata Blattella germanica</p>
 														</div>
 													</div>
 												</div>		
 												<div class="col-md-4 col-sm-6 col-xs-12 fix">
 													<div class="single-gallery">
-														<img src="images/pragas/barata2.jpg" alt="Barata, praga urbana controlada pela Bioforte"/>
+														<img src="images/pragas/barata2.jpg" alt="Barata, praga urbana controlada pela Bioforte"/ loading="lazy" decoding="async">
 														<a data-fancybox="gallery" href="images/pragas/barata2.jpg"><i class="fa fa-search"></i></a>
 														<div class="caption">
 															<p>Barata Periplaneta Americana</p>
@@ -466,7 +501,7 @@
 												</div>		
 												<div class="col-md-4 col-sm-6 col-xs-12 fix">
 													<div class="single-gallery">
-														<img src="images/pragas/barata3.jpg" alt="Barata, praga urbana controlada pela Bioforte"/>
+														<img src="images/pragas/barata3.jpg" alt="Barata, praga urbana controlada pela Bioforte"/ loading="lazy" decoding="async">
 														<a data-fancybox="gallery" href="images/pragas/barata3.jpg"><i class="fa fa-search"></i></a>
 														<div class="caption">
 															<p>Barata Periplaneta Americana</p>
@@ -502,7 +537,8 @@
 													<li>Proteção da superfície exterior das madeiras com tintas, vernizes ou outras coberturas apropriadas, com o objetivo de tapar frestas e ranhuras onde os cupins possam se alojar.</li>
 													</br>
 													<p class="text">Fonte: Pragas Online</p>
-												</div>
+<p class="text">Conheça o serviço de <a href="descupinizacao.html">descupinização</a> da Bioforte para proteção de móveis, estruturas e imóveis em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 											</div>
 										</div>
 									</div>
@@ -531,10 +567,10 @@
 										<li><i class="fa fa-map-o"></i>Endereço: Rua João de Goes Conrado, 2525 - São Jose, Franca/SP</li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Franca">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -550,10 +586,10 @@
 										<li><i class="fa fa-map-o"></i>Endereço: Rua João Nutti, 1135 - Jardim Paulistano, Ribeirão Preto/SP</li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Ribeirão Preto">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -567,10 +603,10 @@
 										<li><i class="fa fa-envelope"></i>Email:<a href="mailto:atendimentouberaba@bioforte.com.br"> atendimentouberaba@bioforte.com.br</a></li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Uberaba">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -579,12 +615,12 @@
 								<div class="single-widget photo-gallery">
 									<h2>Formas de Pagamento</h2>
 									<ul class="list formaPagamento">
-										<li><a href="images/formasPagamento/boleto.png" data-fancybox="photo"><img src="images/formasPagamento/boleto.png" alt="Pagamento via boleto"></a></li>
-										<li><a href="images/formasPagamento/elo.png" data-fancybox="photo"><img src="images/formasPagamento/elo.png" alt="Pagamento com cartão Elo"></a></li>
-										<li><a href="images/formasPagamento/Hiper-logotipo.jpg" data-fancybox="photo"><img src="images/formasPagamento/Hiper-logotipo.jpg" alt="Pagamento com cartão Hiper"></a></li>
-										<li><a href="images/formasPagamento/Hipercard-logo-5.png" data-fancybox="photo"><img src="images/formasPagamento/Hipercard-logo-5.png" alt="Pagamento com cartão Hipercard"></a></li>
-										<li><a href="images/formasPagamento/mastercard.png" data-fancybox="photo"><img src="images/formasPagamento/mastercard.png" alt="Pagamento com cartão Mastercard"></a></li>
-										<li><a href="images/formasPagamento/visa.jpg" data-fancybox="photo"><img src="images/formasPagamento/visa.jpg" alt="Pagamento com cartão Visa"></a></li>
+										<li><a href="images/formasPagamento/boleto.png" data-fancybox="photo"><img src="images/formasPagamento/boleto.png" alt="Pagamento via boleto" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/elo.png" data-fancybox="photo"><img src="images/formasPagamento/elo.png" alt="Pagamento com cartão Elo" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/Hiper-logotipo.jpg" data-fancybox="photo"><img src="images/formasPagamento/Hiper-logotipo.jpg" alt="Pagamento com cartão Hiper" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/Hipercard-logo-5.png" data-fancybox="photo"><img src="images/formasPagamento/Hipercard-logo-5.png" alt="Pagamento com cartão Hipercard" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/mastercard.png" data-fancybox="photo"><img src="images/formasPagamento/mastercard.png" alt="Pagamento com cartão Mastercard" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/visa.jpg" data-fancybox="photo"><img src="images/formasPagamento/visa.jpg" alt="Pagamento com cartão Visa" loading="lazy" decoding="async"></a></li>
 									</ul>
 								</div>
 							</div>

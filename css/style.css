@@ -483,7 +483,8 @@ input:-webkit-autofill:focus {
 	text-align: center;
 	font-size: 25px;
 }
-.header .single-widget h4 {
+.header .single-widget h4,
+.header .single-widget .widget-title {
 	margin-bottom: 2px;
 	font-size: 14px;
 	text-transform: initial;
@@ -667,7 +668,8 @@ input:-webkit-autofill:focus {
 	border-right: 0px solid;
 	margin: 0;
 }
-.header .nav .mega-menu .single-menu h4 {
+.header .nav .mega-menu .single-menu h4,
+.header .nav .mega-menu .single-menu .widget-title {
 	margin-bottom: 20px;
 	font-size: 15px;
 	font-weight: 500;

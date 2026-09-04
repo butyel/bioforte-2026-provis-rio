@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="pt-BR">
     <head>
         <!-- Meta tag -->
@@ -39,6 +39,7 @@
     "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 20 anos de experiência em Franca, Ribeirão Preto, Uberaba e região.",
     "areaServed": ["Franca, SP", "Ribeirão Preto, SP", "Uberaba, MG"],
     "openingHours": "Mo-Fr 07:30-17:30",
+    "knowsAbout": ["Controle de Pragas Urbanas","Desinsetização","Desratização","Descupinização","Controle Integrado de Pragas","Controle de Pombos","Saneamento Ambiental","Higienização de Caixa d'Água","Manejo de Abelhas","Oxi-Sanitização"],
     "sameAs": [
       "https://pt-br.facebook.com/biofortecontroledepragas/",
       "https://twitter.com/francabioforte",
@@ -80,6 +81,38 @@
     },
     "openingHours": "Mo-Fr 07:30-17:30"
   },
+  {
+    "@type": "Service",
+    "@id": "#service",
+    "serviceType": "Desratização",
+    "name": "Desratização - Controle de Camundongos",
+    "description": "Serviço de desratização para eliminação de camundongos (Mus musculus). A Bioforte realiza controle profissional de roedores em residências e empresas.",
+    "url": "https://www.bioforte.com.br/rato-camundongo.html",
+    "provider": { "@id": "https://www.bioforte.com.br/#organization" },
+    "areaServed": ["Franca, SP", "Ribeirão Preto, SP", "Uberaba, MG"],
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.bioforte.com.br/contato.html",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@type": "LocalBusiness",
+    "@id": "https://www.bioforte.com.br/#unidade-uberaba",
+    "name": "Bioforte Uberaba",
+    "url": "https://www.bioforte.com.br/contato.html",
+    "telephone": "+55-34-99298-6711",
+    "email": "atendimentouberaba@bioforte.com.br",
+    "parentOrganization": { "@id": "https://www.bioforte.com.br/#organization" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Uberaba",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "openingHours": "Mo-Fr 07:30-17:30"
+  },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -90,7 +123,7 @@
 ]}</script>
 		
         <!-- Web Font -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -152,21 +185,21 @@
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-clock-o"></i>
-									<h4>Horário de Funcionamento</h4>
+									<p class="widget-title">Horário de Funcionamento</p>
 									<p>Segunda a Sexta das 07:30 às 17:30</p>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-envelope"></i>
-									<h4>E-mail</h4>
+									<p class="widget-title">E-mail</p>
 									<p><a href="mailto:atendimento@bioforte.com.br">atendimento@bioforte.com.br</a></p>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Single Widget -->
 								<div class="single-widget">
 									<i class="fa fa-phone"></i>
-									<h4>Telefone</h4>
+									<p class="widget-title">Telefone</p>
                                     <p>Franca (16) 3723-0808</p>
                                     <p>Ribeirão Preto (16) 3635-2034</p>
 								</div>
@@ -241,7 +274,7 @@
 											<li class="mega-menu"><a href="#">Biologia<i class="fa fa-angle-down"></i></a>
 												<ul class="drop-down mega-inner">
 													<li class="single-menu">
-														<h4>Pragas</h4>
+														<p class="widget-title">Pragas</p>
 														<ul class="list-menu">
 															<li><a href="aranha-armadeira.html"><span class="fa fa-circle-o"></span>Aranha Armadeira</a></li>
 															<li><a href="barata-americana.html"><span class="fa fa-circle-o"></span>Barata Americana</a></li>
@@ -252,7 +285,7 @@
 														</ul>
 													</li>
 													<li class="single-menu">
-														<h4>Pragas</h4>
+														<p class="widget-title">Pragas</p>
 														<ul class="list-menu">
 															<li><a href="formiga-fantasma.html"><span class="fa fa-circle-o"></span>Formiga Fantasma</a></li>
 															<li><a href="formiga-sauva.html"><span class="fa fa-circle-o"></span>Formiga Saúva</a></li>
@@ -266,7 +299,7 @@
 														<div class="list-menu mega-widget">
 															<p>Contrate nossos serviços e mantenha seu ambiente protegido e seguro contra os insetos.</p>
 															<div class="image">
-																<img src="images/EstruturaBioforteFranca/foto2.jpg" alt="Foto da estrutura da Bioforte em Franca">
+																<img src="images/EstruturaBioforteFranca/foto2.jpg" alt="Foto da estrutura da Bioforte em Franca" loading="lazy" decoding="async">
 																<a href="quemSomos.html" class="btn primary"><i class="fa fa-link"></i></a>
 															</div>
 														</div>
@@ -289,10 +322,10 @@
 								<!--/ End Main Menu -->
 								<!-- Social -->
 								<ul class="social" aria-label="Redes sociais">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								<!--/ End Social -->
 							</div>
@@ -340,7 +373,7 @@
 												<div class="col-md-5 col-sm-12 col-xs-12">
 													<!-- About Image -->
 													<div>
-														<img src="images/pragas/rato-camundongo.jpg" alt="Camundongo, praga urbana controlada pela Bioforte">								
+														<img src="images/pragas/rato-camundongo.jpg" alt="Camundongo, praga urbana controlada pela Bioforte" loading="lazy" decoding="async">								
 													</div>
 												</div>
 												<!-- End About Image -->
@@ -352,7 +385,7 @@
 															<p class="text">Diversos setores da cadeia produtiva agropecuária também sofrem a ação destes roedores, como nas indústrias de aves e suínos, refinarias de óleos, usinas de álcool e açúcar, fábricas de rações, granjas, locais de armazenamento, lavouras, pequenas criações.</p>
 															<p class="text">A presença destes roedores em nosso meio ainda pode acarretar outros problemas como os acidentes devido aos danos causados em fios e cabos de máquinas e instalações elétricas. A presença de ruídos e chiados em ligações telefônicas se devem muitas vezes aos ratos. Cabos e fios danificados perdem a capacidade de transmissão e ficam sujeitos a umidade a ação de outros agentes, como as formigas. Diversas instituições tem pesquisado materiais resistentes a ação de roedores. O revestimento de cabos com fibra de vidro desestimula o roedor, uma vez que as farpas de fibra machucam a boca dos mesmos. Os ratos tem a necessidade de roer, para gastar os dentes que crescem incessantemente.</p>
 															<div>
-																<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/cabo-danificado-roedores.jpg" alt="Cabo danificado por roedores">
+																<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/cabo-danificado-roedores.jpg" alt="Cabo danificado por roedores" loading="lazy" decoding="async">
 															</div>
 															<p class="text">Os ratos estão classificados como:</p>
 															<li>REINO: Animal</li>
@@ -386,7 +419,8 @@
 															<li>Custos associados com a operação de controle.</li>
 															</br>
 															<p class="text">Fonte: Pragas Online</p>
-													</div>
+<p class="text">Conheça o serviço de <a href="desratizacao.html">desratização</a> da Bioforte para controle de roedores em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 												</div>
 											</div>
 										</div>
@@ -401,19 +435,19 @@
                                                     <p class="text">O adulto possui corpo delgado com 8 a 9 cm de comprimento podendo pesar de 10 a 21 gramas. Com pelagem delicada e sedosa, orelhas grandes e salientes em relação a cabeça afilada, olhos pretos e salientes de tamanho pequeno em relação ao resto da cabeça. As patas são escuras e sem membranas interdigitais. A cauda é fina e sem pêlos medindo 8 a 10 cm. São de hábito noturno e escondem-se com extrema facilidade em locais estreitos e de difícil acesso. Possuem um raio de ação de 03 a 09 m em relação ao abrigo.</p>
                                                     <p class="text">Possui uma vida média de 12 meses sendo sexualmente maduro entre 42-45 dias de idade. A gestação da fêmea dura de 19 a 21 dias com 05 a 06 ninhadas por ano. Cada ninhada possui de 4 a 8 filhotes com uma média de sobrevivência de 30 filhotes após o desmame por fêmea/ano. Os ninhos são geralmente terrestres e acima do solo, geralmente no interior de residências. Realizam seus ninhos em guarda-roupas, frestas de rodapés, prateleiras de livros e móveis em geral onde notamos a presença de pelos, restos de alimentos, fiapos de pano, papel e outros detritos. Escalam com facilidade abrigando-se em despensas, armários, espaços internos nas paredes e depósitos. Se alimentam de cereais, farelos, pão e queijos (3 g/dia) e possuem pouca exigência quanto ao consumo de água. As fezes são em forma de bastonete. As roeduras são delicadas, geralmente grãos parcialmente roídos e abandonados.</p>
                                                     <div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/ciclo-ratazana.jpg" alt="Ciclo de vida da ratazana">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/ciclo-ratazana.jpg" alt="Ciclo de vida da ratazana" loading="lazy" decoding="async">
 													</div>
 													<p class="text"><b>ASPECTOS BIOLÓGICOS</b></p>
 													<p class="text">Os roedores possuem uma grande capacidade reprodutiva, sendo limitada apenas por certos fatores como doenças, falta de alimento e abrigo. São dotados de uma série de características sensoriais e físicas.</p>
 													<p class="text">Os ratos possuem hábito noturno, saindo de suas tocas a luz do dia quando o nível populacional está muito elevado e o alimento disponível é insuficiente para alimentar a colônia.</p>
 													<div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/caracteristica-reprodutiva-roedor.jpg" alt="Características reprodutivas de roedores">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/caracteristica-reprodutiva-roedor.jpg" alt="Características reprodutivas de roedores" loading="lazy" decoding="async">
 													</div>
 													<div>
-														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/crescimento-desenvolvimento-roedor.jpg" alt="Crescimento e desenvolvimento de roedores">
+														<img id="imagesPragas" style="width: 289px; height: 134px;" src="images/pragas/crescimento-desenvolvimento-roedor.jpg" alt="Crescimento e desenvolvimento de roedores" loading="lazy" decoding="async">
 													</div>
 													<div>
-														<img  id="imagesPragas"style="width: 289px; height: 134px;" src="images/pragas/reproducao-roedor.jpg" alt="Reprodução de roedores">
+														<img  id="imagesPragas"style="width: 289px; height: 134px;" src="images/pragas/reproducao-roedor.jpg" alt="Reprodução de roedores" loading="lazy" decoding="async">
 													</div>
 													<p class="text"><b>Características Físicas</b></p>
 													<p class="text">Os roedores são providos de um excelente equilíbrio se locomovendo verticalmente e horizontalmente com extrema facilidade em ambientes estreitos como tubulações, canos e conduítes. Podem subir pelo interior de calhas cm 4,0 a 10,0 cm de diâmetro e escalar externamente canos e calhas com até 9,5 cm de diâmetro. Camundongos e jovens ratos podem passar em uma fresta de apenas 0,5 cm de abertura, e os demais em qualquer fresta pela qual passe sua cabeça.</p>
@@ -433,8 +467,8 @@
 													<p class="text"><b>DOENÇAS</b></p>
 													<p class="text">Os ratos são ainda responsáveis pela transmissão de inúmeras doenças ao homem. A Organização Mundial da Saúde já catalogou cerca de 200 doenças transmissíveis, destacando-se a leptospirose, hantavirose, tifo, peste bubônica, febre hemorrágica, salmonelose, nefrite epidêmica, sarnas, micoses, helmintíases entre outras.</p>
 													<p class="text">Fonte: Pragas Online</p>
-												
-											</div>
+<p class="text">Conheça o serviço de <a href="desratizacao.html">desratização</a> da Bioforte para controle de roedores em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 										</div>
 									</div>
 									<!--/ End Story Tab -->
@@ -458,7 +492,8 @@
 													<li>Proteger vãos sob as portas ou janelas, com telas ou chapas galvanizadas.</li>
 													<li>Instalação de golas metálicas em pilastras e colunas.</li>
 													<p class="text">Fonte: Pragas Online</p>
-												</div>
+<p class="text">Conheça o serviço de <a href="desratizacao.html">desratização</a> da Bioforte para controle de roedores em Franca, Ribeirão Preto, Uberaba e região.</p>
+</div>
 											</div>
 										</div>
 									</div>
@@ -487,10 +522,10 @@
 										<li><i class="fa fa-map-o"></i>Endereço: Rua João de Goes Conrado, 2525 - São Jose, Franca/SP</li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Franca">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -506,10 +541,10 @@
 										<li><i class="fa fa-map-o"></i>Endereço: Rua João Nutti, 1135 - Jardim Paulistano, Ribeirão Preto/SP</li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Ribeirão Preto">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -523,10 +558,10 @@
 										<li><i class="fa fa-envelope"></i>Email:<a href="mailto:atendimentouberaba@bioforte.com.br"> atendimentouberaba@bioforte.com.br</a></li>
 									</ul>
 									<ul class="social" aria-label="Redes sociais Bioforte Uberaba">
-										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a></li>
-										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://pt-br.facebook.com/biofortecontroledepragas/" target="_blank" rel="noopener" aria-label="Página da Bioforte no Facebook"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/francabioforte" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Twitter"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ" target="_blank" rel="noopener" aria-label="Canal da Bioforte no YouTube"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="https://www.instagram.com/bioforte_dedetizadora/" target="_blank" rel="noopener" aria-label="Perfil da Bioforte no Instagram"><i class="fa fa-instagram"></i></a></li>
 									</ul>
 								</div>
 								<!--/ End Address Widget -->
@@ -535,12 +570,12 @@
 								<div class="single-widget photo-gallery">
 									<h2>Formas de Pagamento</h2>
 									<ul class="list formaPagamento">
-										<li><a href="images/formasPagamento/boleto.png" data-fancybox="photo"><img src="images/formasPagamento/boleto.png" alt="Pagamento via boleto"></a></li>
-										<li><a href="images/formasPagamento/elo.png" data-fancybox="photo"><img src="images/formasPagamento/elo.png" alt="Pagamento com cartão Elo"></a></li>
-										<li><a href="images/formasPagamento/Hiper-logotipo.jpg" data-fancybox="photo"><img src="images/formasPagamento/Hiper-logotipo.jpg" alt="Pagamento com cartão Hiper"></a></li>
-										<li><a href="images/formasPagamento/Hipercard-logo-5.png" data-fancybox="photo"><img src="images/formasPagamento/Hipercard-logo-5.png" alt="Pagamento com cartão Hipercard"></a></li>
-										<li><a href="images/formasPagamento/mastercard.png" data-fancybox="photo"><img src="images/formasPagamento/mastercard.png" alt="Pagamento com cartão Mastercard"></a></li>
-										<li><a href="images/formasPagamento/visa.jpg" data-fancybox="photo"><img src="images/formasPagamento/visa.jpg" alt="Pagamento com cartão Visa"></a></li>
+										<li><a href="images/formasPagamento/boleto.png" data-fancybox="photo"><img src="images/formasPagamento/boleto.png" alt="Pagamento via boleto" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/elo.png" data-fancybox="photo"><img src="images/formasPagamento/elo.png" alt="Pagamento com cartão Elo" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/Hiper-logotipo.jpg" data-fancybox="photo"><img src="images/formasPagamento/Hiper-logotipo.jpg" alt="Pagamento com cartão Hiper" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/Hipercard-logo-5.png" data-fancybox="photo"><img src="images/formasPagamento/Hipercard-logo-5.png" alt="Pagamento com cartão Hipercard" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/mastercard.png" data-fancybox="photo"><img src="images/formasPagamento/mastercard.png" alt="Pagamento com cartão Mastercard" loading="lazy" decoding="async"></a></li>
+										<li><a href="images/formasPagamento/visa.jpg" data-fancybox="photo"><img src="images/formasPagamento/visa.jpg" alt="Pagamento com cartão Visa" loading="lazy" decoding="async"></a></li>
 									</ul>
 								</div>
 							</div>
