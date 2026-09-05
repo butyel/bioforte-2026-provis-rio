@@ -1,0 +1,120 @@
+/* =========================================================
+   Bioforte — Sistema de componentes (FASE 01: Home pragas)
+   PestCard: cards de pragas com imagem, descrição e CTA.
+   ========================================================= */
+
+.bio-pragmahub {
+  padding: 8px 0 16px;
+  background: #ffffff;
+}
+
+.bio-pragmahub .section-title {
+  margin-bottom: 26px;
+}
+
+.bio-pragmahub .section-lead {
+  text-align: center;
+  max-width: 640px;
+  margin: -14px auto 26px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.bio-pest-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.bio-pest-col {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 12px;
+  margin-bottom: 24px;
+}
+
+.bio-pest-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bio-pest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 40, 15, 0.14);
+  border-color: #02843c;
+  text-decoration: none;
+}
+
+.bio-pest-card .hp-thumb {
+  aspect-ratio: 3 / 2;
+  background: #eef7f2;
+  overflow: hidden;
+}
+
+.bio-pest-card .hp-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bio-pest-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 14px 16px 6px;
+  color: #1a1a1a;
+}
+
+.bio-pest-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #555;
+  margin: 0 16px 12px;
+  flex: 1;
+}
+
+.bio-pest-card .hp-cta {
+  align-self: flex-start;
+  margin: 0 16px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #02843c;
+}
+
+.bio-pest-card:hover .hp-cta {
+  text-decoration: underline;
+}
+
+.bio-pragmahub .bio-pest-all {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.bio-pragmahub .bio-pest-all .btn {
+  padding: 12px 26px;
+}
+
+@media (max-width: 991px) {
+  .bio-pest-col { flex: 0 0 50%; max-width: 50%; }
+}
+
+@media (max-width: 480px) {
+  .bio-pest-col { flex: 0 0 100%; max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-pest-card { transition: none; }
+}
