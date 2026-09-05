@@ -224,6 +224,17 @@ body.rp-has-mobile-cta { padding-bottom: 74px; }
   .rp-mobile-cta + .desktop-bottom-spacer { display: block; }
 }
 
+/* ---------- Ícones de pragas (substituem emojis) ---------- */
+.rp-pest-chip .emoji,
+.rp-service-card .icon .emoji,
+.rp-tip-card h3 .emoji,
+.rp-service-card .emoji {
+  color: var(--rp-green);
+  font-size: 30px;
+  line-height: 1;
+}
+.rp-ic { color: var(--rp-green); }
+
 /* ---------- Microinterações ---------- */
 .rp-reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s var(--rp-ease), transform .6s var(--rp-ease); }
 .rp-reveal.is-visible { opacity: 1; transform: translateY(0); }
