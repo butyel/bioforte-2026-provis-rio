@@ -180,7 +180,7 @@ a:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
+  height: 2px;
   background: var(--color-primary);
 }
 
@@ -257,7 +257,7 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left;
