@@ -45,6 +45,58 @@
     });
   });
 
+  /* ---- Centro de Dúvidas: accordion + busca + hash ---- */
+  var faqItems = document.querySelectorAll('.bio-faq-item');
+  if (faqItems.length) {
+    // accordion
+    document.addEventListener('click', function (e) {
+      var q = e.target.closest ? e.target.closest('.bio-faq-q') : null;
+      if (!q) return;
+      var item = q.closest('.bio-faq-item');
+      if (!item) return;
+      var a = item.querySelector('.bio-faq-a');
+      var open = item.classList.contains('is-open');
+      if (open) {
+        item.classList.remove('is-open');
+        if (a) a.style.maxHeight = '0px';
+      } else {
+        item.classList.add('is-open');
+        if (a) a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+
+    // busca
+    var faqSearch = document.getElementById('bio-faq-search');
+    if (faqSearch) {
+      faqSearch.addEventListener('input', function () {
+        var term = faqSearch.value.trim().toLowerCase();
+        faqItems.forEach(function (it) {
+          var txt = (it.getAttribute('data-search') || '').toLowerCase();
+          it.classList.toggle('is-hidden', term && txt.indexOf(term) === -1);
+        });
+        document.querySelectorAll('.bio-faq-group').forEach(function (g) {
+          g.classList.toggle('is-empty', term && !Array.from(g.querySelectorAll('.bio-faq-item')).some(function (i) { return !i.classList.contains('is-hidden'); }));
+        });
+      });
+    }
+
+    // hash: abre o item e rola até ele
+    function openHash() {
+      if (!location.hash) return;
+      var target = document.getElementById(location.hash.slice(1));
+      if (target && target.classList.contains('bio-faq-item')) {
+        target.classList.add('is-open');
+        var a = target.querySelector('.bio-faq-a');
+        if (a) a.style.maxHeight = a.scrollHeight + 'px';
+        setTimeout(function () {
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        }, 60);
+      }
+    }
+    openHash();
+    window.addEventListener('hashchange', openHash);
+  }
+
   /* ---- Reveal on scroll ---- */
   var revealEls = document.querySelectorAll('.bio-reveal');
   if (revealEls.length) {
