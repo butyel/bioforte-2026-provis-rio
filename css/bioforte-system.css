@@ -244,3 +244,66 @@
 .bio-reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s, transform .6s; }
 .bio-reveal.is-visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .bio-reveal { opacity: 1; transform: none; transition: none; } }
+
+/* =========================================================
+   PestPageTemplate — páginas individuais de praga
+   ========================================================= */
+.bio-pest-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #eef7f2 55%, #dcefe6 100%);
+  padding: 36px 0 44px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.bio-pest-hero .crumb { font-size: 13px; color: #1a5c3f; margin-bottom: 14px; }
+.bio-pest-hero .crumb a { color: #02843c; text-decoration: none; }
+.bio-pest-hero .crumb a:hover { text-decoration: underline; }
+.bio-pest-hero h1 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin-bottom: 12px; color: #1a1a1a; }
+.bio-pest-hero .lead { font-size: 16px; color: #555; line-height: 1.6; max-width: 640px; margin-bottom: 22px; }
+.bio-pest-hero .bio-cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.bio-pest-hero .bio-btn-whats { background: #25d366; }
+.bio-pest-hero .bio-btn-whats:hover { background: #1eb356; }
+.bio-pest-hero .bio-himg { max-width: 340px; margin: 0 auto; }
+.bio-pest-hero .bio-himg img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 12px; box-shadow: 0 14px 34px rgba(0,40,15,.18); display: block; }
+
+.bio-pest-nav {
+  position: sticky; top: 0; z-index: 800;
+  background: #fff; border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap;
+  scrollbar-width: thin;
+}
+.bio-pest-nav a { display: inline-block; padding: 13px 15px; font-size: 13.5px; font-weight: 600; color: #1a5c3f; text-decoration: none; border-bottom: 3px solid transparent; }
+.bio-pest-nav a:hover { color: #02843c; border-bottom-color: #02843c; }
+
+.bio-pest-section { padding: 44px 0; }
+.bio-pest-section:nth-of-type(even) { background: #f7fbf9; }
+.bio-pest-section h2 { font-size: clamp(22px, 2.6vw, 30px); margin-bottom: 8px; color: #1a1a1a; }
+.bio-pest-section > .container > .row > .col-md-12 > p, .bio-pest-section .pest-lead { font-size: 15px; color: #555; line-height: 1.7; }
+
+.bio-pest-ident ul, .bio-pest-risks ul { list-style: none; padding: 0; margin: 8px 0 0; }
+.bio-pest-ident li, .bio-pest-risks li { position: relative; padding-left: 24px; margin-bottom: 8px; font-size: 14.5px; line-height: 1.6; color: #333; }
+.bio-pest-ident li::before, .bio-pest-risks li::before { content: "›"; position: absolute; left: 6px; top: 0; color: #02843c; font-weight: 700; }
+
+.bio-pest-risks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
+.bio-pest-risks-grid .risk-block { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px; }
+.bio-pest-risks-grid .risk-block h4 { font-size: 14px; color: #1a5c3f; text-transform: uppercase; letter-spacing: .4px; margin-bottom: 6px; }
+
+.bio-pest-env { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.bio-pest-env span { display: inline-flex; align-items: center; gap: 6px; background: #eef7f2; color: #1a5c3f; border-radius: 999px; padding: 7px 13px; font-size: 13.5px; font-weight: 600; }
+.bio-pest-env i { color: #02843c; }
+
+.bio-pest-checklist { list-style: none; padding: 0; margin: 14px 0 0; columns: 2; column-gap: 30px; }
+@media (max-width: 600px) { .bio-pest-checklist { columns: 1; } }
+.bio-pest-checklist li { break-inside: avoid; padding-left: 30px; position: relative; margin-bottom: 10px; font-size: 14.5px; line-height: 1.6; color: #333; }
+.bio-pest-checklist li::before { content: "✔"; position: absolute; left: 0; top: 0; color: #02843c; font-weight: 700; }
+
+.bio-pest-prevent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 18px; }
+.bio-pest-prevent-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px; }
+.bio-pest-prevent-card .num { font-size: 26px; font-weight: 800; color: #02843c; opacity: .35; line-height: 1; margin-bottom: 8px; }
+.bio-pest-prevent-card p { font-size: 13.5px; color: #333; line-height: 1.55; margin: 0; }
+
+.bio-pest-cta-inline { margin-top: 30px; text-align: center; background: #e8f4f0; border: 1px dashed #02843c; border-radius: 12px; padding: 24px; }
+.bio-pest-cta-inline h3 { font-size: 20px; margin-bottom: 6px; }
+.bio-pest-cta-inline p { color: #555; margin-bottom: 12px; }
+
+.bio-pest-related { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 18px; }
+.bio-pest-related a { display: block; background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; color: #1a5c3f; text-decoration: none; font-weight: 600; font-size: 14.5px; transition: all .2s; }
+.bio-pest-related a:hover { border-color: #02843c; color: #02843c; transform: translateY(-2px); }
