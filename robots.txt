@@ -7,4 +7,4 @@ Disallow: /google.html
 Disallow: /header.html
 Disallow: /footer.html
 
-Sitemap: https://www.bioforte.com.br/sitemap.xml
+Sitemap: https://biofortecombr.vercel.app/sitemap.xml

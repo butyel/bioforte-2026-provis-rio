@@ -3,10 +3,10 @@
   "@type": "Organization",
   "name": "Bioforte Saneamento Ambiental",
   "legalName": "Bioforte Controle de Pragas",
-  "url": "https://www.bioforte.com.br/",
-  "logo": "https://www.bioforte.com.br/images/logoBioforte.png",
+  "url": "https://biofortecombr.vercel.app/",
+  "logo": "https://biofortecombr.vercel.app/images/logoBioforte.png",
   "email": "atendimento@bioforte.com.br",
-  "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 20 anos de experiência, atuando em Franca, Ribeirão Preto, Uberaba e região.",
+  "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 30 anos de experiência, atuando em Franca, Ribeirão Preto, Uberaba e região.",
   "foundingDate": "",
   "numberOfEmployees": "",
   "sameAs": [
@@ -47,12 +47,12 @@
   "units": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.bioforte.com.br/#unidade-franca",
+      "@id": "https://biofortecombr.vercel.app/#unidade-franca",
       "name": "Bioforte Franca Saneamento Ambiental",
       "parentOrganization": {
-        "@id": "https://www.bioforte.com.br/#organization"
+        "@id": "https://biofortecombr.vercel.app/#organization"
       },
-      "url": "https://www.bioforte.com.br/contato.html",
+      "url": "https://biofortecombr.vercel.app/contato.html",
       "telephone": "+55-16-3723-0808",
       "email": "comercialfranca@bioforte.com.br",
       "address": {
@@ -67,12 +67,12 @@
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.bioforte.com.br/#unidade-ribeirao-preto",
+      "@id": "https://biofortecombr.vercel.app/#unidade-ribeirao-preto",
       "name": "Bioforte Ribeirão Preto",
       "parentOrganization": {
-        "@id": "https://www.bioforte.com.br/#organization"
+        "@id": "https://biofortecombr.vercel.app/#organization"
       },
-      "url": "https://www.bioforte.com.br/contato.html",
+      "url": "https://biofortecombr.vercel.app/contato.html",
       "telephone": "+55-16-3635-2034",
       "email": "comercial@bioforte.com.br",
       "address": {

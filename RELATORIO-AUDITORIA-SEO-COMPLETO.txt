@@ -1,0 +1,328 @@
+﻿================================================================================
+                    AUDITORIA SEO - BIOFORTE SANEAMENTO AMBIENTAL
+                              Relatório Completo
+================================================================================
+
+Data: 2026-09-05 | Projeto: bioforte.com.br | Ambiente: Vercel
+
+RESUMO EXECUTIVO
+================================================================================
+
+PROBLEMAS CRÍTICOS ENCONTRADOS: 7
+  • 1 CRÍTICO: Domínio errado em todas as URLs (www.bioforte.com.br vs biofortecombr.vercel.app)
+  • 1 CRÍTICO: .htaccess inativo em Vercel (configurações perdidas)
+  • 1 ALTA: Copyright desatualizado (2019)
+  • 1 ALTA: Dados incompletos em company-data.json
+  • 1 ALTA: Unidade Uberaba incompleta
+  • 1 MÉDIA: areaCliente.html sem proteção clara
+  • 1 MÉDIA: Opções de sitemap (corretas, sem ação necessária)
+
+ARQUIVOS ANALISADOS: 7
+  ✓ sitemap.xml (32 URLs, domínio errado)
+  ✓ robots.txt (bem configurado, exceto sitemap reference)
+  ✓ .vercelignore (apropriado para Vercel)
+  ✓ .htaccess (inativo - configurações perdidas)
+  ✓ header.html (bem estruturado, canonical errado)
+  ✓ footer.html (bem estruturado, copyright desatualizado)
+  ✓ company-data.json (dados incompletos, domínio antigo)
+
+ARQUIVOS .HTML NO PROJETO: 38
+  • 32 URLs no sitemap (correto)
+  • 6 páginas excluídas corretamente (templates + transacionais)
+
+================================================================================
+1. SITEMAP.XML - ANÁLISE
+================================================================================
+
+STATUS: ❌ DOMÍNIO ERRADO
+TAMANHO: 195 linhas | FORMATO: ✓ Válido | PROTOCOLO: ✓ HTTPS
+
+PROBLEM CRÍTICO:
+  Todas as 32 URLs usam https://www.bioforte.com.br (Apache antigo)
+  Devem usar: https://biofortecombr.vercel.app (Vercel live)
+
+URLs NO SITEMAP (32):
+  Raiz: /
+  Serviços (7): desinsetizacao, desratizacao, descupinizacao, 
+                controleIntegradoDePragas, controlePombos, limpezaCaixaDAgua, oxi-sanitizacao
+  Pragas (12): aranha-armadeira, barata-americana, barata-germanica, 
+              carrapato, cupim-madeira-seca, escorpiao, formiga-fantasma, 
+              formiga-sauva, mosca-domestica, pulga, rato-camundongo, pombo
+  Institucional (8): carreira, certificacoes, depoimentoClientes, 
+                    galeriaInstagram, nossoTime, indica_amigos, 
+                    treinamentoNr33, treinamentoNr35
+  Principais (4): nossosServicos, contato, quemSomos, duvidasFrequentes
+
+PÁGINAS EXCLUÍDAS (Correto):
+  ✓ header.html, footer.html (templates)
+  ✓ emConstrucao.html (erro 404)
+  ✓ google.html (verificação de domínio)
+  ✓ mail-success.html (transacional)
+  ✓ areaCliente.html (restrita)
+
+METADATA:
+  ✓ lastmod: 2026-01-15 (todas as URLs)
+  ✓ changefreq: weekly (homepage) / monthly (demais)
+  ✓ priority: 1.0 (homepage) a 0.8 (internas)
+
+IMPACTO SEO:
+  🔴 Google indexará domínio Apache offline
+  🔴 URLs Vercel não serão descobertas
+  🔴 Perda total de tráfego orgânico
+
+================================================================================
+2. ROBOTS.TXT - ANÁLISE
+================================================================================
+
+STATUS: ⚠️ PARCIALMENTE INCORRETO
+TAMANHO: 10 linhas
+
+CONTEÚDO:
+  User-agent: * (✓)
+  Allow: / (✓)
+  Disallow: areaCliente.html, mail-success.html, emConstrucao.html, 
+            google.html, header.html, footer.html (✓ todas bem justificadas)
+  Sitemap: https://www.bioforte.com.br/sitemap.xml (❌ domínio errado)
+
+AÇÃO NECESSÁRIA:
+  Trocar: Sitemap: https://www.bioforte.com.br/sitemap.xml
+  Por: Sitemap: https://biofortecombr.vercel.app/sitemap.xml
+
+================================================================================
+3. .VERCELIGNORE - ANÁLISE
+================================================================================
+
+STATUS: ✓ CORRETO
+TAMANHO: 5 linhas
+
+BLOQUEIOS:
+  ✓ SEO-REPORT-FASE02.md (relatório)
+  ✓ AUDITORIA-SEO.md (auditoria)
+  ✓ SEO-REPORT.md (relatório)
+  ✓ company-data.json (dados sensíveis)
+  ✓ .htaccess (arquivo Apache)
+
+CONCLUSÃO: Configuração apropriada para Vercel (ambiente estático)
+
+================================================================================
+4. .HTACCESS - ANÁLISE
+================================================================================
+
+STATUS: ❌ INATIVO (arquivo em .vercelignore, não executado no Vercel)
+TAMANHO: 102 linhas
+
+CONFIGURAÇÕES PERDIDAS:
+  ❌ Security headers não implementados:
+     - X-Content-Type-Options: nosniff
+     - X-Frame-Options: SAMEORIGIN
+     - Referrer-Policy: strict-origin-when-cross-origin
+     - Permissions-Policy: geolocation(), microphone(), camera()
+     - Strict-Transport-Security: 31536000 segundos
+
+  ❌ Cache headers não implementados:
+     - CSS/JS: 1 mês
+     - Imagens: 1 ano
+
+  ℹ️ Já feito automaticamente pelo Vercel:
+     - GZIP compression
+     - HTTP → HTTPS redirect
+
+AÇÃO NECESSÁRIA:
+  Criar vercel.json com headers equivalentes (security + cache)
+
+================================================================================
+5. HEADER.HTML - ANÁLISE
+================================================================================
+
+STATUS: ⚠️ DOMÍNIO ANTIGO EM CANONICAL + SCHEMA
+TAMANHO: 561 linhas | TIPO: Template de cabeçalho
+
+META TAGS:
+  ✓ charset: utf-8
+  ✓ viewport: width=device-width, initial-scale=1
+  ✓ Open Graph: og:type, og:site_name, og:locale, og:title, og:description, og:url, og:image
+  ✓ Twitter Card: twitter:card, twitter:title, twitter:description, twitter:image
+  ✓ robots: noindex, follow (correto para template)
+  ❌ canonical: https://www.bioforte.com.br/header.html (domínio antigo)
+
+SCHEMA.ORG (JSON-LD):
+  ✓ Organization (nome, email, telefone, áreas servidas, redes sociais)
+  ✓ LocalBusiness (2 unidades: Franca, Ribeirão Preto)
+  ✓ BreadcrumbList
+  ❌ Todas as URLs usam domínio antigo
+
+MENU:
+  ✓ Home | Sobre nós | Serviços | Biologia | Galeria | Carreira | Contato
+  ✓ Sobre nós: Quem Somos, Depoimentos, FAQ, Certificações, Nosso Time
+  ✓ Biologia: 12 pragas em mega menu
+  ✓ Galeria: Treinamento NR33, NR35, Fotos
+
+CONTATO:
+  ✓ Horário: Seg-Sex 07:30-17:30
+  ✓ Email: atendimento@bioforte.com.br
+  ✓ Telefones: Franca (16) 3723-0808, RP (16) 3635-2034
+
+REDES SOCIAIS:
+  ✓ Facebook, Twitter, YouTube, Instagram
+  ✓ rel="noopener", aria-label presentes
+
+================================================================================
+6. FOOTER.HTML - ANÁLISE
+================================================================================
+
+STATUS: ⚠️ COPYRIGHT DESATUALIZADO + DOMÍNIO ANTIGO
+TAMANHO: 231 linhas | TIPO: Template de rodapé
+
+UNIDADES:
+  ✓ Franca: Tel (16) 3723-0808, WA (16) 97400-7842, Email comercialfranca@
+  ✓ Ribeirão Preto: Tel (16) 3635-2034, WA (16) 97400-7842, Email comercial@
+  ✓ Uberaba: WA (34) 99298-6711, Email atendimentouberaba@
+
+FORMAS DE PAGAMENTO:
+  ✓ 6 métodos: Boleto, Elo, Hiper, Hipercard, Mastercard, Visa
+
+PROBLEMAS:
+  ❌ Copyright: "©2019" (deveria ser ©2026)
+  ❌ canonical: https://www.bioforte.com.br/footer.html (domínio antigo)
+  ❌ Schema URLs: domínio antigo
+
+CTA:
+  ✓ "Com mais de 20 anos de experiência..."
+  ✓ Botão "Contate-nos"
+  ✓ WhatsApp widget: https://api.whatsapp.com/send?phone=5516974007842
+
+================================================================================
+7. COMPANY-DATA.JSON - ANÁLISE
+================================================================================
+
+STATUS: ⚠️ DADOS INCOMPLETOS + DOMÍNIO ANTIGO
+TAMANHO: 89 linhas | BLOQUEADO: .vercelignore
+
+DADOS NAP (Name, Address, Phone):
+  ✓ name: Bioforte Saneamento Ambiental
+  ✓ legalName: Bioforte Controle de Pragas
+  ✓ email: atendimento@bioforte.com.br
+  ✓ description: "Empresa de controle de pragas urbanas... 20 anos de experiência"
+  ✓ areaServed: Franca SP, Ribeirão Preto SP, Uberaba MG
+  ✓ openingHours: Mo-Fr 07:30-17:30
+  ❌ url: https://www.bioforte.com.br/ (domínio antigo)
+  ❌ logo: https://www.bioforte.com.br/images/logoBioforte.png (domínio antigo)
+
+CAMPOS VAZIOS:
+  ❌ foundingDate: "" (data de fundação não preenchida)
+  ❌ numberOfEmployees: "" (número de funcionários não preenchido)
+  ❌ geo: "" (coordenadas geográficas vazias em ambas unidades)
+
+UNIDADES:
+  ✓ Franca: Rua João de Goes Conrado, 2525 - São José, SP
+  ✓ Ribeirão Preto: Rua João Nutti, 1135 - Jardim Paulistano, SP
+  ❌ Uberaba: Sem LocalBusiness separada (apenas em contactPoints)
+
+REDES SOCIAIS:
+  ✓ Facebook, Twitter, YouTube, Instagram (sameAs)
+
+================================================================================
+CHECKLIST DE AÇÕES - PRIORIDADES
+================================================================================
+
+🔴 PRIORIDADE 1 - URGENTE (Hoje)
+───────────────────────────────────
+
+[ ] 1. Atualizar sitemap.xml
+    Trocar: www.bioforte.com.br
+    Por: biofortecombr.vercel.app
+    Impacto: Crítico para SEO
+
+[ ] 2. Atualizar robots.txt linha 10
+    Trocar: Sitemap: https://www.bioforte.com.br/sitemap.xml
+    Por: Sitemap: https://biofortecombr.vercel.app/sitemap.xml
+
+[ ] 3. Atualizar header.html canonical (linha 16)
+    Trocar: https://www.bioforte.com.br/header.html
+    Por: https://biofortecombr.vercel.app/header.html
+
+[ ] 4. Atualizar footer.html canonical (linha 16)
+    Trocar: https://www.bioforte.com.br/footer.html
+    Por: https://biofortecombr.vercel.app/footer.html
+
+[ ] 5. Atualizar company-data.json (linhas 6-7)
+    Trocar: https://www.bioforte.com.br
+    Por: https://biofortecombr.vercel.app
+
+[ ] 6. Criar vercel.json com headers de segurança
+    Adicionar arquivo na raiz do projeto
+
+🟠 PRIORIDADE 2 - ALTA (Esta semana)
+─────────────────────────────────────
+
+[ ] 7. Atualizar copyright footer.html (linha 208)
+    Trocar: ©2019
+    Por: ©2026
+
+[ ] 8. Preencher foundingDate company-data.json
+    Adicionar: "foundingDate": "2003" (ou ano real)
+
+[ ] 9. Preencher numberOfEmployees company-data.json
+    Adicionar: "numberOfEmployees": "50" (ou número real)
+
+[ ] 10. Adicionar coordenadas geo company-data.json
+     Franca: "-20.5300, -48.3700"
+     Ribeirão Preto: "-21.1788, -47.8103"
+
+[ ] 11. Adicionar LocalBusiness Uberaba ao array units
+
+🟡 PRIORIDADE 3 - MÉDIA (Próximas semanas)
+──────────────────────────────────────────
+
+[ ] 12. Verificar status areaCliente.html (segurança/autenticação)
+
+[ ] 13. Configurar Google Search Console com novo domínio
+
+[ ] 14. Validar headers de segurança em SecurityHeaders.com
+
+[ ] 15. Monitorar indexação em GSC após correções
+
+================================================================================
+WORKFLOW PARA IMPLEMENTAÇÃO
+================================================================================
+
+1. Editar arquivos locais em C:\Users\Raphael Fernandes\Desktop\bioforte.com.br
+
+2. Fazer commit:
+   git add -A
+   git commit -m "SEO: atualizar URLs de domínio Apache para Vercel"
+   git push origin main
+
+3. Deploy:
+   vercel --prod --yes
+
+4. Verificar em:
+   • Google Search Console: verificar indexação
+   • SecurityHeaders.com: validar headers
+   • Lighthouse/PageSpeed: validar performance
+
+================================================================================
+CONCLUSÃO
+================================================================================
+
+A auditoria identificou 7 problemas principais, sendo 2 críticos que afetam 
+diretamente o SEO e indexação do site.
+
+O problema mais grave é a permanência de URLs com o domínio Apache antigo 
+(www.bioforte.com.br) em todos os arquivos críticos: sitemap, robots, headers, 
+footer, e company-data. A migração para Vercel não foi completamente finalizada.
+
+Recomendações:
+  1. Resolver problemas de Prioridade 1 HOJE
+  2. Resolver problemas de Prioridade 2 ESTA SEMANA
+  3. Resolver problemas de Prioridade 3 NAS PRÓXIMAS SEMANAS
+
+Após as correções, o site estará pronto para:
+  • Correta indexação por Google
+  • Melhor performance em Mobile
+  • Headers de segurança implementados
+  • Schema.org validation completo
+
+Auditoria realizada sem alteração de arquivos - apenas leitura e análise.
+
+================================================================================
