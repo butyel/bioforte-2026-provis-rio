@@ -1,0 +1,250 @@
+/* =========================================================
+   Bioforte — Upgrade da página de Ribeirão Preto
+   UX/UI evolutivo + Conversão + SEO/AEO + Mobile first
+   ========================================================= */
+
+/* ---------- Tokens (herdam a identidade Bioforte) ---------- */
+:root {
+  --rp-green: #02843c;
+  --rp-green-dark: #1a5c3f;
+  --rp-green-soft: #e8f4f0;
+  --rp-ink: #1a1a1a;
+  --rp-muted: #555;
+  --rp-border: #e0e0e0;
+  --rp-bg-soft: #f5f5f5;
+  --rp-radius: 10px;
+  --rp-shadow: 0 6px 24px rgba(0, 40, 15, 0.08);
+  --rp-shadow-hover: 0 12px 32px rgba(0, 40, 15, 0.14);
+  --rp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Hero ---------- */
+.rp-hero {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #eef7f2 55%, #dcefe6 100%);
+  overflow: hidden;
+  padding: 56px 0 72px;
+  border-bottom: 1px solid var(--rp-border);
+}
+.rp-hero .eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--rp-green-dark);
+  background: var(--rp-green-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.rp-hero h1 {
+  font-size: clamp(30px, 4.2vw, 46px);
+  line-height: 1.15;
+  color: var(--rp-ink);
+  margin-bottom: 18px;
+}
+.rp-hero .lead {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.65;
+  color: var(--rp-muted);
+  max-width: 620px;
+  margin-bottom: 26px;
+}
+.rp-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.rp-cta-row .btn { padding: 14px 28px; font-weight: 600; }
+.rp-cta-row .btn-whats { background: #25d366; }
+.rp-cta-row .btn-whats:hover { background: #1eb356; }
+.rp-trust {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  max-width: 620px;
+}
+.rp-trust-item {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--rp-ink);
+  box-shadow: var(--rp-shadow);
+}
+.rp-trust-item i { color: var(--rp-green); font-size: 18px; flex: 0 0 auto; }
+/* Card de contato do hero (NAP) */
+
+/* ---------- Seções genéricas ---------- */
+.rp-section { padding: 64px 0; }
+.rp-section .rp-section-head { max-width: 720px; margin: 0 auto 38px; text-align: center; }
+.rp-section .rp-section-head h2 { font-size: clamp(24px, 3vw, 34px); margin-bottom: 12px; }
+.rp-section .rp-section-head p { color: var(--rp-muted); font-size: 16px; }
+.rp-accent { color: var(--rp-green); }
+
+/* ---------- Cards de pragas (navegação rápida) ---------- */
+.rp-pest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.rp-pest-chip {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  background: #fff;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  padding: 18px 12px;
+  text-align: center;
+  color: var(--rp-ink);
+  text-decoration: none;
+  transition: transform 0.25s var(--rp-ease), box-shadow 0.25s var(--rp-ease), border-color 0.25s var(--rp-ease);
+}
+.rp-pest-chip:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--rp-shadow-hover);
+  border-color: var(--rp-green);
+  text-decoration: none;
+  color: var(--rp-ink);
+}
+.rp-pest-chip .emoji { font-size: 30px; line-height: 1; }
+.rp-pest-chip span { font-size: 13.5px; font-weight: 600; }
+
+/* ---------- Diagnóstico interativo ---------- */
+.rp-dx { background: var(--rp-bg-soft); }
+.rp-dx-step { text-align: center; }
+.rp-dx-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 22px 0; }
+.rp-dx-option {
+  background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius);
+  padding: 16px; font-size: 15px; font-weight: 600; color: var(--rp-ink); cursor: pointer;
+  text-align: left; transition: all 0.2s var(--rp-ease);
+}
+.rp-dx-option:hover { border-color: var(--rp-green); box-shadow: var(--rp-shadow); transform: translateY(-2px); }
+.rp-dx-option.is-active { border-color: var(--rp-green); background: var(--rp-green-soft); box-shadow: 0 0 0 3px rgba(2,132,60,0.15); }
+.rp-dx-result {
+  background: #fff; border: 1px solid var(--rp-border); border-left: 4px solid var(--rp-green);
+  border-radius: var(--rp-radius); padding: 22px; margin-top: 20px; display: none; text-align: left;
+}
+.rp-dx-result.is-open { display: block; animation: rpFadeUp 0.35s var(--rp-ease); }
+.rp-dx-result h3 { font-size: 19px; margin-bottom: 8px; }
+.rp-dx-result h4 { font-size: 15px; margin: 14px 0 6px; color: var(--rp-green-dark); }
+.rp-dx-result ul { margin: 6px 0 0 18px; }
+.rp-dx-result li { margin-bottom: 4px; font-size: 14.5px; line-height: 1.6; color: #333; }
+
+/* ---------- Serviços ---------- */
+.rp-service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+.rp-service-card {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius);
+  padding: 24px; transition: all 0.25s var(--rp-ease); position: relative; overflow: hidden;
+}
+.rp-service-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--rp-green); transform: scaleX(0); transform-origin: left; transition: transform 0.25s var(--rp-ease); }
+.rp-service-card:hover::before { transform: scaleX(1); }
+.rp-service-card:hover { border-color: var(--rp-green); box-shadow: var(--rp-shadow-hover); transform: translateY(-4px); }
+.rp-service-card .icon { font-size: 34px; margin-bottom: 12px; }
+.rp-service-card h3 { font-size: 17px; margin-bottom: 8px; }
+.rp-service-card p { font-size: 14px; line-height: 1.6; color: var(--rp-muted); flex: 1; }
+.rp-service-card a { margin-top: 14px; font-weight: 600; color: var(--rp-green); text-decoration: none; }
+.rp-service-card a:hover { text-decoration: underline; }
+
+/* ---------- Processo (timeline) ---------- */
+.rp-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.rp-timeline-item {
+  background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius);
+  padding: 20px; position: relative; transition: box-shadow 0.25s var(--rp-ease), transform 0.25s var(--rp-ease);
+}
+.rp-timeline-item:hover { box-shadow: var(--rp-shadow-hover); transform: translateY(-3px); }
+.rp-timeline-item .num {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--rp-green); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; font-size: 15px; margin-bottom: 12px;
+}
+.rp-timeline-item h4 { font-size: 15.5px; margin-bottom: 6px; }
+.rp-timeline-item p { font-size: 13.5px; color: var(--rp-muted); line-height: 1.55; margin: 0; }
+
+/* ---------- Prevenção por praga (linha/grade) ---------- */
+.rp-tip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+.rp-tip-card { background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius); padding: 22px; transition: box-shadow 0.25s var(--rp-ease), transform 0.25s var(--rp-ease); }
+.rp-tip-card:hover { box-shadow: var(--rp-shadow-hover); transform: translateY(-3px); }
+.rp-tip-card > h3 { font-size: 17px; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.rp-tip-card h4 { font-size: 13.5px; text-transform: uppercase; letter-spacing: .4px; color: var(--rp-green-dark); margin: 12px 0 6px; }
+.rp-tip-card p, .rp-tip-card li { font-size: 14px; line-height: 1.6; color: #333; }
+.rp-tip-card ul { margin: 0 0 0 18px; }
+.rp-tip-card .rp-tip-link { display: inline-block; margin-top: 12px; font-weight: 600; color: var(--rp-green); }
+
+/* ---------- FAQ (accordion) ---------- */
+.rp-faq-group { margin-bottom: 26px; }
+.rp-faq-group > h3 { font-size: 19px; color: var(--rp-green-dark); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--rp-green-soft); }
+.rp-accordion { background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius); margin-bottom: 10px; overflow: hidden; }
+.rp-accordion button {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: none; border: none; padding: 16px 18px; text-align: left; cursor: pointer;
+  font: inherit; font-weight: 600; font-size: 15px; color: var(--rp-ink);
+}
+.rp-accordion button .fa { font-size: 13px; color: var(--rp-green); transition: transform 0.25s var(--rp-ease); flex: 0 0 auto; }
+.rp-accordion.is-open button .fa { transform: rotate(180deg); }
+.rp-accordion .rp-a-body { max-height: 0; overflow: hidden; transition: max-height 0.3s var(--rp-ease); }
+.rp-accordion .rp-a-inner { padding: 0 18px 18px; font-size: 14.5px; line-height: 1.65; color: #333; }
+.rp-accordion .rp-a-inner p { margin: 0; }
+
+/* ---------- Dicas / guias ---------- */
+.rp-guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.rp-guide-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius); padding: 20px; transition: all 0.25s var(--rp-ease); }
+.rp-guide-card:hover { border-color: var(--rp-green); box-shadow: var(--rp-shadow-hover); transform: translateY(-3px); }
+.rp-guide-card .cat { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--rp-green-dark); }
+.rp-guide-card h3 { font-size: 16px; margin: 8px 0 8px; }
+.rp-guide-card p { font-size: 14px; color: var(--rp-muted); line-height: 1.55; flex: 1; }
+.rp-guide-card a { font-weight: 600; color: var(--rp-green); margin-top: 12px; }
+.rp-guide-card a:hover { text-decoration: underline; }
+
+/* ---------- GEO / respostas diretas ---------- */
+.rp-answer { background: #fff; border: 1px solid var(--rp-border); border-radius: var(--rp-radius); padding: 22px; margin-bottom: 14px; }
+.rp-answer h3 { font-size: 17px; margin-bottom: 8px; }
+.rp-answer p { font-size: 14.5px; color: #333; line-height: 1.7; margin: 0; }
+
+/* ---------- Mini CTA inline ---------- */
+.rp-inline-cta { text-align: center; background: var(--rp-green-soft); border: 1px dashed var(--rp-green); border-radius: var(--rp-radius); padding: 26px 20px; margin: 34px 0; }
+.rp-inline-cta h3 { font-size: 20px; margin-bottom: 6px; }
+.rp-inline-cta p { color: var(--rp-muted); margin-bottom: 14px; }
+
+/* ---------- CTA mobile fixo ---------- */
+.rp-mobile-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9990;
+  display: none;
+  grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(6px);
+  border-top: 1px solid var(--rp-border); box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+}
+.rp-mobile-cta a { display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; padding: 13px 10px; font-weight: 700; font-size: 14.5px; color: #fff; text-decoration: none; }
+.rp-mobile-cta .m-whats { background: #25d366; }
+.rp-mobile-cta .m-call { background: var(--rp-green); }
+body.rp-has-mobile-cta { padding-bottom: 74px; }
+
+@media (max-width: 767px) {
+  .rp-mobile-cta { display: grid; }
+  .rp-mobile-cta + .desktop-bottom-spacer { display: block; }
+}
+
+/* ---------- Microinterações ---------- */
+.rp-reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s var(--rp-ease), transform .6s var(--rp-ease); }
+.rp-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes rpFadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Respeito a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .rp-reveal { opacity: 1; transform: none; transition: none; }
+  .rp-timeline-item, .rp-pest-chip, .rp-service-card, .rp-guide-card, .rp-tip-card { transition: none; }
+  .rp-dx-result.is-open { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Scroll suave p/ âncoras */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 20px; }
+
+/* Segurança: nada de grids estourando em telas pequenas */
+@media (max-width: 400px) {
+  .rp-pest-grid { grid-template-columns: repeat(2, 1fr); }
+  .rp-hero { padding: 40px 0 54px; }
+  .rp-section { padding: 46px 0; }
+}
