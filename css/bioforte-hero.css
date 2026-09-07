@@ -1,0 +1,629 @@
+/* =========================================================
+   Bioforte — Hero moderno + refinamentos da Home
+   Paleta oficial preservada:
+   - Verde principal:  #02843c
+   - Verde escuro:     #1a5c3f
+   - Tintas de apoio:  #e8f4f0 / #eef7f2 / #dcefe6
+   - Texto:            #1a1a1a / #555 / #353535
+   Carregado por último (index.html) para sobrepor o tema.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. HERO
+   --------------------------------------------------------- */
+.bio-hero {
+  position: relative;
+  background: linear-gradient(180deg, #eef7f2 0%, #f7fbf9 52%, #ffffff 100%);
+  padding: 48px 0 72px;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bio-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+/* ---------- Coluna de texto ---------- */
+.bio-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1a5c3f;
+  background: #ffffff;
+  border: 1px solid #d0e4da;
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+.bio-hero-eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #02843c;
+  flex: 0 0 auto;
+}
+
+.bio-hero h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+}
+
+/* Termo dinâmico: ocupa a própria linha e reserva altura
+   (medida por JS) para não causar salto de layout. */
+.bio-hero-rotator {
+  display: block;
+  width: 100%;
+  color: #02843c;
+}
+.bio-hero-rotator.is-measuring {
+  visibility: hidden;
+}
+
+.bio-hero-word {
+  display: inline-block;
+  will-change: opacity, transform;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.bio-hero-word--out {
+  opacity: 0;
+  transform: translateY(-22%);
+}
+.bio-hero-word--in {
+  opacity: 0;
+  transform: translateY(22%);
+}
+
+.bio-hero-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 560px;
+  margin: 0 0 12px;
+}
+
+.bio-hero-cities {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #1a5c3f;
+  margin: 0 0 26px;
+}
+.bio-hero-cities i {
+  color: #02843c;
+  font-size: 16px;
+}
+
+/* ---------- Ações ---------- */
+.bio-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.bio-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease,
+              border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.bio-hero-btn:hover,
+.bio-hero-btn:focus {
+  text-decoration: none;
+}
+.bio-hero-btn:active {
+  transform: translateY(1px);
+}
+
+.bio-hero-btn--primary {
+  background: #02843c;
+  color: #ffffff;
+  border: 2px solid #02843c;
+}
+.bio-hero-btn--primary:hover,
+.bio-hero-btn--primary:focus {
+  background: #1a5c3f;
+  border-color: #1a5c3f;
+  box-shadow: 0 12px 24px rgba(2, 132, 60, 0.28);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.bio-hero-btn--outline {
+  background: transparent;
+  color: #1a5c3f;
+  border: 2px solid #1a5c3f;
+}
+.bio-hero-btn--outline:hover,
+.bio-hero-btn--outline:focus {
+  background: #1a5c3f;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(26, 92, 63, 0.22);
+  transform: translateY(-2px);
+}
+
+.bio-hero-btn--dark {
+  background: #02843c;
+  color: #ffffff;
+  border: 2px solid #02843c;
+}
+.bio-hero-btn--dark:hover,
+.bio-hero-btn--dark:focus {
+  background: #026a31;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(26, 92, 63, 0.28);
+  transform: translateY(-2px);
+}
+
+.bio-hero-btn i {
+  font-size: 14px;
+}
+
+/* ---------- Indicadores de confiança ---------- */
+.bio-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bio-hero-trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1a5c3f;
+}
+.bio-hero-trust li i {
+  color: #02843c;
+  font-size: 14px;
+  width: 15px;
+  text-align: center;
+}
+
+/* ---------- Coluna visual ---------- */
+.bio-hero-col-visual {
+  position: relative;
+  max-width: 520px;
+  margin-left: auto;
+  width: 100%;
+}
+
+.bio-hero-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 460px;
+  padding: 30px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(150deg, #02843c 0%, #1a5c3f 100%);
+  box-shadow: 0 26px 52px rgba(2, 132, 60, 0.28);
+}
+
+/* Formas decorativas (somente paleta, sem insetos) */
+.bio-hero-deco {
+  position: absolute;
+  top: -60px;
+  right: -50px;
+  width: 260px;
+  height: 260px;
+  opacity: 0.14;
+  pointer-events: none;
+}
+.bio-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.bio-hero-orb--a {
+  width: 170px;
+  height: 170px;
+  right: -56px;
+  bottom: -46px;
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.05) 68%);
+  animation: bio-float 9s ease-in-out infinite;
+}
+.bio-hero-orb--b {
+  width: 96px;
+  height: 96px;
+  left: -40px;
+  top: -34px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  animation: bio-float 11s ease-in-out infinite reverse;
+}
+.bio-hero-ring {
+  position: absolute;
+  width: 148px;
+  height: 148px;
+  left: 12%;
+  bottom: 18%;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes bio-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Badge de marca (dado real: +30 anos) */
+.bio-hero-badge {
+  position: relative;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 22px rgba(0, 40, 15, 0.22);
+}
+.bio-hero-badge strong {
+  font-size: 24px;
+  font-weight: 900;
+  color: #02843c;
+  line-height: 1;
+}
+.bio-hero-badge span {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #1a5c3f;
+  line-height: 1.3;
+}
+
+/* Card principal de contato */
+.bio-hero-contact {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 16px 34px rgba(0, 40, 15, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bio-hero-contact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 40, 15, 0.28);
+}
+
+.bio-hero-card-eyebrow {
+  position: relative;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #02843c;
+  margin: 0 0 4px;
+}
+.bio-hero-card-title {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+}
+
+.bio-hero-contact ul {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px 18px;
+}
+.bio-hero-contact li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  color: #353535;
+  line-height: 1.5;
+}
+.bio-hero-contact li i {
+  width: 15px;
+  flex: 0 0 auto;
+  text-align: center;
+  color: #02843c;
+}
+.bio-hero-contact li a {
+  color: #02843c;
+  font-weight: 700;
+}
+.bio-hero-contact li a:hover {
+  text-decoration: underline;
+}
+
+/* Card secundário — especialista */
+.bio-hero-specialist {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #14392a;
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 16px 30px rgba(0, 30, 12, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bio-hero-specialist:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(0, 30, 12, 0.34);
+}
+.bio-hero-specialist .bio-hero-card-title {
+  color: #ffffff;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.bio-hero-specialist .bio-hero-btn {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #02843c;
+  border-color: #ffffff;
+}
+.bio-hero-specialist .bio-hero-btn:hover,
+.bio-hero-specialist .bio-hero-btn:focus {
+  background: #e8f4f0;
+  color: #02843c;
+  border-color: #e8f4f0;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- Entrada gradual ---------- */
+.bio-hero-col-text > *,
+.bio-hero-col-visual {
+  animation: bio-rise 0.7s cubic-bezier(0.22, 0.68, 0.35, 1) both;
+}
+.bio-hero-col-text > *:nth-child(1) { animation-delay: 0.05s; }
+.bio-hero-col-text > *:nth-child(2) { animation-delay: 0.18s; }
+.bio-hero-col-text > *:nth-child(3) { animation-delay: 0.30s; }
+.bio-hero-col-text > *:nth-child(4) { animation-delay: 0.42s; }
+.bio-hero-col-text > *:nth-child(5) { animation-delay: 0.54s; }
+.bio-hero-col-visual { animation-delay: 0.30s; animation-duration: 0.9s; }
+
+@keyframes bio-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Foco visível ---------- */
+.bio-hero-btn:focus-visible,
+.bio-hero-contact a:focus-visible,
+.bio-hero-specialist a:focus-visible {
+  outline: 3px solid #02843c;
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------
+   2. REFINAMENTOS DA HOME (scoped em body#home)
+   --------------------------------------------------------- */
+body#home {
+  overflow-x: hidden;
+}
+
+/* Ritmo vertical e hierarquia de seções */
+body#home .section {
+  padding: 68px 0;
+}
+body#home .section-title {
+  margin-bottom: 34px;
+  padding: 0 24px;
+}
+body#home .section-title h2 {
+  font-size: clamp(26px, 2.6vw, 34px);
+  letter-spacing: 0.2px;
+}
+body#home .section-title h2::before {
+  height: 3px;
+  border-radius: 2px;
+}
+body#home .section-title p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666;
+  max-width: 620px;
+}
+body#home #services {
+  scroll-margin-top: 28px;
+}
+
+/* Hub de pragas */
+body#home .bio-pragmahub {
+  padding: 56px 0;
+}
+
+/* Serviços: cards inteiros clicáveis */
+body#home .services .single-services {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+body#home .services .single-services h2 {
+  color: inherit;
+}
+body#home .services .single-services:hover {
+  text-decoration: none;
+}
+body#home .services .single-services:focus-visible {
+  outline: 3px solid #02843c;
+  outline-offset: 4px;
+}
+
+/* Faixa verde de recursos logo abaixo do hero */
+body#home .features {
+  padding: 14px 0;
+}
+body#home .features .features-single {
+  padding: 34px 26px;
+}
+
+/* Contador */
+body#home .counter {
+  padding: 72px 0;
+}
+
+/* Rodapé + botão flutuante não cobrem conteúdo no mobile */
+body#home .whatsapp {
+  z-index: 9990;
+}
+
+/* Cabeçalho não ocupa espaço excessivo nem ganha margem no mobile */
+@media (max-width: 767px) {
+  .header {
+    margin: 0 !important;
+  }
+  .header .logo img {
+    max-width: 190px;
+  }
+}
+
+/* ---------------------------------------------------------
+   3. RESPONSIVO
+   --------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .bio-hero-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bio-hero {
+    min-height: 0;
+    padding: 44px 0 56px;
+  }
+  .bio-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .bio-hero-col-visual {
+    margin: 0 auto;
+  }
+  .bio-hero-lead {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bio-hero {
+    padding: 36px 0 48px;
+  }
+  .bio-hero-grid {
+    gap: 38px;
+  }
+  .bio-hero h1 {
+    font-size: clamp(27px, 7.6vw, 36px);
+    line-height: 1.18;
+  }
+  .bio-hero-lead {
+    font-size: 15.5px;
+  }
+  .bio-hero-actions {
+    flex-direction: column;
+  }
+  .bio-hero-btn {
+    width: 100%;
+    max-width: none;
+  }
+  .bio-hero-trust {
+    gap: 8px 16px;
+  }
+  .bio-hero-trust li {
+    font-size: 13px;
+  }
+  .bio-hero-panel {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 18px;
+  }
+  .bio-hero-badge {
+    padding: 8px 13px;
+  }
+  .bio-hero-badge strong {
+    font-size: 20px;
+  }
+  .bio-hero-specialist {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+  .bio-hero-specialist .bio-hero-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 389px) {
+  .bio-hero h1 {
+    font-size: 26px;
+  }
+  .bio-hero-contact ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body#home .section {
+    padding: 56px 0;
+  }
+}
+
+/* ---------------------------------------------------------
+   4. MOVIMENTO REDUZIDO
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .bio-hero {
+    min-height: 0;
+  }
+  .bio-hero *,
+  .bio-hero *::before,
+  .bio-hero *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .bio-hero-word {
+    transition: none;
+  }
+}

@@ -66,35 +66,12 @@ Version:	1.1
 		});
 
 		/*===============================
-		04. Home Slider One
+		04. Home Slider One [REMOVED]
+		Slider de imagens removido do index.
+		O carrossel owlCarousel continua ativo
+		para testemunhos, clientes e blogs.
 		=================================*/ 
-		$(".slider-one").owlCarousel({
-			loop:true,
-			autoplay:true,
-			smartSpeed: 700,
-			autoplayTimeout:4500,
-			autoplayHoverPause:true,
-			center:false,
-			nav:true,
-			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-			dots:true,
-			items:1,
-			responsive:{
-				300: {
-					nav:false,
-				},
-				480: {
-					nav:false,
-				},
-				768: {
-					nav:false,
-				},
-				1170: {
-					nav:true,
-				},
-			}
-		});	
-		
+
 		/*===============================
 		05. Home Slider Two
 		=================================*/ 
@@ -317,9 +294,17 @@ Version:	1.1
 		18. Animate Scroll JS
 		======================================*/ 
 		$('.btn, .slicknav_nav li a').on('click', function(event) {
+			var href = $(this).attr('href');
+			if (!href || href.charAt(0) !== '#') {
+				return;
+			}
+			var $target = $(href);
+			if (!$target.length) {
+				return;
+			}
 			var $anchor = $(this);
 			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top -0 
+				scrollTop: $target.offset().top - 0 
 			}, 1000, 'easeInOutQuart');
 			event.preventDefault();
 		});
