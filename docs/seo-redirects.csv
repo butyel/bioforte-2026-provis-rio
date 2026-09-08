@@ -1,0 +1,4 @@
+URL_origem,URL_destino,tipo,status,justificativa
+/index.html,/,permanente (308),CONFIGURADO,Consolidação da home: / e /index.html serviam o mesmo conteúdo. O redirect preserva parâmetros de consulta por padrão no Vercel.
+/area-atuacao.html,(nenhuma),removida (404/410),REMOVIDA EM 08/09/2026,Página excluída (removida do menu e navegação). Não redirecionar para a home porque não há conteúdo equivalente único; manter 404/410 real para URL inexistente.
+/indica_amigos.html,(nenhuma),removida (404/410),REMOVIDA EM 10/09/2026,Página "Indique um Amigo" excluída; link removido do menu e da home. Manter 404/410.

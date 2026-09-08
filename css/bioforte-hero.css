@@ -62,7 +62,26 @@
   line-height: 1.12;
   letter-spacing: -0.5px;
   color: #1a1a1a;
-  margin: 0 0 18px;
+  margin: 0 0 8px;
+}
+
+/* Linha complementar com o rotator de serviços:
+   mantém o efeito visual sem que o H1 dependa da animação. */
+.bio-hero-sub {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #02843c;
+  margin: 0 0 16px;
+}
+.bio-hero-sub .bio-hero-rotator {
+  display: inline-block;
+  width: auto;
+}
+.bio-hero-sub .bio-hero-word {
+  white-space: nowrap;
 }
 
 /* Termo dinâmico: ocupa a própria linha e reserva altura
