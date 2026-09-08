@@ -137,19 +137,8 @@ Version:	1.1
 		/*===============================
 		09. Testemunho
 		=================================*/ 
-		$(".testimonial-carousel").owlCarousel({
-			loop:true,
-			autoplay:false,
-			smartSpeed: 700,
-			center:false,
-			margin:15,
-			autoplay:true,
-			autoplayTimeout:4000,
-			nav:true,
-			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-			dots:false,
-			items:1,
-		});	
+		/* Exibição em grade responsiva (substitui o carrossel Owl que desconfigurava) */
+		// $(".testimonial-carousel").owlCarousel({ ... });
 		
 		/*===============================
 		10. Checkbox JS
