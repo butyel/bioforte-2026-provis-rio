@@ -211,10 +211,34 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://biofortecombr.vercel.app/area-atuacao.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://biofortecombr.vercel.app/controle-de-pragas-guarapuava.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://biofortecombr.vercel.app/guia-dedetizacao-guarapuava-pr.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://biofortecombr.vercel.app/guia-baratas-escorpioes-guarapuava.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://biofortecombr.vercel.app/guia-controle-de-pragas-franca-regiao.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://biofortecombr.vercel.app/guia-controle-de-pragas-uberaba-agro.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://biofortecombr.vercel.app/dicas.html</loc>

@@ -9,10 +9,10 @@
 ## 1. ARQUITETURA ATUAL
 
 ### Páginas (52 HTML)
-- **Institucionais:** index (home), quemSomos, nossoTime, certificacoes, contato, carreira, areaCliente, depoimentoClientes, duvidasFrequentes, indica_amigos, area-atuacao, emConstrucao, mail-success
+- **Institucionais:** index (home), quemSomos, nossoTime, certificacoes, contato, carreira, areaCliente, depoimentoClientes, duvidasFrequentes, indica_amigos, emConstrucao, mail-success
 - **Serviços (7):** desinsetizacao, desratizacao, descupinizacao, controleIntegradoDePragas, controlePombos, limpezaCaixaDAgua, oxi-sanitizacao
 - **Pragas (12):** aranha‑armadeira, barata‑americana, barata‑germanica, carrapato, cupim‑madeira‑seca, escorpiao, formiga‑fantasma, formiga‑sauva, mosca‑domestica, pulga, pombo, rato‑camundongo
-- **Unidades (3):** controle‑de‑pragas‑franca/ribeirao‑preto/uberaba — **design referência (upgrade‑rp)**
+- **Unidades (4):** controle‑de‑pragas‑franca/ribeirao‑preto/uberaba/guarapuava — **design referência (upgrade‑rp)**
 - **Conteúdo:** dicas (hub), 8 guias (guia-…), galeriaInstagram, treinamentoNr33/35
 - **Templates/fragmentos:** header.html, footer.html, google.html, google1d6aab6188bd04a0.html (verificação)
 

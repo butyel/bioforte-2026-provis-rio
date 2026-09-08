@@ -63,7 +63,7 @@ const ACTIVE = {
   'controle-de-pragas-franca.html': 'unidades',
   'controle-de-pragas-ribeirao-preto.html': 'unidades',
   'controle-de-pragas-uberaba.html': 'unidades',
-  'area-atuacao.html': 'unidades',
+  'controle-de-pragas-guarapuava.html': 'unidades',
   // Conteúdo
   'dicas.html': 'conteudo',
   'galeriaInstagram.html': 'conteudo',
