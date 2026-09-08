@@ -59,11 +59,13 @@ Version:	1.1
 		}
 		
 		/*==============================
-		03. Mobile Nav
+		03. Mobile Nav (estrutura antiga opcional)
 		================================*/ 	
-		$('.nav').slicknav({
-			prependTo:".mobile-nav",
-		});
+		if ($('.nav').length && $('.mobile-nav').length) {
+			$('.nav').slicknav({
+				prependTo:".mobile-nav",
+			});
+		}
 
 		/*===============================
 		04. Home Slider One [REMOVED]

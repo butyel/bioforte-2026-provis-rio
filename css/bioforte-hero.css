@@ -440,10 +440,6 @@
 /* ---------------------------------------------------------
    2. REFINAMENTOS DA HOME (scoped em body#home)
    --------------------------------------------------------- */
-body#home {
-  overflow-x: hidden;
-}
-
 /* Ritmo vertical e hierarquia de seções */
 body#home .section {
   padding: 68px 0;
@@ -466,13 +462,20 @@ body#home .section-title p {
   color: #666;
   max-width: 620px;
 }
-body#home #services {
-  scroll-margin-top: 28px;
+body#home #services,
+body#home section[id] {
+  scroll-margin-top: 88px;
 }
 
 /* Hub de pragas */
 body#home .bio-pragmahub {
   padding: 56px 0;
+}
+
+/* Correção: margens negativas do Bootstrap vazam 15px na home */
+body#home .why-choose .container-fluid .row.fix {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Serviços: cards inteiros clicáveis */
