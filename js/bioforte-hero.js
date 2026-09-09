@@ -1,92 +1,67 @@
-/* =========================================================
-   Bioforte — Hero dinâmico (rotação de serviços)
-   - Lista real de serviços extraída de um <script type="application/json">
-   - Reserva altura para o maior termo (sem layout shift)
-   - Rotação com fade + movimento vertical curto
-   - Respeita prefers-reduced-motion (conteúdo estático)
-   - Scroll suave para âncoras internas do hero
-   Sem dependências. Funciona mesmo sem JS (mostra o 1º termo).
-   ========================================================= */
+/* Rotação discreta, pausável e sem deslocar o conteúdo. Sem dependências. */
 (function () {
   'use strict';
-
-  var reduceMotion = window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var dataScript = document.getElementById('bio-hero-services');
-  var rotator = document.querySelector('.bio-hero-rotator');
-  if (!rotator || !dataScript) return;
-  var word = rotator.querySelector('.bio-hero-word');
-  if (!word) return;
-
+  var hero = document.querySelector('.bio-hero');
+  var data = document.getElementById('bio-hero-services');
+  var word = hero && hero.querySelector('.bio-hero-word');
+  var rotator = hero && hero.querySelector('.bio-hero-rotator');
+  var pause = hero && hero.querySelector('.bio-hero-pause');
+  if (!data || !word || !rotator) return;
   var terms;
-  try {
-    terms = JSON.parse(dataScript.textContent);
-  } catch (err) {
-    return;
-  }
-  if (Object.prototype.toString.call(terms) !== '[object Array]') return;
-  terms = terms
-    .map(function (t) { return String(t).trim(); })
-    .filter(Boolean);
-  if (!terms.length) return;
-
-  var first = (word.textContent || '').trim();
-  if (terms[0] !== first) {
-    terms = [first].concat(terms.filter(function (t) { return t !== first; }));
-  }
+  try { terms = JSON.parse(data.textContent); } catch (e) { return; }
+  if (!Array.isArray(terms) || terms.length < 2) return;
+  terms = terms.filter(function (term) { return typeof term === 'string' && term.trim(); });
+  if (terms.length < 2) return;
+  var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var paused = false;
+  var visible = true;
+  var index = 0;
+  var timer = null;
+  var swapTimer = null;
 
   function measure() {
-    var maxH = 0;
-    rotator.classList.add('is-measuring');
-    for (var i = 0; i < terms.length; i++) {
-      word.textContent = terms[i];
-      if (word.offsetHeight > maxH) maxH = word.offsetHeight;
-    }
-    word.textContent = first;
-    rotator.classList.remove('is-measuring');
-    rotator.style.minHeight = maxH + 'px';
-  }
-
-  measure();
-  var resizeTimer;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(measure, 200);
-  });
-
-  if (reduceMotion) return; // conteúdo estático, sem rotação
-
-  function swap(next) {
-    word.classList.add('bio-hero-word--out');
-    setTimeout(function () {
-      word.textContent = next;
-      word.classList.remove('bio-hero-word--out');
-      word.classList.add('bio-hero-word--in');
-      void word.offsetWidth;
-      word.classList.remove('bio-hero-word--in');
-    }, 300);
-  }
-
-  var idx = 0;
-  setInterval(function () {
-    idx = (idx + 1) % terms.length;
-    swap(terms[idx]);
-  }, 3400);
-
-  /* Scroll suave para âncoras internas do hero */
-  var anchors = document.querySelectorAll('.bio-hero a[href^="#"]');
-  for (var a = 0; a < anchors.length; a++) {
-    anchors[a].addEventListener('click', function (e) {
-      var href = this.getAttribute('href');
-      if (!href || href.length < 2) return;
-      var target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior: reduceMotion ? 'auto' : 'smooth',
-        block: 'start'
-      });
+    var current = word.textContent;
+    var height = parseFloat(window.getComputedStyle(rotator).fontSize) * 2.7;
+    terms.forEach(function (term) {
+      word.textContent = term;
+      height = Math.max(height, word.offsetHeight);
     });
+    word.textContent = current;
+    rotator.style.minHeight = height + 'px';
   }
+  function stop() {
+    clearInterval(timer);
+    clearTimeout(swapTimer);
+    timer = null;
+    word.classList.remove('bio-hero-word--out');
+  }
+  function update() {
+    stop();
+    if (pause) pause.hidden = motion.matches;
+    if (motion.matches || paused || document.hidden || !visible) return;
+    timer = setInterval(function () {
+      word.classList.add('bio-hero-word--out');
+      swapTimer = setTimeout(function () {
+        index = (index + 1) % terms.length;
+        word.textContent = terms[index];
+        word.classList.remove('bio-hero-word--out');
+      }, 180);
+    }, 4800);
+  }
+  if (pause) pause.addEventListener('click', function () {
+    paused = !paused;
+    pause.setAttribute('aria-label', paused ? 'Retomar animação dos serviços' : 'Pausar animação dos serviços');
+    pause.querySelector('i').className = paused ? 'fa fa-play' : 'fa fa-pause';
+    update();
+  });
+  measure();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(rotator);
+  else window.addEventListener('resize', measure);
+  document.addEventListener('visibilitychange', update);
+  if (motion.addEventListener) motion.addEventListener('change', update);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; update(); }).observe(hero);
+  }
+  update();
 })();

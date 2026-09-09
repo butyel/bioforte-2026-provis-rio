@@ -190,46 +190,29 @@
 			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
     		<link rel="stylesheet" href="css/bioforte-header.css">
+			<link rel="stylesheet" href="css/bioforte-layout.css">
 	</head>
     <body class="box-bg" id="home">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PJ9NKS"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 		<a class="skip-link" href="#main">Pular para o conteúdo</a>
-			<!-- INICIO DO PRELOADER -->
-			<div id="preloader">
-					<div class="inner">
-					   <div class="bolas">
-						  <label id="carregando">Carregando...</label>
-						  <div></div>
-						  <div></div>
-						  <div></div>                    
-					   </div>
-					</div>
-				</div>
-			<!-- FIM DO PRELOADER -->
+
 		<div class="boxed-layout">
 			
 			
 			
 			<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
 <header id="header" class="header bf-header">
 				<!-- Topbar -->
 				<div class="bf-topbar">
 					<div class="container bf-topbar-row">
 						<a class="bf-topbar-item bf-topbar-whats" href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Bioforte%20sobre%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="index" data-location="topbar">
 							<i class="fa fa-whatsapp" aria-hidden="true"></i>
-							<span>(16) 3723-0808</span>
+							<span><span class="bf-topbar-label">Fale com a Bioforte: </span>(16) 3723-0808</span>
 						</a>
-						<div class="bf-topbar-right">
-							<span class="bf-topbar-item bf-topbar-phones">
-								<i class="fa fa-phone" aria-hidden="true"></i>
-								<span>(16) 3723-0808 · (16) 3635-2034</span>
-							</span>
+						<div class="bf-topbar-right"><a class="bf-topbar-item bf-topbar-client" href="areaCliente.html"><i class="fa fa-user-o" aria-hidden="true"></i> Área do Cliente</a>
+							<a class="bf-topbar-item bf-topbar-phone" href="tel:+551636352034"><i class="fa fa-phone" aria-hidden="true"></i><span>Ribeirão Preto: (16) 3635-2034</span></a>
 							<span class="bf-topbar-item bf-topbar-clock">
 								<i class="fa fa-clock-o" aria-hidden="true"></i>
 								<span>Seg. a Sex. · 07:30 às 17:30</span>
@@ -249,14 +232,14 @@
 						<nav class="bf-nav" aria-label="Menu principal">
 							<ul class="bf-nav-list">
 								<li class="is-active bf-nav-item" data-nav="home">
-									<a class="bf-nav-link" href="/" aria-current="page">Home</a>
+									<a class="bf-nav-link" href="/" aria-current="page">Início</a>
 								</li>
 								<li class="bf-nav-item bf-has-sub" data-nav="empresa">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="quemSomos.html">A Empresa</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu A Empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu A Empresa" aria-controls="bf-sub-empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-empresa">
 										<a href="quemSomos.html">Quem Somos</a>
 										<a href="nossoTime.html">Nosso Time</a>
 										<a href="certificacoes.html">Certificações</a>
@@ -269,9 +252,9 @@
 								<li class="bf-nav-item bf-has-sub" data-nav="servicos">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="nossosServicos.html">Serviços</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Serviços"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Serviços" aria-controls="bf-sub-servicos"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-servicos">
 										<a href="nossosServicos.html">Nossos Serviços</a>
 										<a href="desinsetizacao.html">Desinsetização</a>
 										<a href="desratizacao.html">Desratização</a>
@@ -285,9 +268,9 @@
 								<li class="bf-nav-item bf-has-sub" data-nav="pragas">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="pragas.html">Pragas</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Pragas" aria-controls="bf-sub-pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub bf-sub--2col">
+									<div class="bf-sub bf-sub--2col" id="bf-sub-pragas">
 										<a href="pragas.html">Central de Pragas</a>
 										<a href="aranha-armadeira.html">Aranha Armadeira</a>
 										<a href="barata-americana.html">Barata Americana</a>
@@ -306,9 +289,9 @@
 								<li class="bf-nav-item bf-has-sub bf-align-right" data-nav="unidades">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="controle-de-pragas-franca.html">Unidades</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Unidades" aria-controls="bf-sub-unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-unidades">
 										<a href="controle-de-pragas-franca.html">Franca/SP</a>
 										<a href="controle-de-pragas-ribeirao-preto.html">Ribeirão Preto/SP</a>
 										<a href="controle-de-pragas-uberaba.html">Uberaba/MG</a>
@@ -317,10 +300,10 @@
 								</li>
 								<li class="bf-nav-item bf-has-sub bf-align-right" data-nav="conteudo">
 									<div class="bf-parentholder">
-										<a class="bf-nav-link" href="dicas.html">Conteúdo</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Conteúdo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<a class="bf-nav-link" href="dicas.html">Dicas e guias</a>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Dicas e guias" aria-controls="bf-sub-conteudo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-conteudo">
 										<a href="dicas.html">Dicas e Guias</a>
 										<a href="duvidasFrequentes.html">Central de Dúvidas</a>
 										<a href="galeriaInstagram.html">Galeria de Fotos</a>
@@ -328,9 +311,7 @@
 										<a href="treinamentoNr35.html">Treinamento NR 35</a>
 									</div>
 								</li>
-								<li class="bf-nav-item" data-nav="cliente">
-									<a class="bf-nav-link" href="areaCliente.html">Área do Cliente</a>
-								</li>
+
 							</ul>
 						</nav>
 
@@ -346,20 +327,20 @@
 				<!-- /Menu principal -->
 
 				<!-- Painel móvel -->
-				<aside class="bf-mobile" id="bf-mobile-panel" aria-hidden="true" aria-label="Menu de navegação móvel">
+				<aside class="bf-mobile" id="bf-mobile-panel" aria-hidden="true" role="dialog" aria-modal="true" inert aria-label="Menu de navegação móvel">
 					<div class="bf-mobile-head">
-						<a href="/" class="bf-mobile-logo" aria-label="Bioforte Controle de Pragas — página inicial" tabindex="-1"><img src="images/logoBioforte.png" alt="Bioforte Controle de Pragas"></a>
-						<button class="bf-mobile-close" type="button" aria-label="Fechar menu de navegação" tabindex="-1"><i class="fa fa-times" aria-hidden="true"></i></button>
+						<a href="/" class="bf-mobile-logo" aria-label="Bioforte Controle de Pragas — página inicial"><img src="images/logoBioforte.png" alt="Bioforte Controle de Pragas"></a>
+						<button class="bf-mobile-close" type="button" aria-label="Fechar menu de navegação"><i class="fa fa-times" aria-hidden="true"></i></button>
 					</div>
 					<nav class="bf-mobile-nav" aria-label="Navegação móvel">
 						<ul>
-							<li class="is-active bf-m-link" data-nav="home"><a href="/">Home</a></li>
+							<li class="is-active bf-m-link" data-nav="home"><a href="/" aria-current="page">Início</a></li>
 							<li class="bf-m-sub" data-nav="empresa">
 								<div class="bf-m-row">
 									<a href="quemSomos.html">A Empresa</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu A Empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu A Empresa" aria-controls="bf-m-sub-empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-empresa">
 									<a href="quemSomos.html">Quem Somos</a>
 									<a href="nossoTime.html">Nosso Time</a>
 									<a href="certificacoes.html">Certificações</a>
@@ -372,9 +353,9 @@
 							<li class="bf-m-sub" data-nav="servicos">
 								<div class="bf-m-row">
 									<a href="nossosServicos.html">Serviços</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Serviços"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Serviços" aria-controls="bf-m-sub-servicos"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-servicos">
 									<a href="nossosServicos.html">Nossos Serviços</a>
 									<a href="desinsetizacao.html">Desinsetização</a>
 									<a href="desratizacao.html">Desratização</a>
@@ -388,9 +369,9 @@
 							<li class="bf-m-sub" data-nav="pragas">
 								<div class="bf-m-row">
 									<a href="pragas.html">Pragas</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Pragas" aria-controls="bf-m-sub-pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-pragas">
 									<a href="pragas.html">Central de Pragas</a>
 									<a href="aranha-armadeira.html">Aranha Armadeira</a>
 									<a href="barata-americana.html">Barata Americana</a>
@@ -409,9 +390,9 @@
 							<li class="bf-m-sub" data-nav="unidades">
 								<div class="bf-m-row">
 									<a href="controle-de-pragas-franca.html">Unidades</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Unidades" aria-controls="bf-m-sub-unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-unidades">
 									<a href="controle-de-pragas-franca.html">Franca/SP</a>
 									<a href="controle-de-pragas-ribeirao-preto.html">Ribeirão Preto/SP</a>
 									<a href="controle-de-pragas-uberaba.html">Uberaba/MG</a>
@@ -420,10 +401,10 @@
 							</li>
 							<li class="bf-m-sub" data-nav="conteudo">
 								<div class="bf-m-row">
-									<a href="dicas.html">Conteúdo</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Conteúdo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<a href="dicas.html">Dicas e guias</a>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Dicas e guias" aria-controls="bf-m-sub-conteudo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-conteudo">
 									<a href="dicas.html">Dicas e Guias</a>
 									<a href="duvidasFrequentes.html">Central de Dúvidas</a>
 									<a href="galeriaInstagram.html">Galeria de Fotos</a>
@@ -446,331 +427,58 @@
 <main id="main">
 			<!-- Start Hero -->
 			<section class="bio-hero" id="inicio" aria-labelledby="bio-hero-title">
-				<div class="container">
-					<div class="bio-hero-grid">
-						<div class="bio-hero-col-text">
-							<p class="bio-hero-eyebrow">Especialistas em Controle de Pragas</p>
-							<h1 id="bio-hero-title">Controle de pragas para resid&ecirc;ncias e empresas</h1>
-							<p class="bio-hero-sub" aria-live="polite">Soluções em <span class="bio-hero-rotator"><span class="bio-hero-word">Desratização</span></span>, com atendimento t&eacute;cnico para cada ambiente</p>
-							<p class="bio-hero-lead">Controle de pragas para residências, empresas, condomínios e indústrias, com atendimento técnico e soluções adequadas para cada ambiente.</p>
-							<p class="bio-hero-cities"><i class="fa fa-map-marker" aria-hidden="true"></i> Presença em Franca, Ribeirão Preto, Uberaba e Guarapuava.</p>
-							<div class="bio-hero-actions">
-								<a class="bio-hero-btn bio-hero-btn--primary" href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20gratuito%20de%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="home" data-location="home-hero" aria-label="Solicitar um orçamento gratuito de controle de pragas pelo WhatsApp">Solicitar orçamento gratuito<i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-								<a class="bio-hero-btn bio-hero-btn--outline" href="#services">Conhecer os serviços<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-							</div>
-							<ul class="bio-hero-trust">
-								<li><i class="fa fa-user-md" aria-hidden="true"></i> Atendimento especializado</li>
-								<li><i class="fa fa-building" aria-hidden="true"></i> Soluções para diferentes ambientes</li>
-								<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Orçamento sem compromisso</li>
-							</ul>
-						</div>
-						<div class="bio-hero-col-visual">
-							<div class="bio-hero-panel">
-								<svg class="bio-hero-deco" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-									<circle cx="40" cy="40" r="3" fill="#ffffff"/>
-									<circle cx="80" cy="40" r="3" fill="#ffffff"/>
-									<circle cx="120" cy="40" r="3" fill="#ffffff"/>
-									<circle cx="160" cy="40" r="3" fill="#ffffff"/>
-									<circle cx="40" cy="80" r="3" fill="#ffffff"/>
-									<circle cx="80" cy="80" r="3" fill="#ffffff"/>
-									<circle cx="120" cy="80" r="3" fill="#ffffff"/>
-									<circle cx="160" cy="80" r="3" fill="#ffffff"/>
-									<circle cx="40" cy="120" r="3" fill="#ffffff"/>
-									<circle cx="80" cy="120" r="3" fill="#ffffff"/>
-									<circle cx="120" cy="120" r="3" fill="#ffffff"/>
-									<circle cx="160" cy="120" r="3" fill="#ffffff"/>
-									<circle cx="40" cy="160" r="3" fill="#ffffff"/>
-									<circle cx="80" cy="160" r="3" fill="#ffffff"/>
-									<circle cx="120" cy="160" r="3" fill="#ffffff"/>
-									<circle cx="160" cy="160" r="3" fill="#ffffff"/>
-								</svg>
-								<span class="bio-hero-orb bio-hero-orb--a" aria-hidden="true"></span>
-								<span class="bio-hero-orb bio-hero-orb--b" aria-hidden="true"></span>
-								<span class="bio-hero-ring" aria-hidden="true"></span>
-								<span class="bio-hero-badge">
-									<strong>30+</strong>
-									<span>anos de<br>experiência</span>
-								</span>
-								<div class="bio-hero-contact">
-									<p class="bio-hero-card-eyebrow">Precisa de ajuda?</p>
-									<h3 class="bio-hero-card-title">Fale com nossa equipe</h3>
-									<ul>
-										<li><i class="fa fa-whatsapp" aria-hidden="true"></i> <a href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Bioforte%20sobre%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="home" data-location="home-hero-whatsapp">(16) 3723-0808</a></li>
-										<li><i class="fa fa-phone" aria-hidden="true"></i> (16) 3723-0808 · Franca</li>
-										<li><i class="fa fa-phone" aria-hidden="true"></i> (16) 3635-2034 · Ribeirão Preto</li>
-										<li><i class="fa fa-clock-o" aria-hidden="true"></i> Segunda a Sexta · 07:30 às 17:30</li>
-									</ul>
-								</div>
-								<div class="bio-hero-specialist">
-									<p class="bio-hero-card-title">Quero conversar com um especialista</p>
-									<a class="bio-hero-btn" href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20em%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="home" data-location="home-hero-especialista">Falar com um especialista<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<script type="application/json" id="bio-hero-services">["Desratização","Desinsetização","Descupinização","Controle de Escorpiões","Higienização de Caixa D'Água","Controle Integrado de Pragas"]</script>
-				</div>
-			</section>
+  <div class="container">
+    <div class="bio-hero-grid">
+      <div class="bio-hero-col-text">
+        <p class="bio-hero-eyebrow">Bioforte Saneamento Ambiental</p>
+        <h1 id="bio-hero-title">Controle de pragas para <span>residências e empresas.</span></h1>
+        <div class="bio-hero-service-line">
+          <p class="bio-hero-sub"><span class="sr-only">Soluções em desratização, desinsetização, descupinização, controle de escorpiões, higienização de caixa d'água e controle integrado de pragas.</span><span aria-hidden="true">Soluções em <span class="bio-hero-rotator"><span class="bio-hero-word">Desratização</span></span></span></p>
+          <button class="bio-hero-pause" type="button" aria-label="Pausar animação dos serviços" hidden><i class="fa fa-pause" aria-hidden="true"></i></button>
+        </div>
+        <p class="bio-hero-lead">Da sua casa à sua empresa, cada ambiente precisa de um cuidado. Conte com nossa equipe para avaliar o problema e orientar o controle de pragas.</p>
+        <div class="bio-hero-actions">
+          <a class="bio-hero-btn bio-hero-btn--primary" href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="home" data-location="home-hero"><i class="fa fa-whatsapp" aria-hidden="true"></i> Solicitar orçamento</a>
+          <a class="bio-hero-btn bio-hero-btn--outline" href="#services">Conhecer os serviços <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <p class="bio-hero-note"><i class="fa fa-check-circle" aria-hidden="true"></i> Orçamento gratuito e sem compromisso</p>
+      </div>
+      <aside class="bio-hero-units" aria-labelledby="bio-units-title">
+        <div class="bio-units-heading"><i class="fa fa-map-marker" aria-hidden="true"></i><p>Atendimento perto de você</p></div>
+        <h2 id="bio-units-title">Encontre a Bioforte<br>na sua região.</h2>
+        <p class="bio-units-description">Escolha sua cidade e conheça os serviços e os contatos da unidade.</p>
+        <nav class="bio-units-list" aria-label="Unidades Bioforte"><a href="controle-de-pragas-franca.html"><span class="bio-unit-state">SP</span><span>Franca</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+<a href="controle-de-pragas-ribeirao-preto.html"><span class="bio-unit-state">SP</span><span>Ribeirão Preto</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+<a href="controle-de-pragas-uberaba.html"><span class="bio-unit-state">MG</span><span>Uberaba</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+<a href="controle-de-pragas-guarapuava.html"><span class="bio-unit-state">PR</span><span>Guarapuava</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a></nav>
+        <div class="bio-units-experience"><strong>30+</strong><p>Anos de experiência<br>em controle de pragas</p><i class="fa fa-shield" aria-hidden="true"></i></div>
+      </aside>
+    </div>
+    <nav class="bio-home-shortcuts" aria-label="Acesso rápido">
+      <a href="#problema"><i class="fa fa-search" aria-hidden="true"></i> Identificar uma praga <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="dicas.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Dicas de prevenção <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="duvidasFrequentes.html"><i class="fa fa-comment-o" aria-hidden="true"></i> Tirar uma dúvida <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </nav>
+    <script type="application/json" id="bio-hero-services">["Desratização","Desinsetização","Descupinização","Controle de Escorpiões","Higienização de Caixa D'Água","Controle Integrado de Pragas"]</script>
+  </div>
+</section>
 			<!--/ End Hero -->
 			<!-- Start Features -->
-			<section class="features" >
-				<div class="container">
-					<div class="row">
-						<!-- Features Single -->
-						<div class="col-md-4 col-sm-4 col-xs-12 features-single">
-							<i class="fa fa-line-chart"></i>
-							<h2>01/ Qualidade</h2>
-							<p>Aqui na Bioforte atendemos as necessidades e expectativas que nossos clientes são merecedores, pois entregamos o que foi contratado: O resultado perfeito.</p>
-						</div>
-						<!--/ End Features Single -->
-						<!-- Features Single -->
-						<div class="col-md-4 col-sm-4 col-xs-12 features-single active ">
-							<i class="fa fa-certificate"></i>
-							<h2>02/ Certificado</h2>
-							<p>Nossa empresa possui todos os requisitos e certificados para atuar no mercado, trazendo melhor segurança e conforto. Além disso todos os funcionários são certificados.</p>
-						</div>
-						<!--/ End Features Single -->
-						<!-- Features Single -->
-						<div class="col-md-4 col-sm-4 col-xs-12 features-single">
-							<i class="fa fa-handshake-o"></i>
-							<h2>03/ Segurança</h2>
-							<p>Temos a consciência dos impactos que um trabalho mal executado pode causar no ambiente. Temos um compromisso sério com todos os seres envolvidos numa dedetização.</p>
-						</div>
-						<!--/ End Features Single -->
-					</div>
-				</div>
-			</section>
+			<section class="bio-home-standards" aria-label="O cuidado da Bioforte">
+<div class="container"><div><i class="fa fa-user" aria-hidden="true"></i><p><strong>Atendimento especializado</strong>Orientação para cada ambiente.</p></div><a href="certificacoes.html"><i class="fa fa-certificate" aria-hidden="true"></i><p><strong>Equipe qualificada</strong>Conheça nossas certificações.</p></a><a href="quemSomos.html"><i class="fa fa-shield" aria-hidden="true"></i><p><strong>Cuidado em cada etapa</strong>Saiba como trabalhamos.</p></a></div></section>
 			<!--/ End Features -->
 			<!-- Start PestHub: Qual problema você precisa resolver? -->
-			<section id="problema" class="bio-pragmahub section reveal">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="section-title">
-								<h2>Qual problema você precisa resolver?</h2>
-								<p>Identifique a praga, entenda o problema e solicite uma avaliação.</p>
-							</div>
-						</div>
-					</div>
-					<div class="bio-pest-grid">
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="escorpiao.html" aria-label="Escorpiões: identificar, prevenir e controlar">
-								<h3>Escorpiões</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de escorpiões.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="barata-americana.html" aria-label="Baratas: identificar, prevenir e controlar">
-								<h3>Baratas</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de baratas.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="rato-camundongo.html" aria-label="Ratos e camundongos: identificar, prevenir e controlar">
-								<h3>Ratos</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de roedores.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="cupim-madeira-seca.html" aria-label="Cupins: identificar, prevenir e tratar">
-								<h3>Cupins</h3>
-								<p>Saiba como identificar, prevenir e tratar a presença de cupins.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="formiga-sauva.html" aria-label="Formigas: identificar, prevenir e controlar">
-								<h3>Formigas</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de formigas.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="aranha-armadeira.html" aria-label="Aranhas: identificar, prevenir e controlar">
-								<h3>Aranhas</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de aranhas.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="pombo.html" aria-label="Pombos: identificar, prevenir e controlar">
-								<h3>Pombos</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de pombos.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="pulga.html" aria-label="Pulgas: identificar, prevenir e controlar">
-								<h3>Pulgas</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de pulgas.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="carrapato.html" aria-label="Carrapatos: identificar, prevenir e controlar">
-								<h3>Carrapatos</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de carrapatos.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-						<div class="bio-pest-col">
-							<a class="bio-pest-card" href="mosca-domestica.html" aria-label="Moscas: identificar, prevenir e controlar">
-								<h3>Moscas</h3>
-								<p>Saiba como identificar, prevenir e controlar a presença de moscas.</p>
-								<span class="hp-cta">Saiba mais</span>
-							</a>
-						</div>
-					</div>
-					<div class="bio-pest-all">
-						<a href="pragas.html" class="btn primary" role="button" aria-label="Ver todas as pragas urbanas na Central de Pragas">Ver todas as pragas</a>
-					</div>
-				</div>
-			</section>
+			<section id="problema" class="bio-pragmahub section">
+<div class="container"><div class="bio-section-heading"><div><p class="bio-eyebrow">Identifique o problema</p><h2>Qual praga apareceu por aí?</h2></div><p>Encontre sinais, cuidados e orientações de prevenção para cada tipo de praga.</p></div><div class="bio-pest-quickgrid"><a class="bio-pest-quicklink" href="escorpiao.html"><h3>Escorpiões</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="barata-americana.html"><h3>Baratas</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="rato-camundongo.html"><h3>Ratos</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="cupim-madeira-seca.html"><h3>Cupins</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="formiga-sauva.html"><h3>Formigas</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="aranha-armadeira.html"><h3>Aranhas</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="pombo.html"><h3>Pombos</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="pulga.html"><h3>Pulgas</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="carrapato.html"><h3>Carrapatos</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="bio-pest-quicklink" href="mosca-domestica.html"><h3>Moscas</h3><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div><a class="bio-text-link" href="pragas.html">Explorar a central de pragas <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></section>
 			<!--/ End PestHub -->
 			<!-- Start Services -->
-			<section id="services" class="services section reveal">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-<div class="section-title">
-								<h2>Nossos Serviços</h2>
-								<p>Conheça nossos serviços e saiba o ramo em que atuamos</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<!-- Single Service -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="desinsetizacao.html" aria-label="Desinsetização: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/barata.png" alt="Ícone de barata representando o serviço de desinsetização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/barata.png" alt="Ícone de barata representando o serviço de desinsetização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Desinsetização</h2>
-								<p>Serviço utilizado para prevenção de insetos e demais pragas urbanas, como baratas, formigas e aranhas.</p>
-							</a>
-						</div>
-						<!--/ End Single Service -->
-						<!-- Single Service -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="desratizacao.html" aria-label="Desratização: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/rato.png" alt="Ícone de rato representando o serviço de desratização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/rato.png" alt="Ícone de rato representando o serviço de desratização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Desratização</h2>
-								<p>Serviço utilizado para erradicação e prevenção de roedores (camundongos, ratazanas e rato de telhado).</p>
-							</a>
-						</div>
-						<!--/ End Single Service -->
-						<!-- Single Service -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="controleIntegradoDePragas.html" aria-label="Controle Integrado de Pragas: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/dedetizador.png" alt="Ícone de profissional de controle integrado de pragas" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/dedetizador.png" alt="Ícone de profissional de controle integrado de pragas" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Controle Integrado de Pragas</h2>
-								<p>É um conjunto de ações preventivas e corretivas, para impedir a atração, abrigo, acesso ou proliferação de pragas urbanas.</p>
-							</a>
-						</div>
-						<!--/ End Single Service -->
-						<!-- Single Service -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="controlePombos.html" aria-label="Controle de Pombos: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/passaro.png" alt="Ícone de pombo representando o serviço de controle de pombos" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/passaro.png" alt="Ícone de pombo representando o serviço de controle de pombos" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Controle de Pombos</h2>
-								<p>Os pombos, apesar de apresentarem aparência inofensiva, são causadores de doenças.</p>
-							</a>
-						</div>
-						<!--/ End Single Service -->
-						<!-- Single Service -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="descupinizacao.html" aria-label="Descupinização: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/cupim.png" alt="Ícone de cupim representando o serviço de descupinização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/cupim.png" alt="Ícone de cupim representando o serviço de descupinização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Descupinização</h2>
-								<p>Para não correr o risco dessa infestação atingir proporções alarmantes, é importante realizar a descupinização.</p>
-							</a>
-						</div>
-						<!--/ End Single Service -->
-						<!-- Single Service -->
-<div class="col-md-4 col-sm-6 col-xs-12">
-							<a class="single-services" href="limpezaCaixaDAgua.html" aria-label="Higienização de Caixa D'Água: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/caixa.png" alt="Ícone de caixa d'água representando o serviço de higienização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<div class="icon two"><i><img src="images/icones/caixa.png" alt="Ícone de caixa d'água representando o serviço de higienização" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-								<h2>Higienização de Caixa D'Água</h2>
-								<p>A Bioforte possui equipe treinada e qualificada que executam todas as etapas de desinfecção e limpeza de caixa d'água.</p>
-							</a>
-						</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12">
-								<a class="single-services" role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalScrollable" aria-label="Manejo de Abelhas: saiba mais sobre o serviço da Bioforte" aria-haspopup="dialog" style="cursor: pointer;">
-<div class="icon"><i><img src="images/icones/abelha.png" alt="Ícone de abelha representando o serviço de manejo de abelhas" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-									<div class="icon two"><i><img src="images/icones/abelha.png" alt="Ícone de abelha representando o serviço de manejo de abelhas" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-									<h2>Manejo de Abelha</h2>
-									<p>As abelhas s&atilde;o essenciais para a poliniza&ccedil;&atilde;o e o equil&iacute;brio dos ecossistemas. A Bioforte realiza o manejo respons&aacute;vel de enxames em &aacute;reas urbanas.</p>
-								</a>
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12">
-								<a class="single-services" href="oxi-sanitizacao.html" aria-label="Oxi-Sanitização: saiba mais sobre o serviço da Bioforte">
-<div class="icon"><i><img src="images/icones/oxi-sanitizacao.png" alt="Ícone de oxi-sanitização representando o serviço de sanitização com ozônio" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-									<div class="icon two"><i><img src="images/icones/oxi-sanitizacao.png" alt="Ícone de oxi-sanitização representando o serviço de sanitização com ozônio" style="width: 50px;" loading="lazy" decoding="async"></i></div>
-									<h2>Oxi-Sanitização</h2>
-									<p>No ar, o Ozônio elimina cheiros ruins e sanitiza o ambiente, pois, oxida bactérias, fungos, vírus, germes e ácaros.</p>
-								</a>
-						</div>
-							
-						<!--/ End Single Service -->
-					</div>
-				</div>
-			</section>
+			<section id="services" class="bio-home-services section">
+<div class="container"><div class="bio-section-heading"><div><p class="bio-eyebrow">Nossos serviços</p><h2>O cuidado certo para<br>cada ambiente.</h2></div><p>Conheça as soluções de controle de pragas e saneamento ambiental da Bioforte.</p></div><div class="bio-service-grid"><a class="bio-service-card" href="desinsetizacao.html"><img src="images/icones/barata.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Desinsetização</h3><p>Serviço utilizado para prevenção de insetos e demais pragas urbanas, como baratas, formigas e aranhas.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><a class="bio-service-card" href="desratizacao.html"><img src="images/icones/rato.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Desratização</h3><p>Serviço utilizado para erradicação e prevenção de roedores (camundongos, ratazanas e rato de telhado).</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><a class="bio-service-card" href="controleIntegradoDePragas.html"><img src="images/icones/dedetizador.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Controle Integrado de Pragas</h3><p>É um conjunto de ações preventivas e corretivas, para impedir a atração, abrigo, acesso ou proliferação de pragas urbanas.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><a class="bio-service-card" href="controlePombos.html"><img src="images/icones/passaro.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Controle de Pombos</h3><p>Os pombos, apesar de apresentarem aparência inofensiva, são causadores de doenças.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><a class="bio-service-card" href="descupinizacao.html"><img src="images/icones/cupim.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Descupinização</h3><p>Para não correr o risco dessa infestação atingir proporções alarmantes, é importante realizar a descupinização.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><a class="bio-service-card" href="limpezaCaixaDAgua.html"><img src="images/icones/caixa.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Higienização de Caixa D'Água</h3><p>A Bioforte possui equipe treinada e qualificada que executam todas as etapas de desinfecção e limpeza de caixa d'água.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a><button class="bio-service-card" type="button" data-toggle="modal" data-target="#exampleModalScrollable" aria-haspopup="dialog"><img src="images/icones/abelha.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Manejo de Abelha</h3><p>As abelhas são essenciais para a polinização e o equilíbrio dos ecossistemas. A Bioforte realiza o manejo responsável de enxames em áreas urbanas.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></button><a class="bio-service-card" href="oxi-sanitizacao.html"><img src="images/icones/oxi-sanitizacao.png" width="52" height="52" alt="" loading="lazy" decoding="async"><h3>Oxi-Sanitização</h3><p>No ar, o Ozônio elimina cheiros ruins e sanitiza o ambiente, pois, oxida bactérias, fungos, vírus, germes e ácaros.</p><span class="bio-service-more">Conhecer o serviço <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a></div></div></section>
 			<!--/ End Services -->
 
 				<!-- Why Choose Us -->
-			<section id="why-choose" class="why-choose section reveal">
-				<div class="container-fluid fix">
-					<div class="row fix">
-						<div class="col-md-4 col-sm-12 col-xs-12 fix">
-							<div class="working-process">
-								<h2>Nosso Processo De Trabalho</h2>
-								<p>Definimos vários processos para te atender melhor. Todo o nosso atendimento é feito por um cronograma de passo a passo que define a melhor estratégia para atendê-lo.</p>
-								<a href="quemSomos.html" class="btn" aria-label="Consulte mais informações sobre a Bioforte e nosso processo de atendimento"> Saiba mais sobre nosso atendimento</a>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-12 col-xs-12 fix">
-							<div class="choose-main">
-								<!-- Single Choose -->
-								<div class="single-choose">
-									<i class="fa fa-laptop"></i>
-									<h4>Cadastro</h4>
-									<p>Consultamos se o cadastro já existe para elaborarmos um novo cadastro</p>
-								</div>
-								<!-- End Single Choose -->	
-								<!-- Single Choose -->
-								<div class="single-choose">
-									<i class="fa fa-address-card"></i>
-									<h4>Realização do orçamento/visita</h4>
-									<p>Realizamos o orçamento e enviamos ao e-mail de destino</p>
-								</div>
-								<!-- End Single Choose -->
-								<!-- Single Choose -->
-								<div class="single-choose">
-									<i class="fa fa-check"></i>
-									<h4>Realização do serviço</h4>
-									<p>Realizamos o serviço com profissionais qualificados e atenciosos para melhor atender</p>
-								</div>
-								<!-- End Single Choose -->	
-							</div>
-						</div>			
-						<div class="col-md-4 col-sm-12 col-xs-12 fix">
-								<!--Inicia a foto do flautista, mas a foto que está puxando é do css-->
-								<div class="why-video">
-									<div class="single-slider" role="img" aria-label="Socio-fundador e equipe da Bioforte em apresentacao aos clientes"></div>
-								</div>
-								<!--Finaliza comentario-->
-						</div>								
-					</div>
-				</div>
-			</section>	
+			<section id="why-choose" class="bio-home-process section">
+<div class="container"><div class="bio-process-layout"><div class="bio-process-intro"><p class="bio-eyebrow">Do primeiro contato ao serviço</p><h2>Como funciona<br>o atendimento.</h2><p>Entenda as etapas para solicitar o serviço e receber nossa equipe.</p><a class="bio-text-link" href="quemSomos.html">Conheça a Bioforte <i class="fa fa-arrow-right" aria-hidden="true"></i></a><img src="images/EstruturaBioforteFranca/foto1.jpg" alt="Fachada da unidade Bioforte em Franca" width="1000" height="667" loading="lazy" decoding="async"></div><ol class="bio-process-steps"><li><span aria-hidden="true">01</span><div><h3>Conte o que está acontecendo</h3><p>Entre em contato. Nossa equipe confere seu cadastro e reúne as informações para o atendimento.</p></div></li><li><span aria-hidden="true">02</span><div><h3>Receba o orçamento</h3><p>Avaliamos a necessidade de uma visita e preparamos o orçamento para o seu ambiente.</p></div></li><li><span aria-hidden="true">03</span><div><h3>Agende o serviço</h3><p>Com o orçamento aprovado, combinamos o atendimento com a equipe responsável.</p></div></li></ol></div></div></section>
 			<!--/ End Why Choose Us -->
 			
 			<!-- Start Projects -->
@@ -903,6 +611,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</section>
 			<!--/ End Projects -->
 			
@@ -1489,7 +1198,7 @@
 			<!-- Main JS -->
 			<script src="js/main.js" type="text/javascript"></script>
 			<script src="js/bioforte-hero.js" type="text/javascript"></script>
-			<script src="js/contador_clientes.js" type="text/javascript"></script>
+
 		</div>
     			<script src="js/bioforte-header.js" type="text/javascript"></script>
 		</body>

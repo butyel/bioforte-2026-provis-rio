@@ -170,6 +170,7 @@
 				  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 				<![endif]-->
 					<link rel="stylesheet" href="css/bioforte-header.css">
+			<link rel="stylesheet" href="css/bioforte-layout.css">
 	</head>
 			<body class="box-bg">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PJ9NKS"
@@ -194,24 +195,16 @@
 					
 			
 			<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
-<!-- Componente compartilhado: partials/header.html (via scripts/sync-header.mjs) -->
 <header id="header" class="header bf-header">
 				<!-- Topbar -->
 				<div class="bf-topbar">
 					<div class="container bf-topbar-row">
 						<a class="bf-topbar-item bf-topbar-whats" href="https://api.whatsapp.com/send?l=pt&amp;phone=551637230808&amp;text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Bioforte%20sobre%20controle%20de%20pragas." target="_blank" rel="noopener" data-event="click_whatsapp" data-page-origin="contato" data-location="topbar">
 							<i class="fa fa-whatsapp" aria-hidden="true"></i>
-							<span>(16) 3723-0808</span>
+							<span><span class="bf-topbar-label">Fale com a Bioforte: </span>(16) 3723-0808</span>
 						</a>
-						<div class="bf-topbar-right">
-							<span class="bf-topbar-item bf-topbar-phones">
-								<i class="fa fa-phone" aria-hidden="true"></i>
-								<span>(16) 3723-0808 · (16) 3635-2034</span>
-							</span>
+						<div class="bf-topbar-right"><a class="bf-topbar-item bf-topbar-client" href="areaCliente.html"><i class="fa fa-user-o" aria-hidden="true"></i> Área do Cliente</a>
+							<a class="bf-topbar-item bf-topbar-phone" href="tel:+551636352034"><i class="fa fa-phone" aria-hidden="true"></i><span>Ribeirão Preto: (16) 3635-2034</span></a>
 							<span class="bf-topbar-item bf-topbar-clock">
 								<i class="fa fa-clock-o" aria-hidden="true"></i>
 								<span>Seg. a Sex. · 07:30 às 17:30</span>
@@ -231,29 +224,29 @@
 						<nav class="bf-nav" aria-label="Menu principal">
 							<ul class="bf-nav-list">
 								<li class="bf-nav-item" data-nav="home">
-									<a class="bf-nav-link" href="/">Home</a>
+									<a class="bf-nav-link" href="/">Início</a>
 								</li>
 								<li class="is-active bf-nav-item bf-has-sub" data-nav="empresa">
 									<div class="bf-parentholder">
-										<a class="bf-nav-link" href="quemSomos.html" aria-current="page">A Empresa</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu A Empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<a class="bf-nav-link" href="quemSomos.html">A Empresa</a>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu A Empresa" aria-controls="bf-sub-empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-empresa">
 										<a href="quemSomos.html">Quem Somos</a>
 										<a href="nossoTime.html">Nosso Time</a>
 										<a href="certificacoes.html">Certificações</a>
 										<a href="depoimentoClientes.html">Depoimentos</a>
 										<a href="carreira.html">Carreira</a>
 										<a href="duvidasFrequentes.html">Dúvidas Frequentes</a>
-										<a href="contato.html">Contato</a>
+										<a href="contato.html" aria-current="page">Contato</a>
 									</div>
 								</li>
 								<li class="bf-nav-item bf-has-sub" data-nav="servicos">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="nossosServicos.html">Serviços</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Serviços"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Serviços" aria-controls="bf-sub-servicos"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-servicos">
 										<a href="nossosServicos.html">Nossos Serviços</a>
 										<a href="desinsetizacao.html">Desinsetização</a>
 										<a href="desratizacao.html">Desratização</a>
@@ -267,9 +260,9 @@
 								<li class="bf-nav-item bf-has-sub" data-nav="pragas">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="pragas.html">Pragas</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Pragas" aria-controls="bf-sub-pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub bf-sub--2col">
+									<div class="bf-sub bf-sub--2col" id="bf-sub-pragas">
 										<a href="pragas.html">Central de Pragas</a>
 										<a href="aranha-armadeira.html">Aranha Armadeira</a>
 										<a href="barata-americana.html">Barata Americana</a>
@@ -288,9 +281,9 @@
 								<li class="bf-nav-item bf-has-sub bf-align-right" data-nav="unidades">
 									<div class="bf-parentholder">
 										<a class="bf-nav-link" href="controle-de-pragas-franca.html">Unidades</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Unidades" aria-controls="bf-sub-unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-unidades">
 										<a href="controle-de-pragas-franca.html">Franca/SP</a>
 										<a href="controle-de-pragas-ribeirao-preto.html">Ribeirão Preto/SP</a>
 										<a href="controle-de-pragas-uberaba.html">Uberaba/MG</a>
@@ -299,10 +292,10 @@
 								</li>
 								<li class="bf-nav-item bf-has-sub bf-align-right" data-nav="conteudo">
 									<div class="bf-parentholder">
-										<a class="bf-nav-link" href="dicas.html">Conteúdo</a>
-										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Conteúdo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+										<a class="bf-nav-link" href="dicas.html">Dicas e guias</a>
+										<button class="bf-caret" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir submenu Dicas e guias" aria-controls="bf-sub-conteudo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 									</div>
-									<div class="bf-sub">
+									<div class="bf-sub" id="bf-sub-conteudo">
 										<a href="dicas.html">Dicas e Guias</a>
 										<a href="duvidasFrequentes.html">Central de Dúvidas</a>
 										<a href="galeriaInstagram.html">Galeria de Fotos</a>
@@ -310,9 +303,7 @@
 										<a href="treinamentoNr35.html">Treinamento NR 35</a>
 									</div>
 								</li>
-								<li class="bf-nav-item" data-nav="cliente">
-									<a class="bf-nav-link" href="areaCliente.html">Área do Cliente</a>
-								</li>
+
 							</ul>
 						</nav>
 
@@ -328,35 +319,35 @@
 				<!-- /Menu principal -->
 
 				<!-- Painel móvel -->
-				<aside class="bf-mobile" id="bf-mobile-panel" aria-hidden="true" aria-label="Menu de navegação móvel">
+				<aside class="bf-mobile" id="bf-mobile-panel" aria-hidden="true" role="dialog" aria-modal="true" inert aria-label="Menu de navegação móvel">
 					<div class="bf-mobile-head">
-						<a href="/" class="bf-mobile-logo" aria-label="Bioforte Controle de Pragas — página inicial" tabindex="-1"><img src="images/logoBioforte.png" alt="Bioforte Controle de Pragas"></a>
-						<button class="bf-mobile-close" type="button" aria-label="Fechar menu de navegação" tabindex="-1"><i class="fa fa-times" aria-hidden="true"></i></button>
+						<a href="/" class="bf-mobile-logo" aria-label="Bioforte Controle de Pragas — página inicial"><img src="images/logoBioforte.png" alt="Bioforte Controle de Pragas"></a>
+						<button class="bf-mobile-close" type="button" aria-label="Fechar menu de navegação"><i class="fa fa-times" aria-hidden="true"></i></button>
 					</div>
 					<nav class="bf-mobile-nav" aria-label="Navegação móvel">
 						<ul>
-							<li class="bf-m-link" data-nav="home"><a href="/">Home</a></li>
+							<li class="bf-m-link" data-nav="home"><a href="/">Início</a></li>
 							<li class="is-active bf-m-sub" data-nav="empresa">
 								<div class="bf-m-row">
 									<a href="quemSomos.html">A Empresa</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu A Empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu A Empresa" aria-controls="bf-m-sub-empresa"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-empresa">
 									<a href="quemSomos.html">Quem Somos</a>
 									<a href="nossoTime.html">Nosso Time</a>
 									<a href="certificacoes.html">Certificações</a>
 									<a href="depoimentoClientes.html">Depoimentos</a>
 									<a href="carreira.html">Carreira</a>
 									<a href="duvidasFrequentes.html">Dúvidas Frequentes</a>
-									<a href="contato.html">Contato</a>
+									<a href="contato.html" aria-current="page">Contato</a>
 								</div>
 							</li>
 							<li class="bf-m-sub" data-nav="servicos">
 								<div class="bf-m-row">
 									<a href="nossosServicos.html">Serviços</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Serviços"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Serviços" aria-controls="bf-m-sub-servicos"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-servicos">
 									<a href="nossosServicos.html">Nossos Serviços</a>
 									<a href="desinsetizacao.html">Desinsetização</a>
 									<a href="desratizacao.html">Desratização</a>
@@ -370,9 +361,9 @@
 							<li class="bf-m-sub" data-nav="pragas">
 								<div class="bf-m-row">
 									<a href="pragas.html">Pragas</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Pragas" aria-controls="bf-m-sub-pragas"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-pragas">
 									<a href="pragas.html">Central de Pragas</a>
 									<a href="aranha-armadeira.html">Aranha Armadeira</a>
 									<a href="barata-americana.html">Barata Americana</a>
@@ -391,9 +382,9 @@
 							<li class="bf-m-sub" data-nav="unidades">
 								<div class="bf-m-row">
 									<a href="controle-de-pragas-franca.html">Unidades</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Unidades" aria-controls="bf-m-sub-unidades"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-unidades">
 									<a href="controle-de-pragas-franca.html">Franca/SP</a>
 									<a href="controle-de-pragas-ribeirao-preto.html">Ribeirão Preto/SP</a>
 									<a href="controle-de-pragas-uberaba.html">Uberaba/MG</a>
@@ -402,10 +393,10 @@
 							</li>
 							<li class="bf-m-sub" data-nav="conteudo">
 								<div class="bf-m-row">
-									<a href="dicas.html">Conteúdo</a>
-									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Conteúdo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+									<a href="dicas.html">Dicas e guias</a>
+									<button type="button" class="bf-m-toggle" aria-expanded="false" aria-label="Expandir submenu Dicas e guias" aria-controls="bf-m-sub-conteudo"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
 								</div>
-								<div class="bf-m-list">
+								<div class="bf-m-list" id="bf-m-sub-conteudo">
 									<a href="dicas.html">Dicas e Guias</a>
 									<a href="duvidasFrequentes.html">Central de Dúvidas</a>
 									<a href="galeriaInstagram.html">Galeria de Fotos</a>

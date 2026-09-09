@@ -31,7 +31,8 @@ const ACTIVE = {
   'nossoTime.html': 'empresa',
   'certificacoes.html': 'empresa',
   'depoimentoClientes.html': 'empresa',
-  'duvidasFrequentes.html': 'empresa',
+  'duvidasFrequentes.html': 'conteudo',
+  'areaCliente.html': 'cliente',
   'carreira.html': 'empresa',
   'indica_amigos.html': 'empresa',
   'contato.html': 'empresa',
@@ -85,10 +86,14 @@ function buildHeader(file, key) {
     .replace(/(<li\s+class=")([^"]*)("\s+data-nav=")([^"]+)(")/g, (m, a, cls, b, k, c) => {
       return k === key ? `${a}is-active ${cls}${b}${k}${c}` : m;
     })
-    // aria-current no link do grupo ativo
-    .replace(/ data-navkey="([^"]+)"/g, (m, k) => (
-      k === key ? ' aria-current="page"' : ''
-    ));
+    .replace(/ data-navkey="[^"]+"/g, '')
+    // aria-current descreve a página de destino, não apenas seu grupo.
+    .replace(/<a\b[^>]*>/g, tag => {
+      const href = tag.match(/href="([^"]+)"/);
+      if (!href || /class="bf-(?:mobile-)?logo"/.test(tag)) return tag;
+      const current = file === 'index.html' ? '/' : file;
+      return href[1] === current ? tag.replace(/>$/, ' aria-current="page">') : tag;
+    });
 }
 
 const HEADER_RE = /<header\b[^>]*>[\s\S]*?(?:<\/header>|(?=<!--\s*Start Breadcrumbs))/;
@@ -114,6 +119,7 @@ for (const file of files) {
 
   // limpa comentários de "Start/End Header" acumulados (idempotência)
   content = content
+    .replace(/<!-- Componente compartilhado: partials\/header\.html \(via scripts\/sync-header\.mjs\) -->\s*/g, '')
     .replace(/<!--\s*Start\s+Header[\s\S]*?-->/gi, '')
     .replace(/<!--\s*\/?\s*End\s+Header[\s\S]*?-->/gi, '');
 
@@ -125,6 +131,9 @@ for (const file of files) {
       /<\/head>/i,
       `\t\t<link rel="stylesheet" href="${CSS_LINK}">\n\t</head>`
     );
+  }
+  if (!content.includes('css/bioforte-layout.css')) {
+    content = content.replace(/<\/head>/i, '\t\t<link rel="stylesheet" href="css/bioforte-layout.css">\n\t</head>');
   }
   if (!content.includes(JS_SRC)) {
     content = content.replace(

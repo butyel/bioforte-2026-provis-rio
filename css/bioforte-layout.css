@@ -1,0 +1,108 @@
+/* Acabamento compartilhado. Sem alterar logo, fontes, URLs ou paleta da marca. */
+:root { --bf-green: #02843c; --bf-dark: #1a5c3f; --bf-soft: #eef7f2; --bf-border: #dcefe6; --bf-header-h: 76px; }
+.bf-header-row, .bf-topbar-row { max-width: 1200px; }
+.bf-header-row::before, .bf-header-row::after, .bf-topbar-row::before, .bf-topbar-row::after { display: none; }
+.bf-header-row { min-height: 76px; gap: 24px; }
+.bf-nav { margin-left: auto; flex: 0 1 auto; }
+.bf-nav-link { font-size: 14px; padding: 14px 10px; border-radius: 4px; }
+.bf-caret { height: 44px; }
+.bf-cta { font-size: 14px; min-height: 48px; border-radius: 4px; padding-inline: 18px; }
+.bf-topbar-row { padding-block: 7px; }
+.bf-topbar-item { min-height: 28px; }
+.bf-topbar-right { gap: 22px; }
+.bf-topbar-client { order: 3; border-left: 1px solid #ffffff66; padding-left: 20px; }
+.bf-sub { padding: 10px; border-radius: 6px; box-shadow: 0 10px 26px #1a5c3f14; }
+.bf-sub a { padding: 12px; min-height: 44px; font-size: 14px; border-radius: 4px; }
+.bf-m-list { visibility: hidden; }
+.bf-m-sub.is-open > .bf-m-list { visibility: visible; }
+.bf-mobile-nav { overscroll-behavior: contain; }
+.bf-mobile-close { flex-shrink: 0; }
+.bf-mobile-nav .is-active > a, .bf-mobile-nav .is-active > .bf-m-row > a { color: #02843c; background: #eef7f2; }
+.bf-mobile.is-open { padding-bottom: env(safe-area-inset-bottom,0px); }
+.bf-mobile-open { overflow: hidden !important; }
+/* A keyboard user can see every interactive focus, even against green panels. */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #1a5c3f; outline-offset: 3px; }
+.bio-units-list a:focus-visible { outline-offset: -4px; }
+.bf-topbar a:focus-visible { outline-color: #fff; }
+section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-header-h) + 24px); }
+.bio-pest-section[id] { scroll-margin-top: calc(var(--bf-header-h) + 76px); }
+.bio-eyebrow { font-size: 13px; line-height: 1.5; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1a5c3f; margin: 0 0 12px; }
+.bio-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 36px; }
+.bio-section-heading h2, .bio-section-heading h1 { font-size: clamp(28px,3vw,40px); font-weight: 700; line-height: 1.15; text-transform: none; margin: 0; letter-spacing: -.5px; }
+.bio-section-heading > p { max-width: 350px; font-size: 16px; line-height: 1.7; color: #555; margin: 0; }
+.bio-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #1a5c3f; font-weight: 700; font-size: 15px; }
+.bio-text-link:hover { color: #02843c; text-decoration: underline; }
+.bio-home-services { background: #eef7f2; padding: 64px 0; }
+.bio-service-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; }
+.bio-service-card { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-width: 0; background: #fff; border: 1px solid #dcefe6; border-radius: 6px; padding: 26px 22px; color: #1a1a1a; text-align: left; font: inherit; cursor: pointer; transition: border-color .2s, box-shadow .2s; }
+.bio-service-card:hover { color: #1a1a1a; border-color: #02843c; box-shadow: 0 5px 18px #1a5c3f0d; }
+.bio-service-card img { object-fit: contain; margin-bottom: 24px; }
+.bio-service-card h3 { color: #1a1a1a; font-size: 21px; line-height: 1.3; font-weight: 700; margin: 0 0 14px; overflow-wrap: break-word; }
+.bio-service-card p { color: #555; font-size: 15px; line-height: 1.7; margin: 0 0 24px; }
+.bio-service-more { display: flex; gap: 14px; align-items: center; margin-top: auto; padding-top: 18px; border-top: 1px solid #dcefe6; width: 100%; color: #1a5c3f; font-size: 14px; font-weight: 700; }
+.bio-service-more i { margin-left: auto; font-size: 12px; }
+.bio-service-card:hover .bio-service-more { color: #02843c; }
+/* Centrais e páginas de pragas: títulos consistentes e leitura confortável. */
+.bio-pest-hero, .bio-hub-hero, .bio-faq-hero { background: #eef7f2; padding-block: 52px; }
+.bio-pest-hero h1, .bio-hub-hero h1, .bio-faq-hero h1 { font-size: clamp(30px,3.6vw,46px); line-height: 1.15; max-width: 850px; }
+.bio-faq-hero p { margin-left: 0; }
+.bio-hub-hero .eyebrow, .bio-faq-hero .eyebrow { background: transparent; border-radius: 0; padding: 0; font-size: 13px; }
+.bio-pest-hero .bio-himg img { box-shadow: none; border-radius: 6px; }
+.bio-pest-hero .bio-btn-whats { background: #02843c; color: #fff; }
+.bio-pest-hero .bio-btn-whats:hover { background: #1a5c3f; }
+.bio-pest-nav a { font-size: 14px; min-height: 48px; }
+.bio-pest-section { padding-block: 52px; }
+.bio-pest-section p, .bio-pest-ident li, .bio-pest-risks li, .bio-pest-checklist li, .bio-pest-prevent-card p { font-size: 16px; line-height: 1.75; }
+.bio-pest-prevent-card { padding: 22px; border-radius: 6px; }
+.bio-pest-prevent-card .num { opacity: 1; font-size: 22px; margin-bottom: 12px; }
+.bio-pest-risks-grid { grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); }
+.bio-hub-grid { row-gap: 4px; }
+.bio-hub-card { border-radius: 6px; box-shadow: none; }
+.bio-hub-card .bd { padding: 22px; }
+.bio-hub-card .bd h3 { font-size: 21px; line-height: 1.35; margin-bottom: 10px; }
+.bio-hub-card .bd p { font-size: 16px; line-height: 1.65; }
+.bio-hub-card .bd .go { padding-top: 14px; font-size: 14px; text-transform: none; letter-spacing: 0; }
+.bio-hub-card .bd .meta { font-size: 14px; }
+.bio-filters { display: flex; }
+.bio-filter-chip { min-height: 44px; font-size: 14px; border-radius: 4px; }
+#bp-search, #bio-faq-search { border-radius: 6px; min-height: 52px; font-size: 16px; }
+.bio-faq-cats a.button { min-height: 44px; font-size: 14px; border-radius: 4px; }
+.bio-faq-area > .container { max-width: 960px; }
+.bio-faq-item { border-radius: 6px; }
+.bio-faq-q { font-size: 17px; padding: 20px; min-height: 60px; line-height: 1.5; }
+.bio-faq-a-inner { padding: 0 20px 22px; font-size: 16px; line-height: 1.75; max-width: 80ch; }
+.bio-faq-a { max-height: none; }
+.bio-faq-item.is-open .bio-faq-a { max-height: none !important; }
+.bio-search-status { max-width: 640px; margin: 16px auto; font-size: 16px; color: #555; text-align: center; }
+/* Static content remains readable if JavaScript or external trackers fail. */
+.bio-reveal, .reveal { opacity: 1; visibility: visible; transform: none; }
+.bf-whatsapp-float:focus-visible { outline-offset: 5px; }
+@media (max-width: 1199px) {
+  .bf-topbar-phone { display: none; }
+  .bio-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .bf-header-row > .bf-cta { display: inline-flex; margin-left: auto; }
+  .bf-burger { margin-left: 0; }
+}
+@media (max-width: 767px) {
+  :root { --bf-header-h: 64px; }
+  .bf-header-row { min-height: 64px; }
+  .bf-header-row > .bf-cta { display: none; }
+  .bf-burger { margin-left: auto; }
+  .bf-topbar-label { display: none; }
+  .bf-topbar-item { font-size: 12px; }
+  .bf-topbar-right { gap: 0; }
+  .bf-topbar-client { border-left: 0; padding-left: 0; }
+  .bio-section-heading { display: block; margin-bottom: 26px; }
+  .bio-section-heading > p { margin-top: 18px; max-width: 100%; }
+  .bio-service-grid { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .bio-service-card { padding: 24px; }
+  .bio-service-card img { margin-bottom: 18px; }
+  .bio-service-card p { font-size: 16px; }
+  .bio-home-services { padding-block: 48px; }
+  .bio-pest-hero, .bio-hub-hero, .bio-faq-hero { padding-block: 34px; }
+  .bio-pest-section { padding-block: 36px; }
+  .bio-pest-hero .bio-himg { margin-top: 28px; }
+  .bio-faq-q { padding: 16px; font-size: 16px; }
+  .bio-faq-a-inner { padding-inline: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .bio-service-card, .bio-filter-chip, .bio-faq-a { transition: none; } .bf-whatsapp-float { animation: none; } }
