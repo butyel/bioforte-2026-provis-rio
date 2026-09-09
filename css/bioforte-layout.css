@@ -319,6 +319,24 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
 }
 
 /* =========================================================
+   Página de Contato — canais diretos (bio-contact)
+   ========================================================= */
+.bio-contact-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+.bio-contact-card { background: #fff; border: 1px solid #dcefe6; border-radius: 8px; padding: 28px 24px; display: flex; flex-direction: column; }
+.bio-contact-card > i { color: #02843c; font-size: 30px; margin-bottom: 14px; }
+.bio-contact-card h2 { font-size: 19px; color: #1a5c3f; font-weight: 700; margin: 0 0 10px; }
+.bio-contact-card p { font-size: 15px; line-height: 1.6; color: #555; margin: 0 0 6px; }
+.bio-contact-card p:last-child { margin-bottom: 0; }
+.bio-contact-card a { color: #02843c; font-weight: 600; text-decoration: none; overflow-wrap: break-word; }
+.bio-contact-card a:hover { text-decoration: underline; }
+.bio-contact-card--whats { text-decoration: none; color: inherit; border-color: #dcefe6; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.bio-contact-card--whats:hover { border-color: #02843c; box-shadow: 0 8px 24px rgba(26,92,63,0.12); transform: translateY(-3px); color: inherit; }
+.bio-contact-card--whats span { margin-top: auto; padding-top: 12px; font-size: 14px; color: #02843c; font-weight: 700; }
+
+@media (max-width: 1023px) { .bio-contact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 767px) { .bio-contact-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
    Dicas e Guias — HUB de conteúdo (bio-editorial, bio-guide, bio-region)
    ========================================================= */
 .bio-breadcrumb { background: #fff; border-bottom: 1px solid #dcefe6; }
