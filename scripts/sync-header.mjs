@@ -67,9 +67,6 @@ const ACTIVE = {
   'controle-de-pragas-guarapuava.html': 'unidades',
   // Conteúdo
   'dicas.html': 'conteudo',
-  'galeriaInstagram.html': 'conteudo',
-  'treinamentoNr33.html': 'conteudo',
-  'treinamentoNr35.html': 'conteudo',
 };
 
 function navKey(file) {
