@@ -145,14 +145,13 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
    Página de Desinsetização (landing page de serviço)
    Nomenclatura: service-*
    ========================================================= */
-.service-hero { position: relative; overflow: hidden; background: #eef7f2; padding: 0; }
-.service-hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; min-height: clamp(440px, 62vh, 620px); }
-/* Imagem grande cobrindo todo o hero */
-.service-hero-media { position: absolute; inset: 0; z-index: 0; }
-.service-hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: right center; border-radius: 0; box-shadow: none; display: block; }
-/* Gradiente da esquerda (opaco) para a direita (transparente) — o texto fica sobre a parte clara */
-.service-hero::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, #eef7f2 0%, #eef7f2 38%, rgba(238,247,242,0.92) 55%, rgba(238,247,242,0.35) 78%, rgba(238,247,242,0) 100%); pointer-events: none; }
-.service-hero-content { position: relative; z-index: 2; max-width: 640px; padding: clamp(56px, 8vw, 96px) 0; }
+.service-hero { position: relative; background: #eef7f2; padding: 0; overflow: hidden; }
+.service-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: stretch; min-height: 0; }
+/* Imagem grande preenchendo o canto direito */
+.service-hero-media { position: relative; z-index: 1; display: flex; }
+.service-hero-media img { width: 100%; height: 100%; min-height: 380px; max-height: 560px; object-fit: cover; object-position: center; border-radius: 12px; box-shadow: 0 18px 48px rgba(26,92,63,0.16); display: block; }
+/* Texto sobreposto à esquerda com leve esmaecimento da imagem atrás */
+.service-hero-content { position: relative; z-index: 2; align-self: center; padding: clamp(48px, 6vw, 80px) 0; }
 .service-hero-content h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.18; color: #1a5c3f; margin: 0 0 20px; font-family: 'Roboto', sans-serif; }
 .service-hero-lead { font-size: 18px; line-height: 1.7; color: #333; margin-bottom: 14px; }
 .service-hero-sub { font-size: 16px; line-height: 1.7; color: #555; margin-bottom: 30px; }
@@ -280,7 +279,10 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
 .bio-service-grid--slim .bio-service-more { font-size: 13px; }
 
 @media (max-width: 1023px) {
-  .service-hero-grid { grid-template-columns: 1fr; gap: 0; min-height: clamp(420px, 58vh, 560px); }
+  .service-hero-grid { grid-template-columns: 1fr; gap: 24px; min-height: 0; }
+  .service-hero-media { order: -1; }
+  .service-hero-media img { min-height: 260px; max-height: 380px; }
+  .service-hero-content { padding: 24px 0 40px; }
   .service-authority-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .service-what-grid { grid-template-columns: 1fr; }
   .service-pest-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -294,11 +296,9 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
   .service-pigeons-out-diff-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 767px) {
-  .service-hero { padding: 0; }
-  .service-hero-grid { min-height: min(560px, 78vh); align-items: end; }
-  .service-hero::after { background: linear-gradient(to top, #eef7f2 0%, #eef7f2 30%, rgba(238,247,242,0.9) 55%, rgba(238,247,242,0.25) 100%); }
-  .service-hero-media img { object-position: center top; }
-  .service-hero-content { max-width: 100%; padding: clamp(300px, 46vh, 420px) 0 36px; }
+  .service-hero-grid { gap: 16px; }
+  .service-hero-media img { min-height: 220px; max-height: 300px; border-radius: 8px; }
+  .service-hero-content { padding: 8px 0 32px; }
   .service-authority-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
   .service-authority-item { padding: 16px 12px; }
   .service-pest-grid { grid-template-columns: 1fr; }
