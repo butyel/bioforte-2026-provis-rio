@@ -142,21 +142,39 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
 @media (prefers-reduced-motion: reduce) { .bio-service-card, .bio-filter-chip, .bio-faq-a { transition: none; } .bf-whatsapp-float { animation: none; } .bio-gallery-item img, .bio-gallery-overlay { transition: none; } }
 
 /* =========================================================
-   Página de Desinsetização (landing page de serviço)
-   Nomenclatura: service-*
+   Service Hero — imagem de fundo full-width + texto sobreposto à esquerda
+   Camadas (de baixo para cima): media (img) > ::before (gradiente) > content (texto)
    ========================================================= */
-.service-hero { background: #eef7f2; padding: 56px 0; }
-.service-hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
-.service-hero-content h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.18; color: #1a5c3f; margin: 0 0 20px; font-family: 'Roboto', sans-serif; }
-.service-hero-lead { font-size: 18px; line-height: 1.7; color: #333; margin-bottom: 14px; }
-.service-hero-sub { font-size: 16px; line-height: 1.7; color: #555; margin-bottom: 30px; }
-.service-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 26px; }
-.service-hero-btn { min-height: 50px; border-radius: 4px; padding-inline: 22px; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; text-decoration: none; }
-.service-hero-btn--outline { background: #fff; color: #1a5c3f; border: 1px solid #1a5c3f; }
-.service-hero-btn--outline:hover { background: #1a5c3f; color: #fff; }
+.service-hero { position: relative; overflow: hidden; background: #1a5c3f; padding: 0; }
+.service-hero .container { position: static; }
+.service-hero-grid { position: static; display: grid; grid-template-columns: 1fr; gap: 0; min-height: clamp(520px, 60vh, 650px); align-items: center; padding: 0; }
+/* Imagem de fundo cobrindo todo o hero (ancorada no .service-hero) */
+.service-hero-media { position: absolute; inset: 0; z-index: 0; margin: 0; }
+.service-hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 68% center; border-radius: 0; box-shadow: none; display: block; }
+/* Gradiente: esquerda sólida Bioforte -> direita transparente (imagem visível) */
+.service-hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, #1a5c3f 0%, #1a5c3f 26%, rgba(26,92,63,0.85) 48%, rgba(26,92,63,0.45) 70%, rgba(26,92,63,0.06) 88%, rgba(26,92,63,0) 100%); pointer-events: none; }
+/* Texto acima de tudo */
+.service-hero-content { position: relative; z-index: 2; align-self: center; justify-self: start; max-width: 640px; padding: clamp(48px, 6vw, 80px) 0; animation: serviceHeroIn .45s ease-out both; }
+.service-hero-content h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.18; color: #fff; margin: 0 0 18px; font-family: 'Roboto', sans-serif; text-shadow: 0 2px 14px rgba(0,20,8,0.25); }
+.service-hero-lead { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.94); margin-bottom: 12px; }
+.service-hero-sub { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 28px; }
+.service-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 24px; }
+.service-hero-btn { min-height: 50px; border-radius: 4px; padding-inline: 22px; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.service-hero-btn:hover { transform: translateY(-1px); }
+.service-hero-btn--outline { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+.service-hero-btn--outline:hover { background: #fff; color: #1a5c3f; border-color: #fff; }
 .service-hero-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; }
-.service-hero-tags li { background: #fff; border: 1px solid #dcefe6; color: #1a5c3f; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px; }
-.service-hero-media img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(26,92,63,0.12); }
+.service-hero-tags li { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.35); color: #fff; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px; }
+@keyframes serviceHeroIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* Controle de enquadramento por serviço (ponto focal da fotografia) */
+.service-hero--desinsetizacao .service-hero-media img { object-position: 65% center; }
+.service-hero--desratizacao .service-hero-media img { object-position: 70% center; }
+.service-hero--descupinizacao .service-hero-media img { object-position: 62% center; }
+.service-hero--cip .service-hero-media img { object-position: 58% center; }
+.service-hero--pombos .service-hero-media img { object-position: 72% center; }
+.service-hero--caixa .service-hero-media img { object-position: 60% center; }
+.service-hero--oxi .service-hero-media img { object-position: 68% center; }
+.service-hero .bio-eyebrow { color: #fff; }
 
 .service-authority { background: #fff; padding: 32px 0; border-bottom: 1px solid #dcefe6; }
 .service-authority-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; }
@@ -275,7 +293,8 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
 .bio-service-grid--slim .bio-service-more { font-size: 13px; }
 
 @media (max-width: 1023px) {
-  .service-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .service-hero-grid { grid-template-columns: 1fr; gap: 0; min-height: clamp(440px, 54vh, 560px); }
+  .service-hero-content { max-width: 100%; justify-self: start; }
   .service-authority-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .service-what-grid { grid-template-columns: 1fr; }
   .service-pest-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -289,7 +308,10 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
   .service-pigeons-out-diff-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 767px) {
-  .service-hero { padding: 36px 0; }
+  .service-hero-grid { min-height: min(560px, 74vh); align-items: end; }
+  .service-hero::before { background: linear-gradient(180deg, rgba(26,92,63,0.55) 0%, rgba(26,92,63,0.72) 34%, rgba(26,92,63,0.86) 62%, #1a5c3f 100%); }
+  .service-hero-content { padding: clamp(260px, 42vh, 360px) 20px 34px; justify-self: stretch; max-width: 100%; }
+  .service-hero-content h1 { font-size: clamp(24px, 6.5vw, 32px); }
   .service-authority-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
   .service-authority-item { padding: 16px 12px; }
   .service-pest-grid { grid-template-columns: 1fr; }
