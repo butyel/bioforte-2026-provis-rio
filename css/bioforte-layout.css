@@ -104,5 +104,39 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
   .bio-pest-hero .bio-himg { margin-top: 28px; }
   .bio-faq-q { padding: 16px; font-size: 16px; }
   .bio-faq-a-inner { padding-inline: 16px; }
+  .bio-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .bio-about-gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (prefers-reduced-motion: reduce) { .bio-service-card, .bio-filter-chip, .bio-faq-a { transition: none; } .bf-whatsapp-float { animation: none; } }
+/* Quem Somos - Layout moderno */
+.bio-about-hero { background: #eef7f2; padding: 52px 0; text-align: center; }
+.bio-about-hero h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin-bottom: 16px; }
+.bio-about-lead { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto; }
+.bio-about-intro, .bio-about-method, .bio-about-docs, .bio-about-mission, .bio-about-gallery { padding: 64px 0; }
+.bio-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.bio-about-grid--reverse { direction: ltr; }
+.bio-about-grid--reverse .bio-about-content { order: 2; }
+.bio-about-grid--reverse .bio-about-image { order: 1; }
+.bio-about-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(26, 92, 63, 0.1); }
+.bio-about-content h2 { font-size: clamp(24px, 2.8vw, 34px); line-height: 1.25; margin-bottom: 20px; color: #1a5c3f; }
+.bio-about-content p, .bio-about-text p { font-size: 17px; line-height: 1.75; color: #333; margin-bottom: 20px; }
+.bio-about-text { max-width: 960px; margin: 0 auto; }
+.bio-about-services { padding: 64px 0; }
+.bio-about-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.bio-gallery-item { position: relative; overflow: hidden; border-radius: 6px; }
+.bio-gallery-item img { width: 100%; height: 240px; object-fit: cover; display: block; transition: transform 0.3s; }
+.bio-gallery-item:hover img { transform: scale(1.05); }
+.bio-gallery-overlay { position: absolute; inset: 0; background: rgba(2, 132, 60, 0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+.bio-gallery-item:hover .bio-gallery-overlay { opacity: 1; }
+.bio-gallery-overlay i { color: #fff; font-size: 32px; }
+@media (max-width: 767px) {
+  .bio-about-hero { padding: 36px 0; }
+  .bio-about-intro, .bio-about-method, .bio-about-docs, .bio-about-mission, .bio-about-gallery { padding: 48px 0; }
+  .bio-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .bio-about-grid--reverse .bio-about-content { order: 1; }
+  .bio-about-grid--reverse .bio-about-image { order: 2; }
+  .bio-about-gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .bio-gallery-item img { height: 180px; }
+  .bio-about-commitment { padding: 48px 0 !important; }
+  .bio-about-mission-box { padding: 32px 24px !important; }
+}
+@media (prefers-reduced-motion: reduce) { .bio-service-card, .bio-filter-chip, .bio-faq-a { transition: none; } .bf-whatsapp-float { animation: none; } .bio-gallery-item img, .bio-gallery-overlay { transition: none; } }
