@@ -122,6 +122,28 @@
     window.addEventListener('hashchange', openHash);
   }
 
+  /* ---- Landing page de serviço: accordion FAQ (service-faq) ---- */
+  var serviceFaq = document.querySelectorAll('.service-faq-item');
+  if (serviceFaq.length) {
+    function setServiceFaq(item, open) {
+      item.classList.toggle('is-open', open);
+      var question = item.querySelector('.service-faq-q');
+      if (question) question.setAttribute('aria-expanded', String(open));
+    }
+    serviceFaq.forEach(function (item, i) {
+      var question = item.querySelector('.service-faq-q');
+      var answer = item.querySelector('.service-faq-a');
+      if (question && answer) {
+        answer.id = answer.id || 'service-faq-answer-' + i;
+        question.setAttribute('aria-controls', answer.id);
+      }
+      setServiceFaq(item, item.classList.contains('is-open'));
+      if (question) question.addEventListener('click', function () {
+        setServiceFaq(item, !item.classList.contains('is-open'));
+      });
+    });
+  }
+
   /* ---- Reveal on scroll ---- */
   var revealEls = document.querySelectorAll('.bio-reveal');
   if (revealEls.length) {
