@@ -8,13 +8,10 @@
 .bio-hero-eyebrow::before { content: ''; width: 28px; height: 3px; background: #02843c; flex: 0 0 auto; }
 .bio-hero h1 { font-family: Roboto, sans-serif; font-size: clamp(36px, 4.3vw, 60px); font-weight: 900; line-height: 1.08; letter-spacing: -1.5px; color: #1a1a1a; margin: 0 0 24px; text-transform: none; }
 .bio-hero h1 span { color: #02843c; }
-.bio-hero-service-line { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-.bio-hero-sub { flex: 1; min-width: 0; font-size: 20px; line-height: 1.35; font-weight: 500; color: #1a5c3f; margin: 0; }
+.bio-hero-sub { font-size: 20px; line-height: 1.35; font-weight: 500; color: #1a5c3f; margin: 0 0 18px; }
 .bio-hero-rotator { display: block; min-height: 2.7em; font-weight: 700; }
 .bio-hero-word { display: block; overflow-wrap: break-word; transition: opacity .18s ease, transform .18s ease; }
 .bio-hero-word--out { opacity: 0; transform: translateY(5px); }
-.bio-hero-pause { flex: 0 0 auto; width: 44px; height: 44px; border: 1px solid #dcefe6; border-radius: 4px; background: #fff; color: #1a5c3f; font-size: 13px; cursor: pointer; }
-.bio-hero-pause:hover { background: #e8f4f0; }
 .bio-hero-lead { max-width: 540px; color: #555; font-size: 17px; line-height: 1.75; margin: 0 0 28px; }
 .bio-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .bio-hero-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 20px; border: 1px solid #02843c; border-radius: 4px; font-size: 15px; font-weight: 700; line-height: 1.4; text-decoration: none; transition: background .2s, color .2s; }
@@ -94,9 +91,8 @@ body#home .why-choose .container-fluid .row.fix { margin-inline: 0; }
   .bio-hero h1 { font-size: clamp(34px,8.7vw,50px); letter-spacing: -1px; margin-bottom: 20px; }
   .bio-hero-eyebrow { font-size: 12px; letter-spacing: 1px; margin-bottom: 18px; }
   .bio-hero-lead { font-size: 16px; line-height: 1.7; margin-bottom: 22px; }
-  .bio-hero-sub { font-size: 18px; }
+  .bio-hero-sub { font-size: 18px; margin-bottom: 14px; }
   .bio-hero-actions { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; }
-  .bio-hero-service-line { margin-bottom: 8px; }
   .bio-hero-note { font-size: 13px; }
   .bio-hero-units { padding: 24px; }
   .bio-units-list a { min-height: 58px; font-size: 16px; }
@@ -157,8 +153,6 @@ body#home .why-choose .container-fluid .row.fix { margin-inline: 0; }
 .bio-hero--team .bio-hero-lead { color: rgba(255,255,255,0.92); max-width: 560px; }
 .bio-hero--team .bio-hero-note { color: rgba(255,255,255,0.85); }
 .bio-hero--team .bio-hero-note i { color: #7ddb9e; }
-.bio-hero--team .bio-hero-pause { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.4); color: #fff; }
-.bio-hero--team .bio-hero-pause:hover { background: rgba(255,255,255,0.24); }
 .bio-hero--team .bio-hero-btn--primary { background: #fff; color: #1a5c3f; border-color: #fff; }
 .bio-hero--team .bio-hero-btn--primary:hover, .bio-hero--team .bio-hero-btn--primary:focus { background: #eef7f2; color: #1a5c3f; border-color: #eef7f2; }
 .bio-hero--team .bio-hero-btn--outline { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.7); }

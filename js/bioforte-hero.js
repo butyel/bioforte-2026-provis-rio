@@ -5,7 +5,6 @@
   var data = document.getElementById('bio-hero-services');
   var word = hero && hero.querySelector('.bio-hero-word');
   var rotator = hero && hero.querySelector('.bio-hero-rotator');
-  var pause = hero && hero.querySelector('.bio-hero-pause');
   if (!data || !word || !rotator) return;
   var terms;
   try { terms = JSON.parse(data.textContent); } catch (e) { return; }
@@ -13,7 +12,6 @@
   terms = terms.filter(function (term) { return typeof term === 'string' && term.trim(); });
   if (terms.length < 2) return;
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var paused = false;
   var visible = true;
   var index = 0;
   var timer = null;
@@ -37,8 +35,7 @@
   }
   function update() {
     stop();
-    if (pause) pause.hidden = motion.matches;
-    if (motion.matches || paused || document.hidden || !visible) return;
+    if (motion.matches || document.hidden || !visible) return;
     timer = setInterval(function () {
       word.classList.add('bio-hero-word--out');
       swapTimer = setTimeout(function () {
@@ -48,12 +45,6 @@
       }, 180);
     }, 4800);
   }
-  if (pause) pause.addEventListener('click', function () {
-    paused = !paused;
-    pause.setAttribute('aria-label', paused ? 'Retomar animação dos serviços' : 'Pausar animação dos serviços');
-    pause.querySelector('i').className = paused ? 'fa fa-play' : 'fa fa-pause';
-    update();
-  });
   measure();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(rotator);
