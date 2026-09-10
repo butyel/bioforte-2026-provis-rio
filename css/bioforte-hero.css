@@ -113,3 +113,109 @@ body#home .why-choose .container-fluid .row.fix { margin-inline: 0; }
   .bio-process-steps h3 { font-size: 19px; }
 }
 @media (prefers-reduced-motion: reduce) { .bio-hero-word, .bio-hero-btn, .bio-units-list a, .bio-home-shortcuts a, .bio-pest-quicklink { transition: none; } }
+
+/* =========================================================
+   HOME HERO — fotografia da equipe em background full-width
+   Escopo exclusivo da Home (.bio-hero--team). Não afeta
+   heroes de serviços, pragas, unidades ou demais páginas.
+   Camadas: foto (0) > gradiente (1) > texto (2) > painel (3).
+   ========================================================= */
+.bio-hero--team {
+  background: #1a5c3f;
+  padding: 0;
+  border-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bio-hero--team .bio-hero-bg {
+  opacity: 1;
+  object-position: 50% 28%;
+  filter: saturate(1.16) contrast(1.07) brightness(1.03);
+}
+.bio-hero--team::before {
+  background: linear-gradient(90deg, rgba(26,92,63,0.97) 0%, rgba(26,92,63,0.92) 22%, rgba(26,92,63,0.78) 40%, rgba(2,132,60,0.42) 58%, rgba(2,132,60,0.12) 78%, rgba(2,132,60,0) 100%);
+}
+.bio-hero--team .bio-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: clamp(600px, 68vh, 740px);
+}
+.bio-hero--team .bio-hero-content {
+  max-width: 680px;
+  padding: clamp(64px, 6vw, 92px) 0;
+  animation: bioHeroTeamIn .5s ease-out both;
+}
+.bio-hero--team .bio-hero-eyebrow { color: rgba(255,255,255,0.94); }
+.bio-hero--team .bio-hero-eyebrow::before { background: #fff; }
+.bio-hero--team .bio-hero-content h1 { color: #fff; margin-bottom: 20px; }
+.bio-hero--team .bio-hero-content h1 span { color: #fff; }
+.bio-hero--team .bio-hero-sub { color: rgba(255,255,255,0.95); }
+.bio-hero--team .bio-hero-lead { color: rgba(255,255,255,0.92); max-width: 560px; }
+.bio-hero--team .bio-hero-note { color: rgba(255,255,255,0.85); }
+.bio-hero--team .bio-hero-note i { color: #7ddb9e; }
+.bio-hero--team .bio-hero-pause { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.4); color: #fff; }
+.bio-hero--team .bio-hero-pause:hover { background: rgba(255,255,255,0.24); }
+.bio-hero--team .bio-hero-btn--primary { background: #fff; color: #1a5c3f; border-color: #fff; }
+.bio-hero--team .bio-hero-btn--primary:hover, .bio-hero--team .bio-hero-btn--primary:focus { background: #eef7f2; color: #1a5c3f; border-color: #eef7f2; }
+.bio-hero--team .bio-hero-btn--outline { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.7); }
+.bio-hero--team .bio-hero-btn--outline:hover, .bio-hero--team .bio-hero-btn--outline:focus { background: #fff; color: #1a5c3f; border-color: #fff; }
+@keyframes bioHeroTeamIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+/* Painel inferior: atalhos + unidades integrados à base do hero */
+.bio-hero--team .bio-hero-bottom { position: relative; z-index: 3; background: #fff; }
+.bio-hero--team .bio-home-shortcuts { margin-top: 0; border-top: 0; }
+.bio-hero--team .bio-hero-units {
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid #dcefe6;
+  color: #1a1a1a;
+  padding: 22px 0 26px;
+  display: grid;
+  grid-template-columns: minmax(200px, 0.9fr) minmax(0, 1.7fr) auto;
+  gap: clamp(20px, 3vw, 44px);
+  align-items: center;
+}
+.bio-hero--team .bio-units-text { min-width: 0; }
+.bio-hero--team .bio-hero-units h2 { color: #1a1a1a; font-size: 21px; line-height: 1.25; margin: 0 0 6px; }
+.bio-hero--team .bio-units-description { color: #555; font-size: 14px; line-height: 1.5; margin: 0; max-width: none; }
+.bio-hero--team .bio-units-list { gap: 10px; }
+.bio-hero--team .bio-units-list a { min-height: 54px; padding: 10px 14px; border: 1px solid #dcefe6; border-radius: 6px; }
+.bio-hero--team .bio-units-list a:last-child { border: 1px solid #dcefe6; }
+.bio-hero--team .bio-units-list a:hover { background: #eef7f2; border-color: #02843c; color: #1a5c3f; }
+.bio-hero--team .bio-units-experience { margin: 0; padding-left: clamp(20px, 3vw, 40px); border-left: 1px solid #dcefe6; white-space: nowrap; }
+.bio-hero--team .bio-units-experience strong { color: #02843c; }
+.bio-hero--team .bio-units-experience p { color: #555; }
+.bio-hero--team .bio-units-experience i { color: #d3e8dd; }
+@media (min-width: 768px) and (max-width: 991px) {
+  .bio-hero--team .bio-hero-units { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+  .bio-hero--team .bio-units-experience { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #dcefe6; margin-top: 6px; padding: 14px 0 0; white-space: normal; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bio-hero--team .bio-hero-units { grid-template-columns: minmax(180px, 0.9fr) minmax(0, 1.6fr); }
+  .bio-hero--team .bio-units-experience { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #dcefe6; margin-top: 6px; padding: 14px 0 0; white-space: normal; }
+}
+@media (max-width: 991px) {
+  .bio-hero--team { padding-top: 0; }
+  .bio-hero--team .bio-hero-inner { min-height: clamp(540px, 62vh, 640px); }
+  .bio-hero--team .bio-hero-actions { flex-direction: row; }
+}
+@media (max-width: 767px) {
+  .bio-hero--team::before {
+    background: linear-gradient(180deg, rgba(26,92,63,0.42) 0%, rgba(26,92,63,0.68) 34%, rgba(26,92,63,0.9) 64%, rgba(20,74,50,0.98) 100%);
+  }
+  .bio-hero--team .bio-hero-bg { object-position: 50% 20%; }
+  .bio-hero--team .bio-hero-inner { min-height: min(540px, 64vh); align-items: flex-end; }
+  .bio-hero--team .bio-hero-content { max-width: none; padding: 120px 0 26px; }
+  .bio-hero--team .bio-hero-actions { grid-template-columns: minmax(0,1fr); gap: 10px; }
+  .bio-hero--team .bio-hero-units { grid-template-columns: minmax(0,1fr); gap: 16px; padding: 20px 0 24px; }
+  .bio-hero--team .bio-units-list { grid-template-columns: minmax(0,1fr); gap: 8px; }
+  .bio-hero--team .bio-units-experience { border-left: 0; border-top: 1px solid #dcefe6; margin-top: 2px; padding: 14px 0 0; white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bio-hero--team .bio-hero-content { animation: none; }
+  .bio-hero--team .bio-hero-btn { transition: none; }
+}
