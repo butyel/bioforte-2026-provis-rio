@@ -869,3 +869,136 @@ section[id], .bio-faq-group, .bio-faq-item { scroll-margin-top: calc(var(--bf-he
 @media (prefers-reduced-motion: reduce) {
   .bio-reveal-up { opacity: 1; transform: none; transition: none; }
 }
+
+/* =========================================================
+   Pest Hero — páginas individuais da Central de Pragas (upgrade fotográfico)
+   Escopo próprio (.pest-hero) para NÃO afetar serviços, unidades, guias ou FAQ.
+   Camadas (base → topo): imagem (media) > ::before (gradiente) > conteúdo.
+   ========================================================= */
+.pest-hero {
+  position: relative;
+  overflow: hidden;
+  background: #1a5c3f;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 60vh, 620px);
+  padding: 0;
+}
+.pest-hero .container { position: relative; z-index: 2; }
+.pest-hero-media-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+.pest-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #1a5c3f 0%, #1a5c3f 18%, rgba(26,92,63,0.96) 30%, rgba(26,92,63,0.82) 42%, rgba(26,92,63,0.5) 54%, rgba(26,92,63,0.16) 68%, rgba(26,92,63,0) 82%);
+}
+.pest-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  padding: clamp(48px, 6vw, 80px) 0;
+  animation: pestHeroIn .45s ease-out both;
+}
+.pest-hero-crumb { margin-bottom: 16px; }
+.pest-hero-crumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+.pest-hero-crumb li { display: inline-flex; align-items: center; color: rgba(255,255,255,0.92); }
+.pest-hero-crumb li:not(:last-child)::after { content: '›'; margin-left: 6px; color: rgba(255,255,255,0.55); }
+.pest-hero-crumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.pest-hero-crumb a:hover { color: #fff; text-decoration: underline; }
+.pest-hero-crumb [aria-current] { color: #fff; font-weight: 700; }
+.pest-hero-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+  margin: 0 0 12px;
+}
+.pest-hero-content h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 16px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 2px 14px rgba(0,20,8,0.22);
+}
+.pest-hero-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.94);
+  max-width: 560px;
+  margin: 0 0 24px;
+}
+.pest-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.pest-hero-actions .btn {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding-inline: 22px;
+  text-decoration: none;
+  border: 0;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease;
+}
+.pest-hero-actions .btn:hover { transform: translateY(-1px); }
+.pest-hero-actions .btn.primary { background: #fff; color: #1a5c3f; }
+.pest-hero-actions .btn.primary:hover { background: #eef7f2; color: #1a5c3f; }
+.pest-hero-actions .bio-btn-whats { background: #25d366; color: #fff; }
+.pest-hero-actions .bio-btn-whats:hover { background: #1eb356; color: #fff; }
+@keyframes pestHeroIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* Enquadramento individual por praga (ponto focal da fotografia) */
+.pest-hero--escorpiao .pest-hero-media-img { object-position: 66% center; }
+.pest-hero--barata-americana .pest-hero-media-img { object-position: 68% center; }
+.pest-hero--barata-germanica .pest-hero-media-img { object-position: 70% center; }
+.pest-hero--carrapato .pest-hero-media-img { object-position: 68% center; }
+.pest-hero--cupim .pest-hero-media-img { object-position: 64% center; }
+.pest-hero--aranha .pest-hero-media-img { object-position: 72% center; }
+.pest-hero--formiga-fantasma .pest-hero-media-img { object-position: 68% center; }
+.pest-hero--formiga-sauva .pest-hero-media-img { object-position: 68% center; }
+.pest-hero--mosca .pest-hero-media-img { object-position: 64% center; }
+.pest-hero--pombo .pest-hero-media-img { object-position: 70% center; }
+.pest-hero--pulga .pest-hero-media-img { object-position: 70% center; }
+.pest-hero--rato .pest-hero-media-img { object-position: 68% center; }
+@media (max-width: 1023px) {
+  .pest-hero { min-height: clamp(460px, 54vh, 560px); }
+}
+@media (max-width: 767px) {
+  .pest-hero { min-height: min(560px, 74vh); align-items: flex-end; }
+  .pest-hero::before {
+    background: linear-gradient(180deg, rgba(26,92,63,0.45) 0%, rgba(26,92,63,0.7) 30%, rgba(26,92,63,0.88) 60%, #1a5c3f 100%);
+  }
+  .pest-hero-content { max-width: 100%; padding: clamp(200px, 36vh, 300px) 20px 34px; }
+  .pest-hero-content h1 { font-size: clamp(26px, 6.5vw, 32px); }
+  .pest-hero-lead { font-size: 16px; }
+  .pest-hero-actions .btn { font-size: 14px; padding-inline: 16px; min-height: 46px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pest-hero-content { animation: none; }
+  .pest-hero-actions .btn { transition: none; }
+  .pest-hero-actions .btn:hover { transform: none; }
+}
