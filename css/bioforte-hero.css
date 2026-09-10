@@ -150,6 +150,7 @@ body#home .why-choose .container-fluid .row.fix { margin-inline: 0; }
 .bio-hero--team .bio-hero-content h1 { color: #fff; margin-bottom: 20px; }
 .bio-hero--team .bio-hero-content h1 span { color: #fff; }
 .bio-hero--team .bio-hero-sub { color: rgba(255,255,255,0.95); }
+.bio-hero--team .bio-hero-word { color: #04BF20; }
 .bio-hero--team .bio-hero-lead { color: rgba(255,255,255,0.92); max-width: 560px; }
 .bio-hero--team .bio-hero-note { color: rgba(255,255,255,0.85); }
 .bio-hero--team .bio-hero-note i { color: #7ddb9e; }
