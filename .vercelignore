@@ -1,5 +1,17 @@
+# Arquivos internos/build-time — não sobem para o Vercel
 SEO-REPORT-FASE02.md
-AUDITORIA-SEO.md
 SEO-REPORT.md
+AUDITORIA-SEO.md
+
 company-data.json
 .htaccess
+
+# Código-fonte de build/manutenção (não serve ao navegador)
+data/
+scripts/
+partials/
+docs/
+mail/
+Thumbs.db
+*.csv
+*.txt

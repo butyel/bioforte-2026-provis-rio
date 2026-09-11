@@ -1,9 +1,5 @@
+# Ambiente de STAGING/desenvolvimento — bloqueado para indexação.
 User-agent: *
-Allow: /
-Disallow: /mail-success.html
-Disallow: /emConstrucao.html
-Disallow: /google.html
-Disallow: /header.html
-Disallow: /footer.html
+Disallow: /
 
-Sitemap: https://biofortecombr.vercel.app/sitemap.xml
+# Não publicar Sitemap (produção terá um com o domínio oficial).

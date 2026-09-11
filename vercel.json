@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
@@ -16,16 +17,16 @@
     {
       "source": "/(.*)",
       "has": [
-        { "type": "host", "value": "butyel95-4732s-projects.vercel.app" }
+        { "type": "host", "value": { "suf": ".vercel.app" } }
       ],
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
       ]
     },
     {
-      "source": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|svg|webp|avif|ico)(?:\\?.*)?$)",
+      "source": "/(.*\\.(?:css|js|woff|woff2|ttf|svg|png|jpg|jpeg|gif|webp|avif|ico)(?:\\?.*)?$)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, max-age=604800, must-revalidate" }
       ]
     },
     {

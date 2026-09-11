@@ -6,84 +6,82 @@
   "url": "https://biofortecombr.vercel.app/",
   "logo": "https://biofortecombr.vercel.app/images/logoBioforte.png",
   "email": "atendimento@bioforte.com.br",
-  "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 30 anos de experiência, atuando em Franca, Ribeirão Preto, Uberaba e região.",
-  "foundingDate": "",
-  "numberOfEmployees": "",
+  "telephone": "+551637230808",
+  "description": "Empresa de controle de pragas urbanas e saneamento ambiental com mais de 30 anos de experiência, atuando em Franca, Ribeirão Preto, Uberaba e Guarapuava.",
+  "foundingDate": "2002",
   "sameAs": [
     "https://pt-br.facebook.com/biofortecontroledepragas/",
     "https://twitter.com/francabioforte",
     "https://www.youtube.com/channel/UCH39-FD6_s9X6mHQHEfzOMQ",
-    "https://www.instagram.com/bioforte_dedetizadora/"
+    "https://www.instagram.com/biofortededetizadora/"
   ],
   "areaServed": [
-    "Franca, São Paulo, Brasil",
-    "Ribeirão Preto, São Paulo, Brasil",
-    "Uberaba, Minas Gerais, Brasil"
+    "Franca, SP, Brasil",
+    "Ribeirão Preto, SP, Brasil",
+    "Uberaba, MG, Brasil",
+    "Guarapuava, PR, Brasil"
   ],
-  "openingHours": "Mo-Fr 07:30-17:30",
-  "departments": [
-    {
-      "@type": "ContactPoint",
-      "areaServed": "Franca/SP",
-      "contactType": "sales",
-      "telephone": "+55-16-3723-0808",
-      "email": "comercialfranca@bioforte.com.br"
-    },
-    {
-      "@type": "ContactPoint",
-      "areaServed": "Ribeirão Preto/SP",
-      "contactType": "sales",
-      "telephone": "+55-16-3635-2034",
-      "email": "comercial@bioforte.com.br"
-    },
-    {
-      "@type": "ContactPoint",
-      "areaServed": "Uberaba/MG",
-      "contactType": "sales",
-      "telephone": "+55-34-99298-6711",
-      "email": "atendimentouberaba@bioforte.com.br"
-    }
-  ],
+  "openingHours": "Mo-Fr 07:30-17:30, Sa 07:30-12:00",
   "units": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://biofortecombr.vercel.app/#unidade-franca",
+      "key": "franca",
       "name": "Bioforte Franca Saneamento Ambiental",
-      "parentOrganization": {
-        "@id": "https://biofortecombr.vercel.app/#organization"
-      },
-      "url": "https://biofortecombr.vercel.app/contato.html",
-      "telephone": "+55-16-3723-0808",
+      "city": "Franca",
+      "state": "SP",
+      "address": "Rua João de Goes Conrado, 2525 - São José",
+      "cep": "",
+      "phone": "(16) 3723-0808",
+      "whatsapp": "(16) 3723-0808",
       "email": "comercialfranca@bioforte.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua João de Goes Conrado, 2525 - São José",
-        "addressLocality": "Franca",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "openingHours": "Mo-Fr 07:30-17:30",
-      "geo": ""
+      "url": "https://biofortecombr.vercel.app/controle-de-pragas-franca.html",
+      "latitude": null,
+      "longitude": null,
+      "googleBusinessProfile": null
     },
     {
-      "@type": "LocalBusiness",
-      "@id": "https://biofortecombr.vercel.app/#unidade-ribeirao-preto",
+      "key": "ribeirao-preto",
       "name": "Bioforte Ribeirão Preto",
-      "parentOrganization": {
-        "@id": "https://biofortecombr.vercel.app/#organization"
-      },
-      "url": "https://biofortecombr.vercel.app/contato.html",
-      "telephone": "+55-16-3635-2034",
+      "city": "Ribeirão Preto",
+      "state": "SP",
+      "address": "Rua João Nutti, 1135 - Jardim Paulistano",
+      "cep": "",
+      "phone": "(16) 3635-2034",
+      "whatsapp": "(16) 3723-0808",
       "email": "comercial@bioforte.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua João Nutti, 1135 - Jardim Paulistano",
-        "addressLocality": "Ribeirão Preto",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "openingHours": "Mo-Fr 07:30-17:30",
-      "geo": ""
+      "url": "https://biofortecombr.vercel.app/controle-de-pragas-ribeirao-preto.html",
+      "latitude": null,
+      "longitude": null,
+      "googleBusinessProfile": null
+    },
+    {
+      "key": "uberaba",
+      "name": "Bioforte Uberaba",
+      "city": "Uberaba",
+      "state": "MG",
+      "address": "R. Aracajú, 145 - Santa Marta",
+      "cep": "38055-440",
+      "phone": "(34) 99298-6711",
+      "whatsapp": "(34) 99298-6711",
+      "email": "atendimentouberaba@bioforte.com.br",
+      "url": "https://biofortecombr.vercel.app/controle-de-pragas-uberaba.html",
+      "latitude": null,
+      "longitude": null,
+      "googleBusinessProfile": null
+    },
+    {
+      "key": "guarapuava",
+      "name": "Bioforte Guarapuava",
+      "city": "Guarapuava",
+      "state": "PR",
+      "address": null,
+      "cep": null,
+      "phone": "(16) 3723-0808",
+      "whatsapp": "(16) 3723-0808",
+      "email": "atendimento@bioforte.com.br",
+      "url": "https://biofortecombr.vercel.app/controle-de-pragas-guarapuava.html",
+      "latitude": null,
+      "longitude": null,
+      "googleBusinessProfile": null
     }
   ]
 }

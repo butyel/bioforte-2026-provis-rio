@@ -3015,9 +3015,6 @@ div .single-slider {
 .footer .footer-top {
 	padding: 40px 0 70px;
 	background-color: #fff !important;
-	background-image: url("images/footer-bg.png");
-	background-repeat: repeat !important;
-	background-attachment: scroll !important;
 	background-clip: border-box !important;
 	background-origin: padding-box !important;
 	background-position: 0% 0% !important;

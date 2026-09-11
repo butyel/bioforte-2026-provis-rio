@@ -1,0 +1,124 @@
+/* =========================================================
+   Bioforte — componentes do núcleo leve (js/bioforte-core.js)
+   Lightbox, carrossel de clientes, scroll-up, newsletter, honeypot.
+   ========================================================= */
+
+/* Lightbox de fotos (data-fancybox) */
+body.bf-lightbox-open { overflow: hidden; }
+.bf-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 32, 22, 0.94);
+  padding: 24px;
+}
+.bf-lightbox img {
+  max-width: 92vw;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+.bf-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #02843c;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.bf-lightbox-close:hover { background: #1a5c3f; }
+.bf-lightbox-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  margin: 0;
+  text-align: center;
+  color: #eef7f2;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+/* Carrossel de logos de clientes (substitui o owl removido) */
+.clients .clients-slider {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-top: 30px;
+}
+.clients .clients-slider .single-clients { flex: 0 0 auto; }
+.clients .clients-slider .single-clients img {
+  width: auto;
+  height: 64px;
+  object-fit: contain;
+  border: 0;
+  opacity: 0.9;
+}
+.clients .clients-slider.is-animated {
+  overflow: hidden;
+  animation: bfMarquee 32s linear infinite;
+}
+.clients .clients-slider.is-animated:hover { animation-play-state: paused; }
+@keyframes bfMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .clients .clients-slider.is-animated { animation: none; }
+}
+
+/* Botão voltar ao topo */
+#scrollUp {
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  z-index: 2000;
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: #02843c;
+  color: #fff;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+#scrollUp.show { display: block; }
+#scrollUp:hover { background: #1a5c3f; }
+
+/* Newsletter status */
+.bf-newsletter-status {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.bf-newsletter-status.is-ok { color: #1a5c3f; }
+.bf-newsletter-status.is-error { color: #b00020; }
+.bf-newsletter-status.is-pending { color: #555; }
+
+/* Honeypot: campo escondido, bóts preenchem (humanos não veem) */
+.bf-hp {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
