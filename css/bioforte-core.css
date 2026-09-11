@@ -100,25 +100,3 @@ body.bf-lightbox-open { overflow: hidden; }
 }
 #scrollUp.show { display: block; }
 #scrollUp:hover { background: #1a5c3f; }
-
-/* Newsletter status */
-.bf-newsletter-status {
-  margin: 12px 0 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.bf-newsletter-status.is-ok { color: #1a5c3f; }
-.bf-newsletter-status.is-error { color: #b00020; }
-.bf-newsletter-status.is-pending { color: #555; }
-
-/* Honeypot: campo escondido, bóts preenchem (humanos não veem) */
-.bf-hp {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
