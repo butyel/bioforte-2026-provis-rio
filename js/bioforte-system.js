@@ -100,7 +100,7 @@
           if (found) count++;
         });
         faqStatus.hidden = !term;
-        faqStatus.textContent = count ? count + (count === 1 ? ' dúvida encontrada.' : ' dúvidas encontradas.') : 'Nenhuma dúvida encontrada. Tente outra palavra, como orçamento ou prevenção.';
+        faqStatus.textContent = count ? count + (count === 1 ? ' dúvida encontrada.' : ' dúvidas encontradas.') : 'Não encontramos uma resposta para esse termo. Tente outra palavra ou fale com a equipe.';
         document.querySelectorAll('.bio-faq-group').forEach(function (g) {
           g.classList.toggle('is-empty', term && !Array.from(g.querySelectorAll('.bio-faq-item')).some(function (i) { return !i.classList.contains('is-hidden'); }));
         });
