@@ -17,18 +17,20 @@ Capturar a jornada **problema → praga → serviço → localidade → orçamen
 | /desratizacao-franca.html | desratização em Franca | controle de ratos Franca; rato no forro; rato dentro de casa; fezes de rato | Comercial + problema | MOFU/BOFU | Roedores | Hub Franca; rato-camundongo.html; guia de ratos | desratizacao.html; rato-camundongo.html; contato |
 | /limpeza-caixa-dagua-franca.html | limpeza de caixa d'água em Franca | higienização de caixa d'água Franca; limpeza de reservatório; quando limpar caixa d'água | Comercial + informacional | MOFU/BOFU | Reservatórios | Hub Franca; guia de higienização; serviços | limpezaCaixaDAgua.html; contato |
 
+| /controle-de-pragas-condominios-franca.html | controle de pragas para condomínios em Franca | dedetização condomínio Franca; controle preventivo condomínio | Comercial B2B | BOFU | Condomínios | Hub Franca; guia empresas | controle integrado; pragas; contato |
+| /controle-de-pragas-restaurantes-franca.html | controle de pragas para restaurantes em Franca | dedetização restaurante Franca; controle preventivo restaurante | Comercial B2B | BOFU | Restaurantes | Hub Franca; guia restaurantes | controle integrado; baratas; roedores; contato |
+| /controle-de-pragas-industrias-franca.html | controle de pragas industrial Franca | dedetização industrial Franca; MIP indústria | Comercial B2B | BOFU | Indústrias | Hub Franca; guia empresas | controle integrado; pragas; contato |
+| /controle-de-pragas-empresas-franca.html | controle de pragas para empresas em Franca | dedetização empresas Franca; controle preventivo empresas | Comercial B2B | BOFU | Empresas | Hub Franca; guia empresas | controle integrado; pragas; contato |
+
 ## Regras de canibalização
 
 - **dedetizadora em Franca**, **dedetização em Franca** e **controle de pragas em Franca** permanecem no hub local, não em três páginas diferentes.
 - Páginas específicas devem ter intenção própria: escorpiões, baratas, cupins, ratos e reservatórios.
 - Guias respondem dúvidas e devem apontar para a entidade/praga, serviço e página local correspondente.
 
-## Próximos P1 — B2B Franca
+## B2B Franca — implementado
 
-1. /controle-de-pragas-condominios-franca.html — controle de pragas para condomínios em Franca
-2. /controle-de-pragas-restaurantes-franca.html — controle de pragas para restaurantes em Franca
-3. /controle-de-pragas-industrias-franca.html — controle de pragas industrial em Franca
-4. /controle-de-pragas-empresas-franca.html — controle de pragas para empresas em Franca
+As quatro páginas comerciais B2B foram criadas e integradas ao hub local.
 
 ## P1 — Clusters informacionais a fortalecer
 
