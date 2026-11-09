@@ -15,10 +15,8 @@
 .lp-page .lp-hero .lp-eyebrow,.lp-page .lp-hero .lp-sub,.lp-page .lp-hero .lp-lead {color:#fff;}
 .lp-page .lp-hero .lp-sub {font-size:21px;line-height:1.5;font-weight:500;margin:0 0 14px;}
 .lp-page .lp-hero .lp-lead {margin:0 0 28px;max-width:540px;}
-.lp-page .lp-btn {display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#02843c;color:#fff;border:2px solid #02843c;border-radius:4px;font-size:16px;font-weight:700;line-height:1.4;padding:14px 22px;min-height:50px;text-decoration:none;transition:background .2s,border-color .2s;max-width:100%;}
-.lp-page .lp-btn:hover {background:#1a5c3f;border-color:#1a5c3f;color:#fff;}
-.lp-page .lp-hero .lp-btn {background:#fff;border-color:#fff;color:#1a5c3f;font-size:18px;}
-.lp-page .lp-hero .lp-btn:hover {background:#e8f4f0;border-color:#e8f4f0;}
+.lp-page .lp-btn {display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#00854a;color:#fff;border:2px solid #00854a;border-radius:4px;font-size:16px;font-weight:700;line-height:1.4;padding:12px 14px;min-height:50px;text-decoration:none;transition:background .2s,border-color .2s;max-width:100%;}
+.lp-page .lp-btn:hover {background:#006b3b;border-color:#006b3b;color:#fff;}
 .lp-section {padding:72px 0;}
 .lp-section-heading {max-width:750px;margin:0 0 36px;}
 .lp-section-heading h2 {font-size:clamp(28px,3vw,38px);line-height:1.25;font-weight:700;letter-spacing:-.6px;margin:0 0 16px;text-transform:none;color:#1a1a1a;}
@@ -30,8 +28,7 @@
 .lp-card {border:1px solid #dce6df;border-top:3px solid #02843c;border-radius:6px;padding:28px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;}
 .lp-card h3 {font-size:22px;font-weight:700;line-height:1.35;text-transform:none;margin:0 0 14px;color:#1a5c3f;}
 .lp-card p {margin:0 0 24px;}
-.lp-card .lp-btn {margin-top:auto;background:#fff;color:#1a5c3f;border-color:#d0e4da;font-size:15px;padding:10px 14px;}
-.lp-card .lp-btn:hover {background:#e8f4f0;color:#1a5c3f;}
+.lp-card .lp-btn {margin-top:auto;font-size:15px;padding:10px 10px;}
 .lp-tint {background:#eef7f2;}
 .lp-number {font-size:28px;line-height:1.3;color:#02843c;margin-bottom:18px;font-weight:500;}
 .lp-page .lp-endnote {margin:28px 0 0;max-width:760px;}
@@ -48,8 +45,6 @@
 .lp-page .lp-questions .lp-btn:hover {background:#eef7f2;}
 .lp-final {background:#1a5c3f;}
 .lp-page .lp-final h2,.lp-page .lp-final p {color:#fff;}
-.lp-page .lp-final .lp-btn {background:#fff;border-color:#fff;color:#1a5c3f;}
-.lp-page .lp-final .lp-btn:hover {background:#e8f4f0;border-color:#e8f4f0;}
 @media(max-width:991px) {.lp-grid-3 {grid-template-columns:repeat(2,minmax(0,1fr));}.lp-hero-content {max-width:570px;}.lp-hero:before {background:linear-gradient(90deg,rgba(13,43,29,.96),rgba(13,43,29,.8) 55%,rgba(13,43,29,.2));}}
-@media(max-width:767px) {.lp-hero {padding-top:190px;}.lp-hero picture {height:220px;}.lp-hero-image {object-position:70% center;}.lp-hero:before {background:linear-gradient(180deg,transparent 80px,#163d2d 225px);}.lp-hero-content {padding:34px 0 44px;min-height:0;max-width:none;}.lp-hero h1 {font-size:36px;letter-spacing:-.8px;}.lp-page .lp-hero .lp-sub {font-size:19px;}.lp-hero .lp-btn {width:100%;}.lp-section {padding:48px 0;}.lp-section-heading {margin-bottom:28px;}.lp-grid-2,.lp-grid-3 {grid-template-columns:minmax(0,1fr);gap:18px;}.lp-card,.lp-audience {padding:24px;}.lp-card h3 {font-size:21px;}.lp-page .lp-eyebrow {font-size:12px;letter-spacing:1.3px;}}
+@media(max-width:767px) {.lp-hero {padding-top:190px;}.lp-hero picture {height:220px;}.lp-hero-image {object-position:70% center;}.lp-hero:before {background:linear-gradient(180deg,transparent 80px,#163d2d 225px);}.lp-hero-content {padding:34px 0 44px;min-height:0;max-width:none;}.lp-hero h1 {font-size:36px;letter-spacing:-.8px;}.lp-page .lp-hero .lp-sub {font-size:19px;}.lp-section {padding:48px 0;}.lp-section-heading {margin-bottom:28px;}.lp-grid-2,.lp-grid-3 {grid-template-columns:minmax(0,1fr);gap:18px;}.lp-card,.lp-audience {padding:24px;}.lp-card h3 {font-size:21px;}.lp-page .lp-eyebrow {font-size:12px;letter-spacing:1.3px;}}
 @media(prefers-reduced-motion:reduce) {.lp-page * {animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
